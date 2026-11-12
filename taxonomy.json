@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "status": "proposed",
+  "locales": ["fa-IR", "en"],
+  "catalog_kinds": {
+    "live_plant": {"en": "Live plants", "fa": "گیاهان زنده"},
+    "cut_stem": {"en": "Cut stems", "fa": "گل شاخه‌بریده"},
+    "arrangement": {"en": "Bouquets and arrangements", "fa": "دسته‌گل و گل‌آرایی"},
+    "preserved_flower": {"en": "Dried and preserved flowers", "fa": "گل خشک و ماندگار"},
+    "supply": {"en": "Pots and supplies", "fa": "گلدان و لوازم نگهداری"}
+  },
+  "facets": {
+    "growing_context": {"applies_to": ["live_plant"], "values": ["indoor", "outdoor", "balcony"]},
+    "light": {"applies_to": ["live_plant"], "values": ["low_light_tolerant", "bright_indirect", "direct_sun"]},
+    "habit": {"applies_to": ["live_plant"], "values": ["trailing", "climbing", "upright", "rosette"]},
+    "sold_size": {"applies_to": ["offer"], "requires": ["height_range", "measurement_unit"]},
+    "mature_indoor_size": {"applies_to": ["live_plant"], "requires": ["conditions", "source_id"]},
+    "care_effort": {"applies_to": ["live_plant"], "requires": ["rubric_version", "source_id"]},
+    "pet_toxicity": {"applies_to": ["live_plant", "cut_stem"], "values": ["toxic", "non_toxic", "unknown"], "requires": ["animal_species", "taxon_id", "source_id"]},
+    "occasion": {"applies_to": ["arrangement"], "values": ["birthday", "anniversary", "congratulations", "sympathy"]},
+    "format": {"applies_to": ["arrangement"], "values": ["bouquet", "box", "basket", "vase", "stand"]},
+    "color": {"applies_to": ["cut_stem", "arrangement", "preserved_flower"]},
+    "selling_unit": {"applies_to": ["cut_stem", "offer"], "values": ["stem", "bunch", "box", "item"]},
+    "delivery_city": {"applies_to": ["offer"]},
+    "price": {"applies_to": ["offer"], "requires": ["amount", "currency", "display_unit", "observed_at"]}
+  },
+  "entities": {
+    "taxon": ["id", "accepted_name", "rank", "authority_reference", "source_revision", "status", "verified_at"],
+    "taxon_relationship": ["from_taxon_id", "to_taxon_id", "relation", "source_id"],
+    "cultivar": ["id", "taxon_id", "name", "registration_reference", "review_status"],
+    "plant_profile": ["id", "taxon_id", "cultivar_id_optional", "identification_precision", "display_names", "alias_ids", "care_claim_ids"],
+    "alias": ["id", "profile_ids", "raw_label", "normalized_label", "locale", "market", "source_id", "ambiguity_status"],
+    "care_claim": ["id", "profile_id", "topic", "condition", "recommendation", "source_id", "source_locator", "review_status", "reviewer", "reviewed_at"],
+    "source": ["id", "url", "publisher", "source_kind", "observed_at", "evidence_scope", "rights_status"],
+    "diagnostic_relation": ["symptom_id", "cause_id", "conditions", "source_id", "review_status"],
+    "category": ["id", "domain", "labels"],
+    "category_assignment": ["category_id", "subject_kind", "subject_id", "editorial_basis"],
+    "product": ["id", "kind", "profile_ids", "variant_attributes"],
+    "arrangement_ingredient": ["product_id", "taxon_id_optional", "trade_name", "stem_count_optional", "substitution_policy"],
+    "seller": ["id", "name", "market", "channel"],
+    "offer": ["id", "product_id", "seller_id", "market", "price", "delivery_city", "stock_status", "observed_at"]
+  }
+}
