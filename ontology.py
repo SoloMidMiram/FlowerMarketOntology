@@ -2,6 +2,7 @@
 import argparse
 import json
 import unicodedata
+from hashlib import sha256
 from datetime import date
 from pathlib import Path
 from typing import Literal
@@ -15,11 +16,26 @@ class Record(BaseModel):
     model_config = ConfigDict(extra="forbid", str_min_length=1)
 
 
+class EvidenceArchive(Record):
+    path: str
+    sha256: str
+    reuse_basis: str
+
+    def check_file(self, root: Path) -> None:
+        path = (root / self.path).resolve()
+        if not path.is_relative_to(root.resolve()) or not path.is_file():
+            raise ValueError(f"Missing repository archive: {self.path}")
+        content = path.read_bytes()
+        if not content.strip() or sha256(content).hexdigest() != self.sha256:
+            raise ValueError(f"Invalid archive content: {self.path}")
+
+
 class Evidence(Record):
     url: HttpUrl
     provenance: Literal["reported", "verified"]
     locator: str | None = None
     observed_at: date | None = None
+    archive: EvidenceArchive | None = None
 
 
 class Treatment(Record):
@@ -46,7 +62,15 @@ class Alias(Record):
         return self
 
 
+class LocaleReview(Record):
+    reviewer: str
+    reviewed_at: date
+    decision: Literal["approved", "changes_requested"]
+    wording_revision: str
+
+
 class Claim(Record):
+    id: str
     topic: str
     wording: dict[Literal["en", "fa"], str]
     evidence_ids: list[str]
@@ -54,7 +78,11 @@ class Claim(Record):
     research_record: str
     research_pointer: str
     editorial_status: Literal["draft"] = "draft"
+    reviews: dict[Literal["en", "fa"], LocaleReview] = {}
     animal_species: list[Literal["cat", "dog"]] = []
+
+    def wording_revision(self, locale: Literal["en", "fa"]) -> str:
+        return sha256(self.wording[locale].encode("utf-8")).hexdigest()
 
 
 class ImageCandidate(Record):
@@ -87,6 +115,22 @@ class Observation(Record):
     mapped_concept_id: str
 
 
+class PresentationField(Record):
+    visibility: Literal["shown", "not_found_on_surface", "conditional", "unassessed"]
+    evidence_status: Literal["verified", "reported", "unavailable"]
+    locator: str | None = None
+    detail: str | None = None
+
+    @model_validator(mode="after")
+    def check_evidence(self):
+        if self.visibility == "unassessed":
+            if self.evidence_status != "unavailable":
+                raise ValueError("Unassessed field has no observation evidence")
+        elif self.evidence_status == "unavailable" or not self.locator:
+            raise ValueError("Assessed fields require evidence and a locator")
+        return self
+
+
 class PresentationObservation(Record):
     id: str
     market: Literal["IR", "US", "UK"]
@@ -101,6 +145,7 @@ class PresentationObservation(Record):
     visibility: Literal["shown", "not_found_on_surface", "conditional", "unassessed"]
     method: str
     date: date
+    fields: dict[Literal["ingredients", "dimensions", "delivery", "care"], PresentationField]
 
     @model_validator(mode="after")
     def check_scope(self):
@@ -108,6 +153,10 @@ class PresentationObservation(Record):
             raise ValueError("Product kind must match page scope")
         if self.status == "unavailable" and self.visibility != "unassessed":
             raise ValueError("Unavailable surfaces must be unassessed")
+        if set(self.fields) != {"ingredients", "dimensions", "delivery", "care"}:
+            raise ValueError("Missing presentation field states")
+        if self.status == "unavailable" and any(field.visibility != "unassessed" for field in self.fields.values()):
+            raise ValueError("Unavailable surface has assessed fields")
         return self
 
 
@@ -126,7 +175,7 @@ class Fixture(Record):
 
 
 class Dataset(Record):
-    schema_version: Literal[4] = 4
+    schema_version: Literal[5] = 5
     taxa: dict[str, Literal["species", "genus"]]
     evidence: dict[str, Evidence]
     treatments: list[Treatment]
@@ -139,6 +188,22 @@ class Dataset(Record):
     fixtures: list[Fixture]
     display_authority: Literal["Kew POWO"] = "Kew POWO"
 
+    def reviewed_claims(self, locale: Literal["en", "fa"], root: Path = ROOT) -> list[Claim]:
+        result = []
+        for claim in self.profile.claims:
+            review = claim.reviews.get(locale)
+            if locale not in claim.wording or not review or review.decision != "approved":
+                continue
+            if review.wording_revision != claim.wording_revision(locale):
+                continue
+            sources = [self.evidence[key] for key in claim.evidence_ids]
+            if not sources or not all(s.provenance == "verified" and s.observed_at and s.locator and s.archive for s in sources):
+                continue
+            for source in sources:
+                source.archive.check_file(root)
+            result.append(claim)
+        return result
+
     def display_name(self, taxon_id: str) -> str | None:
         return next((record.name for record in self.treatments
                      if record.taxon_id == taxon_id and record.authority == self.display_authority
@@ -146,6 +211,9 @@ class Dataset(Record):
 
     @model_validator(mode="after")
     def references(self):
+        claim_ids = [claim.id for claim in self.profile.claims]
+        if len(claim_ids) != len(set(claim_ids)):
+            raise ValueError("Duplicate claim ID")
         if self.profile.preferred_image_id not in self.profile.image_candidates:
             raise ValueError("Unknown preferred image")
         ids = [record.id for record in self.presentation_observations]
@@ -261,11 +329,22 @@ def build(root=ROOT) -> Dataset:
     evidence["nargil-golden-pothos"] = Evidence(
         url=listing["url"], provenance="reported", locator="پتوس طلایی"
     )
-    claims = [Claim(topic=item["topic"], wording={"en": item["en"], "fa": item["fa"]},
+    publication = load_json(root / "research" / "publication.json")
+    for key, source in publication["evidence"].items():
+        if key not in evidence:
+            raise ValueError(f"Unknown publication evidence ID: {key}")
+        record = Evidence.model_validate({**evidence[key].model_dump(), **source})
+        if record.archive:
+            record.archive.check_file(root)
+        evidence[key] = record
+    claims = [Claim(id=item["id"], topic=item["topic"], wording={"en": item["en"], "fa": item["fa"]},
                     evidence_ids=list(item["evidence"]), source_locators=item["evidence"],
                     animal_species=item.get("animal_species", []),
+                    reviews=publication["reviews"].get(item["id"], {}),
                     research_record="research/batches/batch-04.json", research_pointer=f"/claims/{index}")
               for index, item in enumerate(fourth["claims"])]
+    if publication["reviews"].keys() - {claim.id for claim in claims}:
+        raise ValueError("Review references unknown claim ID")
     observations = {}
     for line in (root / "observations.jsonl").read_text(encoding="utf-8").splitlines():
         item = json.loads(line)
