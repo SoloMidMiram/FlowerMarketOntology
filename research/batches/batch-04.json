@@ -1,0 +1,98 @@
+{
+  "report": "../sources/pothos-and-commerce-tranche.md",
+  "evidence_status": "reported",
+  "claims": [
+    {
+      "topic": "light",
+      "en": "Bright indirect light is preferred. Lower light is tolerated and may reduce growth and variegation.",
+      "fa": "نور روشن و غیرمستقیم بهتر است. گیاه نور کمتر را تحمل می‌کند، اما ممکن است رشد و ابلقی آن کاهش یابد.",
+      "evidence": {
+        "rhs": "Light section, retrieved lines 104–110"
+      }
+    },
+    {
+      "topic": "watering",
+      "en": "Water as the mix approaches dryness. Avoid sustained saturation and standing water.",
+      "fa": "وقتی بستر رو به خشکی می‌رود آبیاری کنید و از خیس ماندن بستر و جمع شدن آب جلوگیری کنید.",
+      "evidence": {
+        "rhs": "Watering section, retrieved lines 116–124"
+      }
+    },
+    {
+      "topic": "humidity",
+      "en": "Typical indoor humidity is usually sufficient. Supplemental humidity may help in very dry rooms.",
+      "fa": "رطوبت معمول خانه اغلب کافی است. در اتاق‌های بسیار خشک، افزایش رطوبت ممکن است مفید باشد.",
+      "evidence": {
+        "rhs": "Humidity guidance",
+        "ncstate": "Description, supplemental humidity guidance"
+      }
+    },
+    {
+      "topic": "substrate",
+      "en": "Use an airy, slightly acidic mix that retains some moisture and drains well.",
+      "fa": "از بستر هواخور و کمی اسیدی با توان نگهداری رطوبت و زهکشی خوب استفاده کنید.",
+      "evidence": {
+        "rhs": "Compost and repotting section, retrieved lines 80–97"
+      }
+    },
+    {
+      "topic": "repotting",
+      "en": "Repot when roots crowd the container. Choose a pot one size larger.",
+      "fa": "وقتی ریشه‌ها گلدان را پر کردند، گلدانی یک سایز بزرگ‌تر انتخاب کنید.",
+      "evidence": {
+        "rhs": "Compost and repotting section, retrieved lines 80–97"
+      }
+    },
+    {
+      "topic": "toxicity",
+      "en": "Toxic to cats and dogs if chewed or eaten. Insoluble calcium oxalates can irritate the mouth.",
+      "fa": "جویدن یا خوردن پتوس برای گربه و سگ سمی است. اگزالات کلسیم نامحلول می‌تواند دهان را تحریک کند.",
+      "evidence": {
+        "aspca": "Scientific name, toxicity, toxic principles and clinical signs fields"
+      },
+      "animal_species": [
+        "cat",
+        "dog"
+      ]
+    }
+  ],
+  "media_candidate": {
+    "creator": "Dell Enecks",
+    "source_id": "ncstate",
+    "locator": "Image gallery, Dell Enecks entry",
+    "filename": "Pothos_Dell_Enecks_m7ECuAQTwlEH.jpeg",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "asset_status": "unavailable_in_report_capture"
+  },
+  "commerce": [
+    {
+      "url": "https://t.me/floristshopmashhad/648",
+      "label": "بابا آدم",
+      "identity": "unresolved",
+      "scope": "specific post",
+      "pothos_permalink_resolved": false
+    },
+    {
+      "url": "https://vipshop.flowers/product/flower-basket-no-133/",
+      "scope": "K133 only",
+      "locator": "Ingredients, dimensions, pricing and substitution sections"
+    }
+  ],
+  "trade_name_leads": [
+    {
+      "label": "برگ انجیری فر",
+      "scope": "seller-specific",
+      "status": "specimen_review_pending"
+    },
+    {
+      "label": "بابا آدم گورخری",
+      "scope": "seller-specific",
+      "status": "specimen_review_pending"
+    },
+    {
+      "label": "مرمری",
+      "scope": "appearance or trade modifier",
+      "status": "cultivar_unconfirmed"
+    }
+  ]
+}

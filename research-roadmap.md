@@ -1,5 +1,21 @@
 # Research and data roadmap
 
+## Executable pilot status
+
+The [fourth tranche](research/batches/batch-04.json) adds six bilingual pothos drafts with source section locators. The locators come from the supplied report. Review against the original pages and approve each locale before release. The Dell Enecks image is a specific licensed candidate reported by the tranche. Retrieve the exact file and record attribution before use.
+
+Next research, in release order:
+
+1. Reproduce the pothos source passages and pin one exact image. Confirm species applicability for genus-level RHS guidance and record the media checksum, license evidence and credit.
+2. Collect expert-identified specimens for «برگ انجیری فر» and «بابا آدم گورخری». Check which morphological cues survive juvenile growth and which modifiers are vendor-specific. Collect permissioned images.
+3. Extend search expectations for qualified trade names, genus queries and historical treatments before running iOS/Safari and Android/Chrome user tasks. Keep any unsafe automatic species resolution visible as a failed case.
+4. Collect household symptom cases with conditions, intervention and follow-up so reviewers can compare competing causes.
+5. Resolve Nargil consumer delivery and locate the actual Mashhad pothos message. Post 648 documents «بابا آدم». The tranche's summary describes the permalink gap as closed, but its detailed evidence identifies a different plant. Confirm K133 terms at product scope and reconcile online wholesale pack counts by dated source before both physical market samples.
+
+The importer, canonical pilot contract, schema export and local search runner are implemented. Local validation covers the five seller observations and all 16 imported query fixtures. GitHub Actions is configured for the same checks. Raw fixture statuses continue to describe the original research. Device and user testing are separate.
+
+The next release dependency is a reviewable pothos evidence package with stable passage locators, editorial approval per language and an attributed image. Then connect the validated profile and ambiguity results to directory and care views. Expand reviewed plant coverage after that workflow is repeatable. Keep commerce and regionalization after the knowledge pilot.
+
 Working assumption for planning: Persian-first apartment growers in Iran, with an English edition. Tehran is the first local seller sample. Check that assumption during discovery. The supplied market report provides leads and design proposals. Its categories and rollout targets are inputs to validate.
 
 | Order | Investigation and collection | Output and exit criteria |

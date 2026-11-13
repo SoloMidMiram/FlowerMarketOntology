@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "status": "proposed",
   "locales": ["fa-IR", "en"],
   "catalog_kinds": {
@@ -25,7 +25,7 @@
     "price": {"applies_to": ["offer"], "requires": ["amount", "currency", "display_unit", "observed_at"]}
   },
   "entities": {
-    "taxon": ["id", "accepted_name", "rank", "authority_reference", "source_revision", "status", "verified_at"],
+    "taxon": ["id", "rank"],
     "taxon_relationship": ["from_taxon_id", "to_taxon_id", "relation", "source_id"],
     "taxon_treatment": ["taxon_id", "authority", "source_revision", "name", "name_identifier", "name_status", "capture_id", "checked_at"],
     "cultivar": ["id", "taxon_id", "name", "registration_reference", "review_status"],
@@ -46,6 +46,8 @@
     "search_run": ["fixture_id", "tested_at", "device", "os_version", "browser_version", "keyboard_locale", "entered_query", "normalized_query", "autocorrection", "ranked_results", "ambiguity_displayed", "correction_path", "artifact_ref", "outcome"],
     "symptom_case": ["id", "profile_id", "symptoms", "condition_observations", "timing", "asset_refs", "capture_id", "evidence_quality"],
     "source": ["id", "url", "publisher", "source_kind", "observed_at", "evidence_scope", "rights_status"],
+    "symptom": ["id", "localized_labels"],
+    "cause": ["id", "localized_labels"],
     "diagnostic_relation": ["symptom_id", "cause_id", "conditions", "source_id", "review_status"],
     "category": ["id", "domain", "labels"],
     "category_assignment": ["category_id", "subject_kind", "subject_id", "editorial_basis"],
