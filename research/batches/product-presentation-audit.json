@@ -2,7 +2,6 @@
   {
     "id": "vip-k133",
     "market": "IR",
-    "kind": "arrangement",
     "url": "https://vipshop.flowers/product/flower-basket-no-133/",
     "locator": "Product header and order area",
     "shown": "سبد گل K133; dimensions 45 × 50 × 90 cm; 6 strelitzia, 4 alstroemeria, 15 carnations and 20 chrysanthemums; 10,700,000 تومان",
@@ -10,12 +9,14 @@
     "gaps": "Vase or post-delivery care not found in inspected snapshot",
     "status": "verified",
     "method": "Playwright accessibility snapshot",
-    "date": "2026-11-13"
+    "date": "2026-11-13",
+    "page_kind": "product",
+    "product_kind": "arrangement",
+    "visibility": "not_found_on_surface"
   },
   {
     "id": "tar-box",
     "market": "IR",
-    "kind": "arrangement",
     "url": "https://tarhegol.com/product/باکس-گل-مستطیل/",
     "locator": "Product header and description",
     "shown": "باکس گل under گل شاخه بریده; 3,700,000 تومان near title; 10–15 roses and selectable colors described farther down",
@@ -23,12 +24,14 @@
     "gaps": "Exact box dimensions and an explicit substitution policy not found in inspected snapshot",
     "status": "verified",
     "method": "Playwright accessibility snapshot",
-    "date": "2026-11-13"
+    "date": "2026-11-13",
+    "page_kind": "product",
+    "product_kind": "arrangement",
+    "visibility": "not_found_on_surface"
   },
   {
     "id": "sill-pothos",
     "market": "US",
-    "kind": "live_plant",
     "url": "https://www.thesill.com/products/golden-pothos",
     "locator": "Product header, options and tab labels",
     "shown": "Light badge; selected medium 7–8 in; planter and color selectors; plant variation and nursery pot information",
@@ -36,12 +39,14 @@
     "gaps": "Inactive tab contents unassessed; the default description mentions Agnes while the option group shows Isabella",
     "status": "verified",
     "method": "Playwright accessibility snapshot",
-    "date": "2026-11-13"
+    "date": "2026-11-13",
+    "page_kind": "product",
+    "product_kind": "live_plant",
+    "visibility": "unassessed"
   },
   {
     "id": "nargil-pothos",
     "market": "IR",
-    "kind": "live_plant_aggregator",
     "url": "https://nargil.ir/Product/98815/پتوس-طلایی/",
     "locator": "Product heading, vendor offers and care sections",
     "shown": "فروشنده‌ های پتوس طلایی lists multiple offers in toman; separate placement, watering and repotting sections",
@@ -49,12 +54,14 @@
     "gaps": "Unified seller delivery terms and consistent offer-level plant dimensions not established by this snapshot",
     "status": "verified",
     "method": "Playwright accessibility snapshot",
-    "date": "2026-11-13"
+    "date": "2026-11-13",
+    "page_kind": "aggregator",
+    "product_kind": "live_plant",
+    "visibility": "unassessed"
   },
   {
     "id": "sarina-neon",
     "market": "IR",
-    "kind": "live_plant",
     "url": "https://sarinaland.com/product/پتوس-نئون/",
     "locator": "Product feature and price area",
     "shown": "پتوس نئون; current display ۱۲۹٬۰۰۰ تومان; link to shipped examples and reviews; link for shipping schedule and cost",
@@ -62,12 +69,14 @@
     "gaps": "Specimen-level cultivar verification and exact checkout eligibility unassessed",
     "status": "verified",
     "method": "Playwright accessibility snapshot",
-    "date": "2026-11-13"
+    "date": "2026-11-13",
+    "page_kind": "product",
+    "product_kind": "live_plant",
+    "visibility": "unassessed"
   },
   {
     "id": "bloom-occasions",
     "market": "UK",
-    "kind": "collection",
     "url": "https://www.bloomandwild.com/send-flowers/tagonly/occasions",
     "locator": "Default snapshot",
     "shown": "Page title loaded; alert and generic container only",
@@ -75,12 +84,14 @@
     "gaps": "All product and category fields unassessed",
     "status": "unavailable",
     "method": "Playwright accessibility snapshot",
-    "date": "2026-11-13"
+    "date": "2026-11-13",
+    "page_kind": "collection",
+    "product_kind": null,
+    "visibility": "unassessed"
   },
   {
     "id": "tar-cut",
     "market": "IR",
-    "kind": "collection",
     "url": "https://tarhegol.com/product-category/cut-flowers/",
     "locator": "Collection heading, filters and product cards",
     "shown": "گل شاخه بریده includes boxes, bouquets and a wreath; price, size and color filters; English sorting labels",
@@ -88,12 +99,14 @@
     "gaps": "Standalone stem pack fields unassessed",
     "status": "verified",
     "method": "Playwright accessibility snapshot",
-    "date": "2026-11-13"
+    "date": "2026-11-13",
+    "page_kind": "collection",
+    "product_kind": null,
+    "visibility": "unassessed"
   },
   {
     "id": "vip-baskets",
     "market": "IR",
-    "kind": "collection",
     "url": "https://vipshop.flowers/product-category/flower-basket/",
     "locator": "Collection heading, sorting and editorial sections",
     "shown": "سبد گل collection with Persian sorting and editorial uses for birthdays, formal events and thanks",
@@ -101,12 +114,14 @@
     "gaps": "Filter contents and behavior unassessed",
     "status": "verified",
     "method": "Playwright accessibility snapshot",
-    "date": "2026-11-13"
+    "date": "2026-11-13",
+    "page_kind": "collection",
+    "product_kind": null,
+    "visibility": "unassessed"
   },
   {
     "id": "sill-live",
     "market": "US",
-    "kind": "collection",
     "url": "https://www.thesill.com/collections/live-plants",
     "locator": "Category tiles, chooser and catalog intro",
     "shown": "Large, easy-care, pet-friendly and low-light-tolerant categories; room-light chooser",
@@ -114,12 +129,14 @@
     "gaps": "Filter interactions unassessed",
     "status": "verified",
     "method": "Playwright accessibility snapshot",
-    "date": "2026-11-13"
+    "date": "2026-11-13",
+    "page_kind": "collection",
+    "product_kind": null,
+    "visibility": "unassessed"
   },
   {
     "id": "interflora-home",
     "market": "UK",
-    "kind": "home",
     "url": "https://www.interflora.co.uk/",
     "locator": "Occasion discovery and featured cards",
     "shown": "Thinking of you, Thank you, Get well soon; The Classic Dozen card with £67.00 displayed",
@@ -127,12 +144,14 @@
     "gaps": "Delivery eligibility unassessed",
     "status": "verified",
     "method": "Playwright accessibility snapshot",
-    "date": "2026-11-13"
+    "date": "2026-11-13",
+    "page_kind": "home",
+    "product_kind": null,
+    "visibility": "unassessed"
   },
   {
     "id": "interflora-roses",
     "market": "UK",
-    "kind": "arrangement",
     "url": "https://www.interflora.co.uk/product/dozen-luxury-red-roses-ccror1200s",
     "locator": "Product title, Bouquet Size controls and Gift Details heading",
     "shown": "The Classic Dozen; 12, 18, 24 and custom red-rose count controls. £67, £91 and £115 for the three displayed fixed options.",
@@ -140,6 +159,9 @@
     "gaps": "Custom variant pricing, delivery eligibility and unopened Gift Details contents unassessed.",
     "status": "verified",
     "method": "Playwright accessibility snapshot",
-    "date": "2026-11-13"
+    "date": "2026-11-13",
+    "page_kind": "product",
+    "product_kind": "arrangement",
+    "visibility": "unassessed"
   }
 ]

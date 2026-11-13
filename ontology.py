@@ -57,12 +57,23 @@ class Claim(Record):
     animal_species: list[Literal["cat", "dog"]] = []
 
 
+class ImageCandidate(Record):
+    source_page: HttpUrl
+    creator: str
+    license: str
+    locator: str | None = None
+    filename: str | None = None
+    asset_url: HttpUrl | None = None
+    asset_status: str
+    publication_status: Literal["unpublished"] = "unpublished"
+
+
 class Profile(Record):
     id: str
     taxon_id: str
     claims: list[Claim]
-    image_candidate: HttpUrl
-    image_status: Literal["selection_and_attribution_pending"]
+    image_candidates: dict[str, ImageCandidate]
+    preferred_image_id: str
     listing_label: str
     listing_evidence_id: str
 
@@ -74,6 +85,30 @@ class Observation(Record):
     parent_path: list[str]
     ui_role: Literal["collection_link", "chooser_question"]
     mapped_concept_id: str
+
+
+class PresentationObservation(Record):
+    id: str
+    market: Literal["IR", "US", "UK"]
+    page_kind: Literal["product", "aggregator", "collection", "home"]
+    product_kind: Literal["arrangement", "live_plant"] | None
+    url: HttpUrl
+    locator: str
+    shown: str
+    detail: str
+    gaps: str
+    status: Literal["verified", "unavailable"]
+    visibility: Literal["shown", "not_found_on_surface", "conditional", "unassessed"]
+    method: str
+    date: date
+
+    @model_validator(mode="after")
+    def check_scope(self):
+        if (self.page_kind in {"product", "aggregator"}) != bool(self.product_kind):
+            raise ValueError("Product kind must match page scope")
+        if self.status == "unavailable" and self.visibility != "unassessed":
+            raise ValueError("Unavailable surfaces must be unassessed")
+        return self
 
 
 class SearchResult(Record):
@@ -91,7 +126,7 @@ class Fixture(Record):
 
 
 class Dataset(Record):
-    schema_version: Literal[3] = 3
+    schema_version: Literal[4] = 4
     taxa: dict[str, Literal["species", "genus"]]
     evidence: dict[str, Evidence]
     treatments: list[Treatment]
@@ -100,6 +135,7 @@ class Dataset(Record):
     facets: list[str]
     symptoms: dict[str, str]
     observations: dict[str, Observation]
+    presentation_observations: list[PresentationObservation]
     fixtures: list[Fixture]
     display_authority: Literal["Kew POWO"] = "Kew POWO"
 
@@ -110,6 +146,11 @@ class Dataset(Record):
 
     @model_validator(mode="after")
     def references(self):
+        if self.profile.preferred_image_id not in self.profile.image_candidates:
+            raise ValueError("Unknown preferred image")
+        ids = [record.id for record in self.presentation_observations]
+        if len(ids) != len(set(ids)):
+            raise ValueError("Duplicate presentation observation")
         display_taxa = [record.taxon_id for record in self.treatments
                         if record.authority == self.display_authority and record.kind == "scientific_name"]
         if len(display_taxa) != len(set(display_taxa)):
@@ -250,13 +291,27 @@ def build(root=ROOT) -> Dataset:
             fixtures.append(Fixture(raw_query=query, locale="en" if query.isascii() else "fa-IR",
                                     expected=SearchResult(route=route, concept_ids=ids,
                                                           profile_id=pilot["profile_id"] if ref == "87014-1" else None)))
+    kew = pilot["asset_candidate"]
+    ncstate = fourth["media_candidate"]
+    images = {
+        "kew-gallery": ImageCandidate(source_page=kew["page_url"], creator=kew["reported_credit"],
+                                     license=kew["reported_license"], asset_url=kew["asset_url"],
+                                     asset_status=kew["publication_status"]),
+        "ncstate-dell-enecks": ImageCandidate(
+            source_page=first["sources"][ncstate["source_id"]], creator=ncstate["creator"],
+            license=ncstate["license_url"], locator=ncstate["locator"], filename=ncstate["filename"],
+            asset_status=ncstate["asset_status"],
+        ),
+    }
+    presentations = [PresentationObservation.model_validate(item)
+                     for item in load_json(directory / "product-presentation-audit.json")]
     return Dataset(taxa=taxa, evidence=evidence, treatments=treatments, aliases=aliases,
                    profile=Profile(id=pilot["profile_id"], taxon_id="87014-1", claims=claims,
-                                   image_candidate=pilot["asset_candidate"]["page_url"],
-                                   image_status=pilot["asset_candidate"]["publication_status"],
+                                   image_candidates=images, preferred_image_id="ncstate-dell-enecks",
                                    listing_label="پتوس طلایی", listing_evidence_id="nargil-golden-pothos"),
                    facets=list(load_json(root / "taxonomy.json")["facets"]),
-                   symptoms={"yellow-leaves": "زرد شدن برگ"}, observations=observations, fixtures=fixtures)
+                   symptoms={"yellow-leaves": "زرد شدن برگ"}, observations=observations, fixtures=fixtures,
+                   presentation_observations=presentations)
 
 
 def main():
@@ -279,7 +334,9 @@ def main():
             actual = dataset.search(fixture.raw_query)
             if actual != fixture.expected:
                 raise SystemExit(f"{fixture.raw_query!r}: expected {fixture.expected}, got {actual}")
-        print(f"Validated {len(dataset.observations)} observations and ran {len(dataset.fixtures)} search fixtures")
+        print(f"Validated {len(dataset.observations)} observations and "
+              f"{len(dataset.presentation_observations)} presentation records. "
+              f"Ran {len(dataset.fixtures)} search fixtures.")
 
 
 if __name__ == "__main__":

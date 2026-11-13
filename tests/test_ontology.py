@@ -1,3 +1,5 @@
+import json
+from pathlib import Path
 import unittest
 
 from pydantic import ValidationError
@@ -6,6 +8,28 @@ from ontology import Dataset, build
 
 
 class PilotTests(unittest.TestCase):
+    def test_independent_search_cases_after_export(self):
+        exported = Dataset.model_validate_json(self.dataset.model_dump_json())
+        cases = json.loads(Path(__file__).with_name("golden-search.json").read_text(encoding="utf-8"))
+        for case in cases:
+            with self.subTest(query=case["query"]):
+                self.assertEqual(exported.search(case["query"]).model_dump(), case["expected"])
+
+    def test_presentation_records_are_validated(self):
+        data = self.dataset.model_dump(mode="json")
+        self.assertEqual(len(data["presentation_observations"]), 11)
+        record = next(item for item in data["presentation_observations"] if item["status"] == "unavailable")
+        record["visibility"] = "shown"
+        with self.assertRaisesRegex(ValidationError, "Unavailable surfaces must be unassessed"):
+            Dataset.model_validate(data)
+
+    def test_preferred_image_remains_unpublished(self):
+        profile = self.dataset.profile
+        self.assertEqual(set(profile.image_candidates), {"kew-gallery", "ncstate-dell-enecks"})
+        image = profile.image_candidates[profile.preferred_image_id]
+        self.assertEqual(image.creator, "Dell Enecks")
+        self.assertEqual(image.publication_status, "unpublished")
+        self.assertIsNone(image.asset_url)
     @classmethod
     def setUpClass(cls):
         cls.dataset = build()
