@@ -17,12 +17,15 @@ Use the following example records as editorial mapping candidates, pending ident
 
 ```mermaid
 flowchart LR
-  Source --> Observation
-  Source --> CareClaim
+  Source --> SourceCapture
   Taxon --> Cultivar
   Taxon --> PlantProfile
   Cultivar -. optional .-> PlantProfile
-  Alias --> PlantProfile
+  Alias --> AliasCandidate
+  AliasCandidate --> Taxon
+  SourceCapture --> SellerObservation
+  SourceCapture --> CareClaimEvidence
+  CareClaimEvidence --> CareClaim
   CareClaim --> PlantProfile
   Category --> Assignment
   Assignment --> PlantProfile
@@ -30,13 +33,32 @@ flowchart LR
   PlantProfile -. optional .-> Product
   Product --> Offer
   Seller --> Offer
+  Offer --> OfferObservation
   Product --> ArrangementIngredient
   Taxon -. optional .-> ArrangementIngredient
 ```
 
 Use stable IDs across name revisions. A profile has a taxon and may identify a cultivar. A name can resolve to several profiles, and a category can contain many profiles or products. Keep the raw label and source on each alias. Use a separate symptom-to-cause relation with conditions and evidence so a symptom can return several plausible causes. Arrangement ingredients can carry a trade name even when the species is uncertain. Record quantities and substitutions explicitly when the seller specifies them.
 
+Normalize Persian orthography for retrieval before ranking identity candidates. For «برگ انجیری», show disambiguation across the evidenced candidates. For «بابا آدم», show the unresolved trade name and genus lead. Keep the authority and date on scientific synonym decisions so backbone disagreements can be reviewed without changing profile IDs. Store a preferred candidate as a ranking hint.
+
+Keep evidence status on captures and editorial review status on decisions and care claims. Join each claim to one or more sources with a locator and an evidence relationship such as supports, qualifies, or conflicts. For the pothos pilot, condition-based watering is the draft guidance and the seller's twice-weekly recommendation remains a retail observation. Record animal-specific toxicity separately. Treat dated price, pack size, delivery wording and stock as observations of an offer. For wholesale captures include the stall and grade alongside the raw unit and parsed count.
+
 Store market evidence, botanical identity evidence, and editorial care claims independently. A seller observation may inform a search synonym or a collection, while an editorial care claim needs a horticultural source with matching conditions. Attach rights and attribution information to sources and assets before publication. Keep seller data on dated offers. The [roadmap](research-roadmap.md) defines when each layer enters the release.
+
+### Evidence and release rules from the execution update
+
+Track page retrieval, field availability, archive status, and asset rights independently. Nargil's cart is reported as retrieved while its retail delivery terms remain unavailable. Model the retail, aggregation, and wholesale/project channels explicitly. Record VIPShop's B133 box and K133 basket as distinct products with their own policy terms.
+
+Store translated wording and its review state per locale. Keep the underlying claim and citations shared. Record photo rights per selected image with the exact asset URL, credit, license and changes. The Kew pothos image page is a reported CC BY 3.0 candidate. Select the individual image and record attribution before using it.
+
+Store accepted names as authority-specific treatments of a stable taxon concept. The reported Kew and 2018 treatments of split-leaf philodendron are separate records. An authority identifier supports a taxon name. A vernacular mapping still needs listing or morphology evidence. Keep the bare «برگ انجیری» query ambiguous and «بابا آدم» unresolved. The Alocasia and Colocasia species listed for «بابا آدم» are hypotheses for field checks.
+
+Keep search fixtures separate from device runs and symptom cases separate from reviewed cause links. Treat conditions missing from a symptom case as unknown. For dated wholesale lists, preserve the source calendar, raw unit, count, market and collection method. Online price lists and stall visits contribute different coverage. Comparable records require matching item, grade and selling unit.
+
+Classify «ابلق» as an appearance descriptor and «پنجه شیری» as a trade modifier in the current evidence. Link a modifier to a cultivar only when horticultural evidence supports that link. Attach each identification example to its observed traits and supported rank. A listing with «آلوکازیا» supports genus-level identification within that listing. Species resolution needs additional evidence.
+
+Record symptom onset and progression, light source and exposure, watering method and interval, drainage, substrate and recent changes. Document when photos were taken and who supplied them. Add root and pest observations where available. Anecdotal cases can inform the questions shown to a grower. Publish cause links after evidence review.
 
 ## Site structure
 

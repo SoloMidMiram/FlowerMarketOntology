@@ -1,0 +1,249 @@
+{
+  "report": "../sources/tehran-execution-update.md",
+  "report_access_date": "2026-11-12",
+  "surfaces": [
+    {
+      "id": "tarhegol-category",
+      "url": "https://tarhegol.com/category/flowers-and-plants/houseplants/",
+      "role": "category",
+      "observation": "گیاهان آپارتمانی",
+      "evidence_status": "reported",
+      "report_retrieval_status": "retrieved",
+      "archive_status": "not_archived",
+      "rights_status": "unknown"
+    },
+    {
+      "id": "tarhegol-box",
+      "url": "https://tarhegol.com/product/باکس-گل-مستطیل/",
+      "role": "product",
+      "observation": "باکس گل مستطیل",
+      "evidence_status": "reported",
+      "report_retrieval_status": "retrieved",
+      "archive_status": "not_archived",
+      "rights_status": "unknown"
+    },
+    {
+      "id": "tarhegol-contact",
+      "url": "https://tarhegol.com/تماس-با-ما-1/",
+      "role": "seller_policy",
+      "observation": "Tehran-wide order coverage as stated",
+      "evidence_status": "reported",
+      "report_retrieval_status": "retrieved",
+      "archive_status": "not_archived",
+      "rights_status": "unknown"
+    },
+    {
+      "id": "nargil-store",
+      "url": "https://nargil.ir/store.aspx",
+      "role": "portal",
+      "observation": "Storefront categories",
+      "evidence_status": "reported",
+      "report_retrieval_status": "retrieved",
+      "archive_status": "not_archived",
+      "rights_status": "unknown"
+    },
+    {
+      "id": "nargil-monstera",
+      "url": "https://nargil.ir/Product/8934/برگ-انجیری/",
+      "role": "aggregator",
+      "observation": "Multiple vendors and ambiguous trade naming",
+      "evidence_status": "reported",
+      "report_retrieval_status": "retrieved",
+      "archive_status": "not_archived",
+      "rights_status": "unknown"
+    },
+    {
+      "id": "nargil-cart",
+      "url": "https://nargil.ir/Cart/",
+      "role": "cart",
+      "observation": "Delivery policy unavailable in retrieved material",
+      "evidence_status": "reported",
+      "report_retrieval_status": "retrieved",
+      "archive_status": "not_archived",
+      "rights_status": "unknown"
+    },
+    {
+      "id": "vip-faq",
+      "url": "https://vipshop.flowers/faqs/",
+      "role": "seller_policy",
+      "observation": "Same-day delivery subject to selected window",
+      "evidence_status": "reported",
+      "report_retrieval_status": "retrieved",
+      "archive_status": "not_archived",
+      "rights_status": "unknown"
+    },
+    {
+      "id": "vip-basket-133",
+      "url": null,
+      "role": "product",
+      "observation": "Equivalent seasonal replacement by value, color, quality and design",
+      "evidence_status": "reported",
+      "report_retrieval_status": "retrieved",
+      "archive_status": "not_archived",
+      "rights_status": "unknown"
+    },
+    {
+      "id": "mashhad-channel",
+      "url": "https://t.me/s/floristshopmashhad",
+      "role": "social_channel",
+      "observation": "ارسال اسنپ. Target post ID unavailable",
+      "evidence_status": "reported",
+      "report_retrieval_status": "retrieved",
+      "archive_status": "not_archived",
+      "rights_status": "unknown"
+    },
+    {
+      "id": "sarinaland-neon",
+      "url": "https://sarinaland.com/product/پتوس-نئون/",
+      "role": "product",
+      "observation": "Mahallat greenhouse and advertised nationwide Chapar delivery",
+      "evidence_status": "reported",
+      "report_retrieval_status": "retrieved",
+      "archive_status": "not_archived",
+      "rights_status": "unknown"
+    }
+  ],
+  "authority": "Kew POWO per execution report",
+  "taxa": [
+    {
+      "name": "Epipremnum aureum",
+      "ipni_id": "87014-1",
+      "alias_id": "pothos",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:87014-1",
+      "evidence_status": "reported"
+    },
+    {
+      "name": "Dracaena trifasciata",
+      "ipni_id": "77164235-1",
+      "alias_id": "sansevieria",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77164235-1",
+      "evidence_status": "reported"
+    },
+    {
+      "name": "Zamioculcas zamiifolia",
+      "ipni_id": "89402-1",
+      "alias_id": "zz",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:89402-1",
+      "evidence_status": "reported"
+    },
+    {
+      "name": "Monstera deliciosa",
+      "ipni_id": "87478-1",
+      "alias_id": "barg-anjiri",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:87478-1",
+      "evidence_status": "reported"
+    },
+    {
+      "name": "Alocasia macrorrhizos",
+      "ipni_id": "60444565-2",
+      "alias_id": null,
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60444565-2",
+      "evidence_status": "reported"
+    },
+    {
+      "name": "Colocasia esculenta",
+      "ipni_id": "1170772-2",
+      "alias_id": null,
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1170772-2",
+      "evidence_status": "reported"
+    }
+  ],
+  "identity_review": {
+    "ambiguous": [
+      "barg-anjiri",
+      "baba-adam"
+    ],
+    "context_required": [
+      "pothos",
+      "sansevieria"
+    ],
+    "hypotheses": {
+      "baba-adam": [
+        "Alocasia macrorrhizos",
+        "Colocasia esculenta"
+      ]
+    },
+    "treatments": [
+      {
+        "concept": "split-leaf-philodendron",
+        "authority": "Kew POWO",
+        "accepted_name": "Philodendron bipinnatifidum",
+        "other_names": [
+          "Thaumatophyllum bipinnatifidum",
+          "Philodendron selloum"
+        ]
+      },
+      {
+        "concept": "split-leaf-philodendron",
+        "authority": "2018 treatment cited in execution report",
+        "accepted_name": "Thaumatophyllum bipinnatifidum"
+      }
+    ]
+  },
+  "care_review": {
+    "profile_id": "plant-fa-pothos-001",
+    "status": "editorial_review_pending",
+    "light": {
+      "preferred": "bright indirect",
+      "tolerated": "lower light",
+      "retail_conflict": "any light"
+    },
+    "humidity": {
+      "required_high_humidity": false,
+      "supplemental_context": "very dry interiors"
+    },
+    "toxicity": {
+      "animals": [
+        "cat",
+        "dog"
+      ],
+      "principle": "insoluble calcium oxalates"
+    }
+  },
+  "wholesale": [
+    {
+      "market": "Imam Reza/Khavaran",
+      "source_label": "بازار گل امام رضا",
+      "source_date": "1402/08/28",
+      "calendar": "solar_hijri",
+      "method": "online_market_list",
+      "item": "گلایل",
+      "unit_count": 50,
+      "unit": "stem",
+      "evidence_status": "reported"
+    },
+    {
+      "market": "Imam Reza/Khavaran",
+      "source_label": "بازار گل امام رضا",
+      "source_date": "1403/06/31",
+      "calendar": "solar_hijri",
+      "method": "online_market_list",
+      "item": "گلایل",
+      "unit_count": 50,
+      "unit": "stem",
+      "evidence_status": "reported"
+    },
+    {
+      "market": "Imam Reza/Khavaran",
+      "source_label": "بازار گل امام رضا",
+      "source_date": "1404/05/05",
+      "calendar": "solar_hijri",
+      "method": "online_market_list",
+      "item": "گلایل",
+      "unit_count": 50,
+      "unit": "stem",
+      "evidence_status": "reported"
+    },
+    {
+      "market": "Imam Reza/Khavaran",
+      "source_label": "بازار گل امام رضا",
+      "source_date": "1404/05/05",
+      "calendar": "solar_hijri",
+      "method": "online_market_list",
+      "item": "رز هلندی باکسی",
+      "unit_count": 20,
+      "unit": "stem",
+      "evidence_status": "reported"
+    }
+  ]
+}

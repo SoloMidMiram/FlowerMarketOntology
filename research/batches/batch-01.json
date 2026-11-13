@@ -1,0 +1,290 @@
+{
+  "report": "../sources/first-collection-batch.md",
+  "reported_access_date": "2026-11-12",
+  "sources": {
+    "rhs": "https://www.rhs.org.uk/plants/epipremnum/growing-guide",
+    "ncstate": "https://plants.ces.ncsu.edu/plants/epipremnum-aureum/",
+    "aspca": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/golden-pothos"
+  },
+  "seller_captures": [
+    {
+      "seller": "Tarhegol",
+      "url": "https://tarhegol.com/shop/",
+      "surface": "catalog",
+      "raw_labels": [
+        "گیاهان آپارتمانی نور دوست",
+        "گیاهان آپارتمانی با نور متوسط",
+        "گیاهان آپارتمانی سایه دوست"
+      ],
+      "provenance_type": "supplied_report",
+      "evidence_status": "reported"
+    },
+    {
+      "seller": "Nargil",
+      "url": "https://nargil.ir/Product/98815/پتوس-طلایی/",
+      "surface": "product",
+      "raw_labels": [
+        "پتوس طلایی"
+      ],
+      "provenance_type": "supplied_report",
+      "evidence_status": "reported"
+    },
+    {
+      "seller": "VIPShop",
+      "url": "https://vipshop.flowers/",
+      "surface": "catalog",
+      "raw_labels": [
+        "باکس گل",
+        "سبد گل",
+        "دسته گل",
+        "تاج گل",
+        "گل ترحیم"
+      ],
+      "provenance_type": "supplied_report",
+      "evidence_status": "reported"
+    },
+    {
+      "seller": "The Sill",
+      "url": "https://www.thesill.com/products/golden-pothos",
+      "surface": "product",
+      "raw_labels": [
+        "Golden Pothos"
+      ],
+      "provenance_type": "supplied_report",
+      "evidence_status": "reported"
+    },
+    {
+      "seller": "Patch",
+      "url": "https://www.patchplants.com/",
+      "surface": "homepage",
+      "raw_labels": [
+        "Shop indoor plants"
+      ],
+      "provenance_type": "supplied_report",
+      "evidence_status": "reported"
+    },
+    {
+      "seller": "Bloom & Wild",
+      "url": "https://www.bloomandwild.com/send-flowers/tagonly/plants",
+      "surface": "collection",
+      "raw_labels": [],
+      "provenance_type": "supplied_report",
+      "evidence_status": "reported"
+    },
+    {
+      "seller": "Mashhad seller channel",
+      "url": null,
+      "surface": "post",
+      "raw_labels": [
+        "#پتوس",
+        "ارسال اسنپ"
+      ],
+      "provenance_type": "supplied_report",
+      "evidence_status": "reported"
+    }
+  ],
+  "aliases": [
+    {
+      "id": "pothos",
+      "forms": [
+        "پتوس",
+        "پوتوس"
+      ],
+      "locale": "fa-IR",
+      "market": "IR",
+      "resolution": "preferred_candidate",
+      "candidates": [
+        {
+          "name": "Epipremnum aureum",
+          "status": "preferred",
+          "basis": "golden pothos and matching seller context"
+        }
+      ],
+      "evidence_status": "reported",
+      "source_section": "Initial five-name identity register"
+    },
+    {
+      "id": "sansevieria",
+      "forms": [
+        "سانسوریا",
+        "سانسوريا"
+      ],
+      "locale": "fa-IR",
+      "market": "IR",
+      "resolution": "trade_group",
+      "candidates": [
+        {
+          "name": "Dracaena trifasciata",
+          "status": "possible",
+          "basis": "شمشیری narrows candidate; Sansevieria trifasciata is a reported legacy scientific synonym"
+        }
+      ],
+      "evidence_status": "reported",
+      "source_section": "Initial five-name identity register"
+    },
+    {
+      "id": "zz",
+      "forms": [
+        "زاموفیلیا",
+        "زامیفولیا",
+        "زاموفولیا"
+      ],
+      "locale": "fa-IR",
+      "market": "IR",
+      "resolution": "species_candidate",
+      "candidates": [
+        {
+          "name": "Zamioculcas zamiifolia",
+          "status": "preferred",
+          "basis": "species-level usage reported; cultivar modifiers need review"
+        }
+      ],
+      "evidence_status": "reported",
+      "source_section": "Initial five-name identity register"
+    },
+    {
+      "id": "barg-anjiri",
+      "forms": [
+        "برگ‌انجیری",
+        "برگ انجیری"
+      ],
+      "locale": "fa-IR",
+      "market": "IR",
+      "resolution": "ambiguous",
+      "candidates": [
+        {
+          "name": "Monstera deliciosa",
+          "status": "possible",
+          "basis": "plain Nargil listing"
+        },
+        {
+          "name": "Philodendron bipinnatifidum",
+          "status": "possible",
+          "basis": "qualified philodendron listing; authority treatment needs confirmation"
+        }
+      ],
+      "evidence_status": "reported",
+      "source_section": "Initial five-name identity register"
+    },
+    {
+      "id": "baba-adam",
+      "forms": [
+        "بابا آدم"
+      ],
+      "locale": "fa-IR",
+      "market": "IR",
+      "resolution": "unresolved",
+      "candidates": [
+        {
+          "name": "Alocasia",
+          "status": "possible",
+          "basis": "Nargil trade usage supports genus only"
+        }
+      ],
+      "evidence_status": "reported",
+      "source_section": "Initial five-name identity register"
+    }
+  ],
+  "pilot": {
+    "id": "plant-fa-pothos-001",
+    "taxon_candidate": "Epipremnum aureum",
+    "evidence_status": "reported",
+    "claims": [
+      {
+        "topic": "light",
+        "recommendation": "Bright indirect light is preferred. Lower light is tolerated and can reduce growth or variegation.",
+        "source_ids": [
+          "rhs",
+          "ncstate"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "topic": "watering",
+        "recommendation": "In a well-drained indoor container, check the substrate and rewater after partial drying.",
+        "source_ids": [
+          "rhs",
+          "ncstate"
+        ],
+        "review_status": "draft",
+        "conflict": "Tarhegol lists twice-weekly watering for a retail product."
+      },
+      {
+        "topic": "humidity",
+        "recommendation": "Review whether typical household humidity suffices and when additional humidity is useful.",
+        "source_ids": [
+          "rhs",
+          "ncstate"
+        ],
+        "review_status": "draft",
+        "conflict": "Sources differ in emphasis. Editorial synthesis pending."
+      },
+      {
+        "topic": "substrate_repotting",
+        "recommendation": "Use a well-draining medium and assess root crowding before repotting.",
+        "source_ids": [
+          "rhs"
+        ],
+        "review_status": "draft"
+      },
+      {
+        "topic": "toxicity",
+        "recommendation": "Toxic to cats and dogs. Reported toxic principle is insoluble calcium oxalates.",
+        "source_ids": [
+          "aspca"
+        ],
+        "review_status": "draft"
+      }
+    ]
+  },
+  "search_fixtures": [
+    {
+      "query": "پوتوس",
+      "expected_route": "alias",
+      "alias_id": "pothos",
+      "status": "untested"
+    },
+    {
+      "query": "سانسوريا",
+      "expected_route": "alias",
+      "alias_id": "sansevieria",
+      "status": "untested"
+    },
+    {
+      "query": "برگ انجیری",
+      "expected_route": "disambiguation",
+      "alias_id": "barg-anjiri",
+      "status": "untested"
+    },
+    {
+      "query": "بابا آدم",
+      "expected_route": "unresolved",
+      "alias_id": "baba-adam",
+      "status": "untested"
+    },
+    {
+      "query": "زامیفولیا",
+      "expected_route": "alias",
+      "alias_id": "zz",
+      "status": "untested"
+    },
+    {
+      "query": "Sansevieria trifasciata",
+      "expected_route": "scientific_synonym",
+      "alias_id": null,
+      "status": "untested"
+    },
+    {
+      "query": "نور کم",
+      "expected_route": "light_collection",
+      "alias_id": null,
+      "status": "untested"
+    },
+    {
+      "query": "زرد شدن برگ",
+      "expected_route": "symptom",
+      "alias_id": null,
+      "status": "untested"
+    }
+  ]
+}

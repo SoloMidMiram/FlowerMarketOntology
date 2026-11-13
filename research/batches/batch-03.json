@@ -1,0 +1,175 @@
+{
+  "report": "../sources/tehran-tranche-update.md",
+  "baseline": "batch-02.json",
+  "evidence_status": "reported",
+  "pilot": {
+    "profile_id": "plant-fa-pothos-001",
+    "editorial_status": "project_review_pending",
+    "claims": [
+      {
+        "topic": "light",
+        "en": "Pothos prefers bright, indirect light. It tolerates lower light, where growth may slow and variegation may fade.",
+        "fa": "پتوس نور روشن و غیرمستقیم را ترجیح می‌دهد. نور کمتر را تحمل می‌کند، اما رشد آن ممکن است کندتر شود و ابلقی برگ‌ها کاهش یابد.",
+        "source_ids": [
+          "rhs",
+          "ncstate"
+        ]
+      },
+      {
+        "topic": "humidity",
+        "en": "Pothos tolerates typical household humidity. A moderate increase may help in very dry rooms.",
+        "fa": "پتوس معمولاً رطوبت معمول خانه را تحمل می‌کند. در اتاق‌های بسیار خشک، افزایش ملایم رطوبت می‌تواند مفید باشد.",
+        "source_ids": [
+          "rhs",
+          "ncstate"
+        ]
+      },
+      {
+        "topic": "toxicity",
+        "en": "Pothos is toxic to cats and dogs if chewed or swallowed. Insoluble calcium oxalates can irritate the mouth.",
+        "fa": "جویدن یا بلعیدن پتوس برای گربه‌ها و سگ‌ها سمی است. بلورهای نامحلول اگزالات کلسیم می‌توانند دهان را تحریک کنند.",
+        "animal_species": [
+          "cat",
+          "dog"
+        ],
+        "source_ids": [
+          "aspca"
+        ]
+      }
+    ],
+    "source_registry": "batch-01.json",
+    "asset_candidate": {
+      "page_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:87014-1/images",
+      "reported_license": "CC-BY-3.0",
+      "reported_credit": "Board of Trustees, RBG Kew",
+      "asset_url": null,
+      "publication_status": "selection_and_attribution_pending"
+    }
+  },
+  "modifiers": [
+    {
+      "raw": "ابلق",
+      "kind": "appearance_descriptor",
+      "meaning": "variegated"
+    },
+    {
+      "raw": "پنجه شیری",
+      "kind": "trade_modifier",
+      "meaning": "local seller label"
+    },
+    {
+      "raw": "Calidora",
+      "kind": "cultivar_candidate",
+      "meaning": "named horticultural reference in report"
+    }
+  ],
+  "policies": [
+    {
+      "seller": "VIPShop",
+      "channel": "retail",
+      "scope_kind": "product",
+      "scope_id": "B133",
+      "url": "https://vipshop.flowers/product/flower-box-no-133/",
+      "policy_kind": "substitution",
+      "summary": "Foliage and decorations may vary with inventory. Some flowers may vary by season."
+    },
+    {
+      "seller": "VIPShop",
+      "channel": "retail",
+      "scope_kind": "product",
+      "scope_id": "K133",
+      "url": "https://vipshop.flowers/product/flower-basket-no-133/",
+      "policy_kind": "substitution",
+      "summary": "Seasonal substitutes must match comparable value, color, quality and design style."
+    },
+    {
+      "seller": "Nargil",
+      "channel": "wholesale_project",
+      "scope_kind": "channel",
+      "scope_id": "nargil-wholesale-project",
+      "policy_kind": "delivery",
+      "summary": "Timing and delivery depend on the project and destination.",
+      "url": null
+    }
+  ],
+  "gaps": [
+    {
+      "subject": "Nargil retail",
+      "fields": [
+        "coverage",
+        "fee",
+        "window",
+        "substitution"
+      ],
+      "status": "unavailable"
+    },
+    {
+      "subject": "Mashhad pothos message",
+      "fields": [
+        "target_permalink",
+        "message_timestamp"
+      ],
+      "status": "unavailable",
+      "related_post_url": "https://t.me/floristshopmashhad/778",
+      "related_post_role": "different_message"
+    },
+    {
+      "subject": "mobile user testing",
+      "status": "pending"
+    },
+    {
+      "subject": "wholesale visits",
+      "status": "pending"
+    }
+  ],
+  "search_fixtures": [
+    {
+      "query": "برگ انجيري",
+      "expected_route": "disambiguation",
+      "candidate_ref": "barg-anjiri",
+      "status": "untested"
+    },
+    {
+      "query": "زامفولیا",
+      "expected_route": "alias",
+      "candidate_ref": "zz",
+      "status": "untested"
+    },
+    {
+      "query": "Monstera deliciosa",
+      "expected_route": "scientific_name",
+      "candidate_ref": "87478-1",
+      "status": "untested"
+    },
+    {
+      "query": "Philodendron bipinnatifidum",
+      "expected_route": "scientific_name",
+      "candidate_ref": "77306988-1",
+      "status": "untested"
+    },
+    {
+      "query": "Thaumatophyllum bipinnatifidum",
+      "expected_route": "alternative_treatment",
+      "candidate_ref": "77306988-1",
+      "status": "untested"
+    },
+    {
+      "query": "Epipremnum aureum",
+      "expected_route": "scientific_name",
+      "candidate_ref": "87014-1",
+      "status": "untested"
+    },
+    {
+      "query": "Scindapsus aureus",
+      "expected_route": "scientific_synonym",
+      "candidate_ref": "87014-1",
+      "status": "untested"
+    },
+    {
+      "query": "Pothos aureus",
+      "expected_route": "scientific_synonym",
+      "candidate_ref": "87014-1",
+      "status": "untested"
+    }
+  ]
+}

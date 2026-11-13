@@ -19,6 +19,16 @@ The supplied report, `flower_knowledge_market_taxonomy_ia_research_2026-11-11.md
 
 The report also identifies Tehran’s Mahallati and Imam Reza/Khavaran markets. Treat them as leads for wholesale fieldwork on channels, selling units, and seasonality. Keep exact operating hours and stall counts out of stable reference data.
 
+## First collection batch
+
+The [12 November research report](research/sources/first-collection-batch.md) supplies newer research on Tarhegol, Nargil, VIPShop, a Mashhad seller channel, The Sill, Patch and Bloom & Wild. The [structured intake](research/batches/batch-01.json) records selected labels, supplied URLs, name candidates, draft care and search cases. It uses `reported` for this import because it relies on the report’s citations. The earlier direct Sill records in [observations.jsonl](observations.jsonl) cover the collection page and chooser. The new report discusses a product and shipping, so these surfaces support a comparison of coverage. A historical change audit needs matched pages and the original capture.
+
+## Tehran execution update
+
+The [execution intake](research/batches/batch-02.json) adds product, category, aggregator, policy, and social surfaces from the [execution report](research/sources/tehran-execution-update.md). The report records live retrieval on 12 November. The intake uses `reported` for those imports and records archive status separately. Sarinaland adds a Mahallat regional seller. Mahallati is a separate Tehran wholesale market. Imam Reza has repeated dated online unit examples, while Mahallati still has secondary unit evidence. The Sill trend remains unavailable pending a matched historical surface.
+
+The [next tranche](research/batches/batch-03.json) recovers separate VIPShop product URLs for B133 and K133 and reports different substitution terms for each. Nargil's wholesale/project delivery wording has a separate scope from its household retail terms. The recovered Mashhad post 778 is a different message. The target pothos permalink remains missing. Mahallati seller leads advance recruitment for fieldwork, while Imam Reza's online lists remain a separate collection.
+
 ## Earlier direct browser audit
 
 | Market | Indoor-plant seller | Florist benchmark | Evidence status |

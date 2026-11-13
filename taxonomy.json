@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 5,
   "status": "proposed",
   "locales": ["fa-IR", "en"],
   "catalog_kinds": {
@@ -27,10 +27,24 @@
   "entities": {
     "taxon": ["id", "accepted_name", "rank", "authority_reference", "source_revision", "status", "verified_at"],
     "taxon_relationship": ["from_taxon_id", "to_taxon_id", "relation", "source_id"],
+    "taxon_treatment": ["taxon_id", "authority", "source_revision", "name", "name_identifier", "name_status", "capture_id", "checked_at"],
     "cultivar": ["id", "taxon_id", "name", "registration_reference", "review_status"],
+    "listing_modifier": ["id", "capture_id", "raw_label", "kind", "cultivar_id_optional", "basis", "review_status"],
+    "identification_example": ["id", "alias_id", "capture_id", "observed_traits", "candidate_taxon_id", "supported_rank", "review_status", "asset_ids"],
     "plant_profile": ["id", "taxon_id", "cultivar_id_optional", "identification_precision", "display_names", "alias_ids", "care_claim_ids"],
-    "alias": ["id", "profile_ids", "raw_label", "normalized_label", "locale", "market", "source_id", "ambiguity_status"],
-    "care_claim": ["id", "profile_id", "topic", "condition", "recommendation", "source_id", "source_locator", "review_status", "reviewer", "reviewed_at"],
+    "alias": ["id", "raw_label", "normalized_label", "locale", "market", "source_id", "resolution_status"],
+    "alias_candidate": ["alias_id", "taxon_id", "decision", "confidence", "evidence_refs", "basis", "reviewer", "reviewed_at"],
+    "source_capture": ["id", "source_id", "accessed_at", "surface_role", "capture_method", "provenance_type", "evidence_status", "retrieval_status", "archive_status", "locator", "snapshot_ref", "rights_status"],
+    "evidence_gap": ["capture_id", "requested_field", "status", "reason"],
+    "seller_observation": ["id", "capture_id", "raw_label", "parent_path", "ui_role", "mapped_concept_id", "mapping_status"],
+    "care_claim": ["id", "profile_id", "topic", "condition", "recommendation", "applicability", "review_status", "reviewer", "reviewed_at"],
+    "care_claim_evidence": ["claim_id", "capture_id", "locator", "relation", "evidence_note"],
+    "care_claim_translation": ["claim_id", "locale", "wording", "review_status", "reviewer", "reviewed_at"],
+    "media_asset": ["id", "item_url", "source_page_url", "creator", "credit", "license_url", "license_scope", "changes_note", "rights_review_status", "publication_status"],
+    "toxicity_assessment": ["claim_id", "taxon_id", "animal_species", "status", "toxic_principle"],
+    "search_fixture": ["id", "raw_query", "locale", "expected_concept_ids", "expected_route", "expected_ambiguity"],
+    "search_run": ["fixture_id", "tested_at", "device", "os_version", "browser_version", "keyboard_locale", "entered_query", "normalized_query", "autocorrection", "ranked_results", "ambiguity_displayed", "correction_path", "artifact_ref", "outcome"],
+    "symptom_case": ["id", "profile_id", "symptoms", "condition_observations", "timing", "asset_refs", "capture_id", "evidence_quality"],
     "source": ["id", "url", "publisher", "source_kind", "observed_at", "evidence_scope", "rights_status"],
     "diagnostic_relation": ["symptom_id", "cause_id", "conditions", "source_id", "review_status"],
     "category": ["id", "domain", "labels"],
@@ -38,6 +52,9 @@
     "product": ["id", "kind", "profile_ids", "variant_attributes"],
     "arrangement_ingredient": ["product_id", "taxon_id_optional", "trade_name", "stem_count_optional", "substitution_policy"],
     "seller": ["id", "name", "market", "channel"],
-    "offer": ["id", "product_id", "seller_id", "market", "price", "delivery_city", "stock_status", "observed_at"]
+    "offer": ["id", "product_id", "seller_id", "market"],
+    "offer_observation": ["offer_id", "capture_id", "observed_at", "price_raw", "currency", "unit_raw", "unit_count", "stock_status", "delivery_zone", "delivery_timing", "substitution_terms"],
+    "commerce_policy_observation": ["id", "capture_id", "seller_id", "channel", "scope_kind", "scope_id", "policy_kind", "terms_raw", "conditions"],
+    "wholesale_observation": ["id", "capture_id", "physical_market", "collection_method", "source_date_raw", "calendar", "vendor_reference", "stall_reference", "item", "grade", "origin", "unit_raw", "unit_count", "price_raw", "currency", "minimum_order", "seasonality_note"]
   }
 }
