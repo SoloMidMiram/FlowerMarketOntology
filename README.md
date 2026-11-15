@@ -10,11 +10,27 @@ The first public knowledge-data release contains one bilingual golden-pothos pro
 
 See the [project knowledge map](knowledge-map.md) for the site categories, research coverage, and evidence boundaries.
 
+The [live product presentation audit](research/product-presentation-audit.md) compares seller grouping, product details and gaps across sampled Iranian, U.S. and U.K. pages.
+
 Original reports live in [research/sources](research/sources/). Their structured imports live in [research/batches](research/batches/). [Direct observations](observations.jsonl) and the [taxonomy](taxonomy.json) remain at the project root.
 
 The [Tehran execution intake](research/batches/batch-02.json) extends the first batch with page-level evidence, reported authority IDs, and online wholesale unit examples. The [third tranche](research/batches/batch-03.json) adds bilingual pilot wording, an image candidate, scoped seller policies, and search fixtures. The roadmap tracks remaining validation and release work.
 
 Build a maintained Persian and English reference that connects plant names, botanical identities, and cited care advice. The same records should support a plant directory, condition-based discovery, and troubleshooting. A later shop can attach local offers and arrangements while keeping plant profiles and care links stable.
+
+## Run the knowledge pilot
+
+```sh
+python -m pip install -r requirements.txt
+python ontology.py validate
+python ontology.py search "برگ انجیری"
+python ontology.py search "پتوس طلایی"
+python ontology.py export
+python ontology.py schema
+python -m unittest discover -s tests
+```
+
+The Python models define the executable pilot contract. Taxonomy v6 remains the broader design vocabulary. The importer reads the four research batches and the observation log, then emits canonical schema v4. Keep the input files as evidence. For a breaking export change, add a version and an explicit migration. Taxon IDs are distinct from display names, which come from an identified treatment. The internal pilot export includes draft care and candidate image metadata. Editorial review, exact evidence locators, image selection and attribution, and mobile user testing remain release work.
 
 ## Release plan
 

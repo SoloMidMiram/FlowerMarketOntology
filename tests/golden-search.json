@@ -1,0 +1,62 @@
+[
+  {
+    "query": "برگ‌انجيري",
+    "expected": {
+      "route": "disambiguation",
+      "concept_ids": [
+        "barg-anjiri",
+        "87478-1",
+        "77306988-1"
+      ],
+      "profile_id": null
+    }
+  },
+  {
+    "query": "باباآدم",
+    "expected": {
+      "route": "unresolved",
+      "concept_ids": [
+        "baba-adam",
+        "genus-alocasia"
+      ],
+      "profile_id": null
+    }
+  },
+  {
+    "query": "Scindapsus aureus",
+    "expected": {
+      "route": "scientific_synonym",
+      "concept_ids": [
+        "87014-1"
+      ],
+      "profile_id": "plant-fa-pothos-001"
+    }
+  },
+  {
+    "query": "پوتوس طلایی",
+    "expected": {
+      "route": "alias",
+      "concept_ids": [
+        "pothos",
+        "87014-1"
+      ],
+      "profile_id": "plant-fa-pothos-001"
+    }
+  },
+  {
+    "query": "بابا آدم گورخری",
+    "expected": {
+      "route": "no_match",
+      "concept_ids": [],
+      "profile_id": null
+    }
+  },
+  {
+    "query": "گل خیالی ۹۹۹",
+    "expected": {
+      "route": "no_match",
+      "concept_ids": [],
+      "profile_id": null
+    }
+  }
+]

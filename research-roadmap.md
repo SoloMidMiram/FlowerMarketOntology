@@ -20,11 +20,25 @@ For v1.0, verify that a maintainer can correct names or claims, apply documented
 
 Decide on graph exports or evidence-grounded Q&A after the catalog and read interface have demonstrated a concrete interoperability or reader need.
 
-## Baseline verified on November 15, 2026
+## Historical baseline snapshot from November 15, 2026
 
-- Main at `4ae56a3` contains the research foundation. The five PRs are open. #1 and #5 target main. #2, #3, and #4 target #1’s branch.
+- At this snapshot, main at `4ae56a3` contained the research foundation. PRs #1–#5 were open at the time. #1 and #5 targeted main, and #2, #3, and #4 targeted #1’s branch.
 - Local Python 3.11 validation passed at #1 `b1c88a1` and #2 `5887cf0`. Each validated five direct observations, 11 presentation records, and 16 search fixtures. The unit suites passed 11 and 13 tests respectively.
 - The #2 revision provides reviewed-claim filtering, and its ordinary export still serializes the full dataset. Public consumers need the boundary specified in #7.
+
+## Executable pilot status
+
+The [fourth tranche](research/batches/batch-04.json) adds six bilingual pothos drafts with source section locators. The locators come from the supplied report. Review against the original pages and approve each locale before release. The Dell Enecks image is a specific licensed candidate reported by the tranche. Retrieve the exact file and record attribution before use.
+
+Next research, in release order:
+
+1. Reproduce the pothos source passages and pin one exact image. Confirm species applicability for genus-level RHS guidance and record the media checksum, license evidence and credit.
+2. Collect expert-identified specimens for «برگ انجیری فر» and «بابا آدم گورخری». Check which morphological cues survive juvenile growth and which modifiers are vendor-specific. Collect permissioned images.
+3. Extend search expectations for qualified trade names, genus queries and historical treatments before running iOS/Safari and Android/Chrome user tasks. Keep any unsafe automatic species resolution visible as a failed case.
+4. Collect household symptom cases with conditions, intervention and follow-up so reviewers can compare competing causes.
+5. Resolve Nargil consumer delivery and locate the actual Mashhad pothos message. Post 648 documents «بابا آدم». The tranche's summary describes the permalink gap as closed, but its detailed evidence identifies a different plant. Confirm K133 terms at product scope and reconcile online wholesale pack counts by dated source before both physical market samples.
+
+The importer, canonical pilot contract, schema export and local search runner are implemented. Local validation covers the five seller observations and all 16 imported query fixtures. GitHub Actions is configured for the same checks. Raw fixture statuses continue to describe the original research. Device and user testing are separate.
 
 ## Test, review, and iterate
 
