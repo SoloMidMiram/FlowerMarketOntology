@@ -1,13 +1,51 @@
 import json
+from datetime import date
+from hashlib import sha256
 from pathlib import Path
+from tempfile import TemporaryDirectory
 import unittest
 
 from pydantic import ValidationError
 
-from ontology import Dataset, build
+from ontology import Dataset, EvidenceArchive, LocaleReview, build
 
 
 class PilotTests(unittest.TestCase):
+    def test_review_requires_archive_and_current_locale_revision(self):
+        dataset = self.dataset.model_copy(deep=True)
+        claim = dataset.profile.claims[0]
+        claim.reviews["en"] = LocaleReview(
+            reviewer="fixture", reviewed_at=date(2026, 11, 13),
+            decision="approved", wording_revision=claim.wording_revision("en"),
+        )
+        with TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.assertEqual(dataset.reviewed_claims("en", root), [])
+            content = b"Original test excerpt"
+            (root / "excerpt.txt").write_bytes(content)
+            for key in claim.evidence_ids:
+                source = dataset.evidence[key]
+                source.provenance = "verified"
+                source.observed_at = date(2026, 11, 13)
+                source.locator = claim.source_locators[key]
+                source.archive = EvidenceArchive(path="excerpt.txt", sha256=sha256(content).hexdigest(),
+                                                 reuse_basis="Original test fixture")
+            self.assertEqual(dataset.reviewed_claims("en", root), [claim])
+            self.assertEqual(dataset.reviewed_claims("fa", root), [])
+            claim.wording["en"] += " Edited."
+            self.assertEqual(dataset.reviewed_claims("en", root), [])
+
+    def test_dimensions_delivery_and_care_have_independent_visibility(self):
+        data = self.dataset.model_dump(mode="json")
+        row = next(item for item in data["presentation_observations"] if item["id"] == "vip-k133")
+        self.assertEqual(row["fields"]["dimensions"]["visibility"], "shown")
+        row["fields"]["delivery"] = {"visibility": "conditional", "evidence_status": "verified",
+                                     "locator": "Example city selector"}
+        row["fields"]["care"] = {"visibility": "unassessed", "evidence_status": "unavailable"}
+        Dataset.model_validate(data)
+        row["fields"]["care"]["visibility"] = "not_found_on_surface"
+        with self.assertRaises(ValidationError):
+            Dataset.model_validate(data)
     def test_independent_search_cases_after_export(self):
         exported = Dataset.model_validate_json(self.dataset.model_dump_json())
         cases = json.loads(Path(__file__).with_name("golden-search.json").read_text(encoding="utf-8"))
