@@ -4,7 +4,7 @@ Research snapshot: 11 November 2026. Initial audience: Persian-speaking apartmen
 
 Start with [Market research](market-research.md), then read the [Knowledge and website blueprint](blueprint.md). [taxonomy.json](taxonomy.json) is the proposed content vocabulary and data contract. [observations.jsonl](observations.jsonl) contains source-linked labels for follow-up comparisons.
 
-The first release should answer **What plant do I have? Will it suit my home? What should I do when something looks wrong?** Start with Persian search and a bilingual indoor plant library. The [research roadmap](research-roadmap.md) orders the evidence audit, name mapping, care literature, and usability work. Commerce and wholesale research follow their own tracks.
+The first public knowledge-data release contains one bilingual golden-pothos profile with inspectable evidence. The [project roadmap](research-roadmap.md) links the delivery issues, acceptance gates, and research backlog.
 
 ## Intended outcome
 
@@ -21,9 +21,9 @@ Build a maintained Persian and English reference that connects plant names, bota
 | Milestone | Scope | Completion criteria |
 |---|---|---|
 | v0.1 · Research foundation | Architecture, proposed vocabulary, market notes, and evidence format | Taxonomy parses and the existing seller observations resolve to defined concepts. |
-| v0.2 · Next release | Review the [first research batch](research/batches/batch-01.json), confirm the five Persian name records, and publish the bilingual pothos pilot. | Each seller has a dated capture or documented access failure. Each name has an explicit resolution status. A reviewer can trace the pilot profile's care advice to its sources. |
-| v0.3 · Knowledge library | 15–20 reviewed profiles, five care guides, and a mobile directory with Persian, English, and scientific name search | Editorial review and mobile search checks pass, including ambiguous names and Persian spelling variants. |
-| v0.4 · Plant finder and troubleshooting | Match light and space needs to reviewed profiles and show plausible causes for common symptoms | Example scenarios cover conflicting or missing information and produce understandable results. |
-| v1.0 · Maintained reference | Stable profile URLs, documented data exports, and an editorial correction and review workflow | Someone new to the project can add a sourced claim, correct a name, and regenerate the directory without breaking existing links. |
+| v0.2 · Public knowledge-data release | Publish a reproducible, versioned public artifact and manifest with canonical serialization and one stable profile ID, approved Persian and English claims, and inspectable evidence. | Exact-head validation of reconciled main and editorial sign-off are recorded. The internal export remains separate. Regression tests verify exclusion of drafts and unapproved images. |
+| v0.3 · Knowledge library | Verify deterministic multi-profile migration and stable IDs and references across renamed treatments. Then build the Persian-first RTL mobile interface and prepare three to five additional reviewed profiles beyond pothos in parallel. | The integrated batch and interface pass joint export, search, authorization, and usability checks. The five-reader pilot aims for four unassisted completions per task, reports by task, device, and failure category, and reruns affected checks after blocking corrections. |
+| v0.4 · Plant finder and troubleshooting | Use deterministic light and space selection and a separate yellow-leaf flow with reviewed symptom-to-cause evidence. | Tests cover missing, unsupported, and conflicting evidence. Troubleshooting communicates uncertainty and offers safe next observations. |
+| v1.0 · Maintained reference | Maintain stable profile links, editorial correction workflows, documented schema migrations, and reproducible publication. | A maintainer can add or correct a sourced claim, correct a name, migrate the catalog, and regenerate the public release while preserving existing links and references. |
 
-Treat cut-flower guides, seller offers, and florist delivery as extensions. The research roadmap defines the evidence to collect before adding them.
+Commerce research proceeds independently of botanical releases. The roadmap starts Tehran offer testing with one comparable product family and defines the evidence required before ranking offers.
