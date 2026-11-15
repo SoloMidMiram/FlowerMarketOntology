@@ -12,7 +12,31 @@
     "date": "2026-11-13",
     "page_kind": "product",
     "product_kind": "arrangement",
-    "visibility": "not_found_on_surface"
+    "visibility": "not_found_on_surface",
+    "fields": {
+      "ingredients": {
+        "visibility": "shown",
+        "evidence_status": "verified",
+        "locator": "Ingredient list beside title",
+        "detail": "Four flower types with individual stem counts"
+      },
+      "dimensions": {
+        "visibility": "shown",
+        "evidence_status": "verified",
+        "locator": "Dimensions table",
+        "detail": "45 × 50 × 90 cm"
+      },
+      "delivery": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "care": {
+        "visibility": "not_found_on_surface",
+        "evidence_status": "verified",
+        "locator": "Inspected product snapshot",
+        "detail": null
+      }
+    }
   },
   {
     "id": "tar-box",
@@ -27,7 +51,33 @@
     "date": "2026-11-13",
     "page_kind": "product",
     "product_kind": "arrangement",
-    "visibility": "not_found_on_surface"
+    "visibility": "not_found_on_surface",
+    "fields": {
+      "ingredients": {
+        "visibility": "shown",
+        "evidence_status": "verified",
+        "locator": "Product description",
+        "detail": "10–15 roses"
+      },
+      "dimensions": {
+        "visibility": "not_found_on_surface",
+        "evidence_status": "verified",
+        "locator": "Inspected product snapshot",
+        "detail": null
+      },
+      "delivery": {
+        "visibility": "conditional",
+        "evidence_status": "verified",
+        "locator": "Ordering and delivery description",
+        "detail": "Timing and charge depend on prior coordination"
+      },
+      "care": {
+        "visibility": "shown",
+        "evidence_status": "verified",
+        "locator": "Foam and freshness description",
+        "detail": null
+      }
+    }
   },
   {
     "id": "sill-pothos",
@@ -42,7 +92,25 @@
     "date": "2026-11-13",
     "page_kind": "product",
     "product_kind": "live_plant",
-    "visibility": "unassessed"
+    "visibility": "unassessed",
+    "fields": {
+      "ingredients": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "dimensions": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "delivery": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "care": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      }
+    }
   },
   {
     "id": "nargil-pothos",
@@ -57,7 +125,27 @@
     "date": "2026-11-13",
     "page_kind": "aggregator",
     "product_kind": "live_plant",
-    "visibility": "unassessed"
+    "visibility": "unassessed",
+    "fields": {
+      "ingredients": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "dimensions": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "delivery": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "care": {
+        "visibility": "shown",
+        "evidence_status": "verified",
+        "locator": "Placement, watering and repotting headings",
+        "detail": null
+      }
+    }
   },
   {
     "id": "sarina-neon",
@@ -72,7 +160,25 @@
     "date": "2026-11-13",
     "page_kind": "product",
     "product_kind": "live_plant",
-    "visibility": "unassessed"
+    "visibility": "unassessed",
+    "fields": {
+      "ingredients": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "dimensions": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "delivery": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "care": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      }
+    }
   },
   {
     "id": "bloom-occasions",
@@ -87,7 +193,25 @@
     "date": "2026-11-13",
     "page_kind": "collection",
     "product_kind": null,
-    "visibility": "unassessed"
+    "visibility": "unassessed",
+    "fields": {
+      "ingredients": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "dimensions": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "delivery": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "care": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      }
+    }
   },
   {
     "id": "tar-cut",
@@ -102,7 +226,25 @@
     "date": "2026-11-13",
     "page_kind": "collection",
     "product_kind": null,
-    "visibility": "unassessed"
+    "visibility": "unassessed",
+    "fields": {
+      "ingredients": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "dimensions": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "delivery": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "care": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      }
+    }
   },
   {
     "id": "vip-baskets",
@@ -117,7 +259,25 @@
     "date": "2026-11-13",
     "page_kind": "collection",
     "product_kind": null,
-    "visibility": "unassessed"
+    "visibility": "unassessed",
+    "fields": {
+      "ingredients": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "dimensions": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "delivery": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "care": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      }
+    }
   },
   {
     "id": "sill-live",
@@ -132,7 +292,25 @@
     "date": "2026-11-13",
     "page_kind": "collection",
     "product_kind": null,
-    "visibility": "unassessed"
+    "visibility": "unassessed",
+    "fields": {
+      "ingredients": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "dimensions": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "delivery": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "care": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      }
+    }
   },
   {
     "id": "interflora-home",
@@ -147,7 +325,25 @@
     "date": "2026-11-13",
     "page_kind": "home",
     "product_kind": null,
-    "visibility": "unassessed"
+    "visibility": "unassessed",
+    "fields": {
+      "ingredients": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "dimensions": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "delivery": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "care": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      }
+    }
   },
   {
     "id": "interflora-roses",
@@ -162,6 +358,26 @@
     "date": "2026-11-13",
     "page_kind": "product",
     "product_kind": "arrangement",
-    "visibility": "unassessed"
+    "visibility": "unassessed",
+    "fields": {
+      "ingredients": {
+        "visibility": "shown",
+        "evidence_status": "verified",
+        "locator": "Bouquet Size controls",
+        "detail": "12, 18, 24 or custom red rose stems"
+      },
+      "dimensions": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "delivery": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      },
+      "care": {
+        "visibility": "unassessed",
+        "evidence_status": "unavailable"
+      }
+    }
   }
 ]
