@@ -1,6 +1,40 @@
-# Research and data roadmap
+# Project roadmap
 
-Working assumption for planning: Persian-first apartment growers in Iran, with an English edition. Tehran is the first local seller sample. Check that assumption during discovery. The supplied market report provides leads and design proposals. Its categories and rollout targets are inputs to validate.
+The first release serves Persian-first apartment growers in Iran and includes an English edition. v0.2 is a versioned public knowledge-data release with one bilingual golden-pothos profile. Tehran is the first commerce research sample.
+
+## Delivery order
+
+| Order | Issue | Acceptance gate |
+|---|---|---|
+| 1 | [#6 Reconcile the pilot PR stack](https://github.com/SoloMidMiram/FlowerMarketOntology/issues/6) | Review #5 and #1 against main, then reconcile #2 and #3. Record the final disposition of PRs #1–#5 and maintainer decisions. Capture clean-checkout validation, unit tests, and CI evidence for the exact reconciled main HEAD. Give #4 an independent commerce research base so it cannot block the botanical release. |
+| 2 | [#7 Release the bilingual pothos data](https://github.com/SoloMidMiram/FlowerMarketOntology/issues/7) | Reproduce a versioned public artifact with a stable profile ID, approved Persian and English claims, and inspectable evidence references with exact locators and scope. Include a manifest with release and schema versions, source revision, checksum, and publication approvals. Serialize both the artifact and manifest canonically using stable record and key order, UTF-8, and LF line endings. Use fixed release metadata so build timestamps cannot change checksums. Keep the internal export separate. Test missing approvals, wording edits, invalid archives, nested references, and exclusion of all unapproved images. |
+| 3 | [#8 Support multiple plants](https://github.com/SoloMidMiram/FlowerMarketOntology/issues/8) | Migrate and round-trip the pilot and a second plant. Keep project-owned concept IDs and profile links stable when botanical treatments are renamed. Preserve aliases, claim and evidence references, and sourced authority mappings. Require deterministic migration, import, and export. Reject duplicate IDs and broken references. |
+| 4a | [#9 Validate Persian search and read access](https://github.com/SoloMidMiram/FlowerMarketOntology/issues/9) | Provide versioned read-only routes and a minimal Persian-first, RTL, mobile-capable interface. Use independent fixtures and report separate results for normalization, identity resolution, ranking, ambiguity, and public-data authorization. Require zero false exact identifications on ambiguous cases and zero unauthorized data on public routes. |
+| 4b | [#10 Expand the reviewed library](https://github.com/SoloMidMiram/FlowerMarketOntology/issues/10) | Import three to five additional publishable profiles beyond pothos without application changes. Preserve unresolved labels and unknown fields. Reproduce the public artifact and manifest under #7. Use review throughput and reader findings to size later batches. The 15–20 profiles, 80–120 names and five guides are planning targets. |
+| 5 | [#11 Pilot selection and troubleshooting](https://github.com/SoloMidMiram/FlowerMarketOntology/issues/11) | Implement deterministic light and space selection using reviewed traits. Before enabling the separate yellow-leaf flow, approve symptom-to-cause relations with source locators, applicable species and conditions, and competing causes. For conflicting or unsupported evidence, communicate uncertainty and offer safe observations or questions. Withhold definitive diagnoses and unsupported interventions. Test both flows with readers. |
+| Parallel | [#12 Test Tehran offer comparability](https://github.com/SoloMidMiram/FlowerMarketOntology/issues/12) | Select one comparable product family and define required fields before collecting from a target of three sellers. Define the maximum observation age for the market and product family before comparison. Capture dated, source-linked units, counts, grades, currencies, delivery terms, and substitution disclosures where applicable. Reject rankings for missing required fields, incompatible offers, or stale observations. |
+
+After #8 and the publication contract in #7, implement and review #9 and #10 in parallel. Close v0.3 only after export and search tests pass with the reviewed batch and mobile interface together, and the reader pilot passes joint acceptance recorded in both issues. #11 follows that gate. #12 proceeds independently of botanical delivery.
+
+For v1.0, verify that a maintainer can correct names or claims, apply documented schema migrations, and reproduce the public release while preserving stable profile links and evidence references.
+
+Decide on graph exports or evidence-grounded Q&A after the catalog and read interface have demonstrated a concrete interoperability or reader need.
+
+## Baseline verified on November 15, 2026
+
+- Main at `4ae56a3` contains the research foundation. The five PRs are open. #1 and #5 target main. #2, #3, and #4 target #1’s branch.
+- Local Python 3.11 validation passed at #1 `b1c88a1` and #2 `5887cf0`. Each validated five direct observations, 11 presentation records, and 16 search fixtures. The unit suites passed 11 and 13 tests respectively.
+- The #2 revision provides reviewed-claim filtering, and its ordinary export still serializes the full dataset. Public consumers need the boundary specified in #7.
+
+## Test, review, and iterate
+
+1. Each issue records the revision, test commands, results, and open failures. Technical review and CI support the maintainer’s merge decision. The evidence and locale decisions govern publication.
+2. For joint v0.3 acceptance, ask five Persian-first readers to find a named plant, locate a sourced care instruction, and explain an ambiguous search result using the integrated build. Aim for four of five unassisted completions on **each** task as a small-sample pilot target. Report results by task, device, and failure category.
+3. Fix blocking findings, including false identifications, draft exposure, and failures that prevent task completion. Rerun affected automated tests and reader tasks after each blocking correction. Record the disposition and next scope before advancing.
+
+## Research backlog
+
+Use the investigations below to supply the delivery issues. Validate the audience and seller-sample assumptions during discovery. Treat the supplied market report as a source of leads and design proposals.
 
 | Order | Investigation and collection | Output and exit criteria |
 |---|---|---|
