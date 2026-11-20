@@ -54,7 +54,7 @@ class RightsAwareExportTests(unittest.TestCase):
                                       ["Synthetic taxon record"]),
             "identity_approval": approval("0" * 64),
             "claims": {
-                LIGHT: self.selected(self.archived(SOURCE_ID, "Synthetic light license", "light",
+                LIGHT: self.selected(self.archived(SOURCE_ID, "Synthetic external source", "light",
                                                    ["Synthetic light passage", "Synthetic second light passage"])),
                 WATERING: self.selected(self.citation()),
                 WITHHELD: {"mode": "withheld", "reason": "PRIVATE WITHHELD REASON"},
@@ -188,6 +188,46 @@ class RightsAwareExportTests(unittest.TestCase):
         for forbidden in ("PRIVATE", "research/archives", "recheck", WITHHELD, "kew-gallery",
                           "ncstate-dell-enecks", "care.pothos.toxicity.001"):
             self.assertNotIn(forbidden.encode(), artifact + manifest)
+
+    def test_repeated_source_accepts_a_consistently_reviewed_replacement(self):
+        replacement = {
+            "url": "https://example.invalid/replacement",
+            "distribution": "Synthetic replacement distribution",
+            "version": "2",
+        }
+        for claim in (LIGHT, WATERING):
+            record = self.selected_evidence(claim)
+            record["source"].update(replacement)
+            self.authorize_evidence(SOURCE_ID, record)
+        self.approve_fixture()
+
+        artifact, _ = build_release_v2(self.root, HEAD)
+        for claim in json.loads(artifact)["profile"]["claims"]:
+            reference = claim["evidence"][0]
+            self.assertEqual(reference["source_id"], SOURCE_ID)
+            self.assertEqual({key: reference[key] for key in replacement}, replacement)
+
+    def test_repeated_source_rejects_conflicts_even_with_fresh_approvals(self):
+        record = self.selected_evidence(WATERING)
+        original = dict(record["source"])
+        for field, value in (
+            ("url", "https://example.invalid/different-source"),
+            ("distribution", "Another distribution"),
+            ("version", None),
+        ):
+            with self.subTest(field=field):
+                record["source"] = {**original, field: value}
+                self.authorize_evidence(SOURCE_ID, record)
+                self.approve_fixture()
+
+                with self.assertRaisesRegex(ValueError, "Conflicting source identity for rhs"):
+                    build_release_v2(self.root, HEAD)
+
+    def test_rights_review_after_release_is_rejected(self):
+        self.selected_evidence(WATERING)["rights"]["citation"]["reviewed_at"] = "2026-01-04"
+        self.save()
+        with self.assertRaisesRegex(ValueError, "Unauthorized rights decision for rhs/citation"):
+            build_release_v2(self.root, HEAD)
 
     def test_passage_and_claim_order_do_not_change_public_bytes(self):
         expected = build_release_v2(self.root, HEAD)

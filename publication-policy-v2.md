@@ -17,6 +17,22 @@ The v2 release input specifies `release_version`, `release_date`, `intended_use`
 
 Approval records contain `reviewer`, `reviewed_at`, `decision` and `revision`. Rights decisions add a private `basis` and `permitted_use` matching the release's `intended_use`. The reviewer must belong to the maintainer-managed roster. Citation clearance applies to the stated public link as well as the intended use. For a different URL, record the reviewed source and locators that actually apply to that URL. Keep excerpts, confidential notes, and credentials out of public metadata fields.
 
+A source ID identifies one URL, distribution and optional publisher version
+throughout a release, including profile identity and selected claims.
+Passages, observation dates and disclosure modes may differ. For a reviewed
+replacement distribution, record the original source ID and the replacement
+URL, distribution and version in the review record. Apply that identity
+consistently to every use of the source ID in the release and renew the
+applicable approvals against the replacement and its locators. For example,
+record the correspondence from the historical POWO evidence ID to the actual
+WCVP distribution when reviewers approve that substitution.
+
+A standing license can predate observation. For source-specific clearance,
+reviewers must record a review dated on or after observation of the material
+being cleared. The offline exporter enforces the release-date upper bound and
+the approval bindings. Reviewers are responsible for the source-specific lower
+bound.
+
 ## Revision and output rules
 
 All revision inputs use the same canonical JSON as the output. The v2 module defines the exact typed input and hash preimages.
@@ -48,7 +64,7 @@ Claims, source references, and passages sort by canonical ID, source ID, and pas
 
 | Gate | Verification |
 |---|---|
-| V2-G1 Source identity | Evidence and rights bind the specific URL, distribution, available version and observation date. Changing version after recheck invalidates scientific approval. |
+| V2-G1 Source identity | Repeated source IDs share one URL, distribution and optional version throughout each release. Conflicting identities fail even with fresh approvals. Evidence and rights still bind the observation date and specific distribution. |
 | V2-G2 Scientific verification | The mixed synthetic release exercises archived checks and per-release external rechecks. Missing, stale, unauthorized and predating rechecks fail. |
 | V2-G3 Passage selection | A source can supply two noncontiguous passages. Duplicate IDs or locators, overlaps and invalid ranges fail. |
 | V2-G4 Rights decision | Intended-use mismatch, unresolved clearance, stale excerpt attribution clearance and invalid citation URLs fail. |

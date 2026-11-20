@@ -291,6 +291,14 @@ def build_release_v2(root: Path, source_revision: str) -> tuple[bytes, bytes]:
             "evidence": selected.evidence_approval.model_dump(mode="json"),
             "locales": selected.locale_approvals.model_dump(mode="json"),
         }
+    source_identities = {}
+    references = [identity_citation, *(ref for claim in claims for ref in claim["evidence"])]
+    for reference in references:
+        source_id = reference["source_id"]
+        source_identity = (reference["url"], reference["distribution"], reference["version"])
+        if source_identities.setdefault(source_id, source_identity) != source_identity:
+            raise ValueError(f"Conflicting source identity for {source_id}")
+
     artifact = canonical({"schema_version": SCHEMA_VERSION, "profile": {**identity, "claims": claims}})
     manifest = {
         "release_version": policy.release_version, "release_date": policy.release_date.isoformat(),
