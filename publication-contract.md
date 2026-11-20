@@ -25,7 +25,7 @@ python -m unittest discover -s tests
 python public_export.py ../pothos-release
 ```
 
-The public command reads the committed checkout, including `research/public-release.json`. The output path must be a new directory. The checked-in allowlist has no authorized profile, so the command exits with status 1 before creating the directory. The test suite builds a synthetic authorized fixture from two clean Git checkouts with different line-ending settings and compares both files byte for byte. The synthetic decisions and archive exist only inside test workspaces.
+The public command reads the committed checkout, including `research/public-release.json`. The output path must be a new directory. The checked-in allowlist has no authorized profile, so the command exits with status 1 before creating the directory. The test suite builds a synthetic authorized fixture from two clean Git checkouts with different line-ending settings and compares both files byte for byte. The synthetic decisions and archives exist only inside test workspaces. A separate regression selects light, humidity with two passages from different sources, and cat/dog toxicity. It checks deterministic ordering, excludes all other claims and images, and rejects the entire release if any selected claim has unusable evidence or stale locale approval.
 
 Successful builds write `knowledge.json` followed by `manifest.json`. A consumer should accept the pair only after checking the manifest's artifact name, schema version and SHA-256 against the actual bytes. Both files use UTF-8 without BOM, compact JSON, Unicode code-point order for object keys, and exactly one trailing LF. Claim arrays sort by canonical claim ID, references sort by source ID, and animal species are sorted and deduplicated. There is no build timestamp or network access. Fixed release metadata comes from the authorization file and the manifest records the Git source SHA. Do not interpret a manifest as a cryptographic identity signature. Trusted repository access and the maintainer's recorded decision establish authorization.
 
@@ -59,3 +59,10 @@ Identity review follows its capture. Scientific approval follows identity approv
 | Reject drafts, corrupt archives, wording changes, missing approvals and leakage | No real artifact, invalid path/range/checksum tests, duplicate and reference tests, stale scientific and locale tests, separate internal export | Capture and verify the relevant RHS, NC State and ASPCA passages, including applicability of genus-level RHS guidance. Review all six claim wordings and capture reuse rights |
 
 [Issue #7](https://github.com/SoloMidMiram/FlowerMarketOntology/issues/7) tracks the actual release. [Issue #8](https://github.com/SoloMidMiram/FlowerMarketOntology/issues/8) owns multi-profile migration. [Issue #14](https://github.com/SoloMidMiram/FlowerMarketOntology/issues/14) owns presentation visibility semantics. PR #4 remains outside this slice. Automated validation is technical evidence. Maintainer acceptance and publication decisions are pending.
+
+
+## Hosted CI gate
+
+The push and pull request checks for the initial PR #15 head reported an account-level Actions billing block. GitHub's annotations state that the jobs never started because recent account payments failed or the spending limit needs to be increased. The annotations leave the specific billing condition unresolved. The configured hosted runner never reached checkout or workflow steps. [Push check](https://github.com/SoloMidMiram/FlowerMarketOntology/actions/runs/44708668842/job/136194511392) and [pull request check](https://github.com/SoloMidMiram/FlowerMarketOntology/actions/runs/44708790979/job/136195599294).
+
+Keep the merge on hold until the account can start hosted jobs and the applicable checks pass for the exact PR head. Local clean-checkout results and Git tree comparisons provide technical evidence while hosted CI is blocked.

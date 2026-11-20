@@ -48,15 +48,22 @@ class PublicExportTests(unittest.TestCase):
     def write(self, path, data):
         (self.root / path).write_bytes(canonical(data))
 
-    def sign_fixture(self):
+    def sign_fixture(self, claims=None, excerpts=None):
         dataset = build(self.root)
         passage = {"first_line": 1, "last_line": 1}
+        sources = self.read("research/publication.json")["evidence"]
+        excerpts = excerpts or {}
 
         def reference(key):
-            return {"source_id": key, "url": str(dataset.evidence[key].url),
-                    "observed_at": self.source["observed_at"], "source_locator": self.source["locator"],
-                    "archive": {**{key: self.archive[key] for key in ("sha256", "reuse_basis")},
-                                **passage, "excerpt": self.excerpt}}
+            source = sources[key]
+            return {
+                "source_id": key, "url": str(dataset.evidence[key].url),
+                "observed_at": source["observed_at"], "source_locator": source["locator"],
+                "archive": {
+                    "sha256": source["archive"]["sha256"], "reuse_basis": source["archive"]["reuse_basis"],
+                    **passage, "excerpt": excerpts.get(key, self.excerpt),
+                },
+            }
 
         def approval(value):
             return {"reviewer": "Synthetic fixture", "reviewed_at": "2026-01-02",
@@ -69,33 +76,46 @@ class PublicExportTests(unittest.TestCase):
         identity_approval = approval({"kind": "identity-v1", "identity": identity,
                                       "archive_path": self.archive["path"]})
         conditions = {"en": "Synthetic indoor conditions", "fa": "شرایط آزمایشی"}
-        semantics = {
-            "id": self.claim_id, "topic": self.claim["topic"], "conditions": conditions,
-            "animal_species": [], "evidence": [{**reference("rhs"), "claim_locator": self.claim["evidence"]["rhs"]}],
-        }
-        wording = {locale: self.claim[locale] for locale in ("en", "fa")}
-        evidence_approval = approval({
-            "kind": "evidence-v1", "identity_revision": identity_approval["revision"], "semantics": semantics,
-            "wording": wording, "archive_paths": {"rhs": self.archive["path"]},
-        })
-        locale_approvals = {
-            locale: approval({"kind": "locale-v1", "evidence_revision": evidence_approval["revision"],
-                              "locale": locale, "wording": text})
-            for locale, text in wording.items()
-        }
-        self.expected = {"schema_version": 1, "profile": {**identity, "claims": [{**semantics, "wording": wording}]}}
+        projected = []
+        selections = {}
+        approvals = {}
+        for claim in sorted(claims or [self.claim], key=lambda record: record["id"]):
+            claim_id = claim["id"]
+            evidence_ids = sorted(claim["evidence"])
+            semantics = {
+                "id": claim_id, "topic": claim["topic"], "conditions": conditions,
+                "animal_species": sorted(claim.get("animal_species", [])),
+                "evidence": [{**reference(key), "claim_locator": claim["evidence"][key]}
+                             for key in evidence_ids],
+            }
+            wording = {locale: claim[locale] for locale in ("en", "fa")}
+            evidence_approval = approval({
+                "kind": "evidence-v1", "identity_revision": identity_approval["revision"], "semantics": semantics,
+                "wording": wording, "archive_paths": {key: sources[key]["archive"]["path"] for key in evidence_ids},
+            })
+            locale_approvals = {
+                locale: approval({"kind": "locale-v1", "evidence_revision": evidence_approval["revision"],
+                                  "locale": locale, "wording": text})
+                for locale, text in wording.items()
+            }
+            projected.append({**semantics, "wording": wording})
+            selections[claim_id] = {
+                "conditions": conditions, "passages": {key: dict(passage) for key in evidence_ids},
+                "evidence_approval": evidence_approval, "locale_approvals": locale_approvals,
+            }
+            approvals[claim_id] = {"evidence": evidence_approval, "locales": locale_approvals}
+        self.expected = {"schema_version": 1, "profile": {**identity, "claims": projected}}
         manifest = {
             "schema_version": 1, "release_version": "0.2.0", "release_date": "2026-01-03",
             "artifact": {"name": "knowledge.json", "sha256": revision(self.expected)},
             "identity_approval": identity_approval,
-            "claim_approvals": {self.claim_id: {"evidence": evidence_approval, "locales": locale_approvals}},
+            "claim_approvals": approvals,
         }
         self.spec = {
             "release_version": manifest["release_version"], "release_date": manifest["release_date"],
             "profile": {
                 "id": profile.id, "identity_passage": dict(passage), "identity_approval": identity_approval,
-                "claims": {self.claim_id: {"conditions": conditions, "passages": {"rhs": passage},
-                                          "evidence_approval": evidence_approval, "locale_approvals": locale_approvals}},
+                "claims": selections,
             },
             "release_approval": approval({"kind": "release-v1", "manifest": manifest}),
         }
@@ -119,6 +139,63 @@ class PublicExportTests(unittest.TestCase):
         self.assertEqual(parsed["release_approval"], self.spec["release_approval"])
         self.assertEqual(artifact, canonical(json.loads(artifact)))
         self.assertEqual(manifest, canonical(parsed))
+
+    def test_multi_claim_release_is_ordered_and_rejects_any_invalid_selected_claim(self):
+        batch = self.read(self.batch)
+        publication_path = "research/publication.json"
+        metadata = self.read(publication_path)
+        excerpts = {"ncstate": "Synthetic secondary humidity passage", "aspca": "Synthetic toxicity passage"}
+        for key, excerpt in excerpts.items():
+            path = f"{ARCHIVES}/{key}.txt"
+            content = (excerpt + "\n").encode("utf-8")
+            (self.root / path).write_bytes(content)
+            metadata["evidence"][key] = {
+                **self.source, "archive": {**self.archive, "path": path, "sha256": sha256(content).hexdigest()},
+            }
+        self.write(publication_path, metadata)
+        topics = {"light", "humidity", "toxicity"}
+        self.sign_fixture([claim for claim in batch["claims"] if claim["topic"] in topics], excerpts)
+
+        artifact, manifest = build_release(self.root, HEAD)
+        self.assertEqual(json.loads(artifact), self.expected)
+        claims = json.loads(artifact)["profile"]["claims"]
+        self.assertEqual([claim["topic"] for claim in claims], ["humidity", "light", "toxicity"])
+        self.assertEqual([item["source_id"] for item in claims[0]["evidence"]], ["ncstate", "rhs"])
+        self.assertEqual([item["archive"]["excerpt"] for item in claims[0]["evidence"]],
+                         [excerpts["ncstate"], self.excerpt])
+        self.assertEqual(claims[2]["animal_species"], ["cat", "dog"])
+        approval_ids = list(json.loads(manifest)["claim_approvals"])
+        self.assertEqual(approval_ids, [claim["id"] for claim in claims])
+        for claim in batch["claims"]:
+            if claim["topic"] not in topics:
+                self.assertNotIn(claim["id"].encode(), artifact + manifest)
+        for image in ("kew-gallery", "ncstate-dell-enecks"):
+            self.assertNotIn(image.encode(), artifact + manifest)
+
+        batch["claims"].reverse()
+        humidity = next(claim for claim in batch["claims"] if claim["topic"] == "humidity")
+        humidity["evidence"] = dict(reversed(list(humidity["evidence"].items())))
+        selections = self.spec["profile"]["claims"]
+        self.spec["profile"]["claims"] = dict(reversed(list(selections.items())))
+        selections[humidity["id"]]["passages"] = dict(
+            reversed(list(selections[humidity["id"]]["passages"].items()))
+        )
+        (self.root / self.batch).write_text(json.dumps(batch), encoding="utf-8")
+        (self.root / SPEC).write_text(json.dumps(self.spec), encoding="utf-8")
+        self.assertEqual(build_release(self.root, HEAD), (artifact, manifest))
+
+        metadata["evidence"]["ncstate"]["provenance"] = "reported"
+        self.write(publication_path, metadata)
+        with self.assertRaisesRegex(ValueError, "Missing verified capture metadata: ncstate"):
+            build_release(self.root, HEAD)
+        metadata["evidence"]["ncstate"]["provenance"] = "verified"
+        self.write(publication_path, metadata)
+
+        toxicity = selections[claims[2]["id"]]
+        toxicity["locale_approvals"]["fa"]["revision"] = "0" * 64
+        self.write(SPEC, self.spec)
+        with self.assertRaisesRegex(ValueError, r"Stale approval for care\.pothos\.toxicity\.001/fa"):
+            build_release(self.root, HEAD)
 
     def test_reordering_inputs_preserves_bytes(self):
         before = build_release(self.root, HEAD)
