@@ -32,6 +32,8 @@ python -m unittest discover -s tests
 
 The Python models define the executable pilot contract. Taxonomy v6 remains the broader design vocabulary. The importer reads the four research batches and the observation log, then emits canonical schema v5. Keep the input files as evidence. For a breaking export change, add a version and an explicit migration. Taxon IDs are distinct from display names, which come from an identified treatment. The internal pilot export includes draft care and candidate image metadata. Editorial review, exact evidence locators, image selection and attribution, and mobile user testing remain release work.
 
+The separate public exporter reads an explicit release authorization from the committed checkout. See the [public export contract](publication-contract.md) for the build command, approval requirements, and current release blockers.
+
 ## Release plan
 
 | Milestone | Scope | Completion criteria |
