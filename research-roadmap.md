@@ -61,6 +61,8 @@ Use the investigations below to supply the delivery issues. Validate the audienc
 
 Phases 1 and 2 can overlap once sample names are captured. Phase 3 can start with general guides while species mappings are under review. Use Playwright Global MCP for live retailer inspection according to the repository browser instructions.
 
+The [Persian botanical source review](research/sources/persian-botanical-source-review.md) records live access and reuse findings for 11 candidates. The follow-up ran 50 source–target lookups and recorded observed matches, coverage and extraction results.
+
 ## First collection batch status
 
 The [first intake](research/batches/batch-01.json) contains five name records, five draft pothos claim topics, and eight search fixtures. The [execution intake](research/batches/batch-02.json) adds exact URLs where supplied, a Mahallat seller, authority IDs, one product substitution example and repeated online wholesale units. The second review identified these remaining topics.

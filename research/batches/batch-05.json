@@ -1,0 +1,3708 @@
+{
+  "report": "../sources/persian-botanical-source-review.md",
+  "observed_on": "2026-11-24",
+  "timezone": "Asia/Tehran",
+  "evidence_status": "mixed",
+  "browser_tools": [
+    "mcp__playwright_global.browser_navigate",
+    "mcp__playwright_global.browser_evaluate",
+    "mcp__playwright_global.browser_type",
+    "mcp__playwright_global.browser_click"
+  ],
+  "sources": [
+    {
+      "id": "anguor",
+      "benchmark": true,
+      "checks": [
+        {
+          "kind": "discovery",
+          "url": "https://anguor.com/blog/category/treasure-of-plants/",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "robots",
+          "url": "https://anguor.com/robots.txt",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "detail",
+          "url": "https://anguor.com/blog/شمعدانی/",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        }
+      ],
+      "reuse_status": "unverified",
+      "followup_checks": [
+        {
+          "kind": "anguor_archive",
+          "url": "https://anguor.com/blog/category/treasure-of-plants/",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"title\": \"گنجینه گیاهان | بیوگرافی آنلاین گیاهان -اطلس گیاهان آپارتمانی | انگور\",\n  \"text\": \"SKIP TO NAVIGATION\\nSKIP TO MAIN CONTENT\\n\\nتحویل زیر ۳ ساعت برای امروز [ 🧾 صدور فاکتور رسمی فوری + 💳 پرداخت قسطی اسنپ‌پی ]\\n\\nIRT\\nتومان\\n\\nگنجینه عظیمی از گل‌ها و گیاهان\\n\\n \\n\\nدر این گنجینه گیاهی، یا به عبارتی اطلس گل‌ها و گیاهان آپارتمانی، بیش از 200 گونه گیاهی به‌طور کامل معرفی شده است. در هر بخش علاوه بر معرفی گیاه، به تاریخچه و خاستگاه آن نیز پرداخته شده و توضیح داده شده که این گیاه چگونه سفر خود را از کجا آغاز کرده است. شرایط نگهداری گیاه در طول سال و در فصل‌های مختلف به‌طور دقیق توضیح داده شده تا کمک کند که علاقه‌مندان بتوانند بهترین روش‌ها را \",\n  \"links\": [\n    [\n      \"2"
+        },
+        {
+          "kind": "anguor_retry_detail",
+          "url": "https://anguor.com/blog/شمعدانی/",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"title\": \"گنجینه گیاهان انگور : شمعدانی چه نوع گیاهی هست + نگهداری\",\n  \"h\": [\n    \"وبلاگ\",\n    \"شمعدانی\",\n    \"شناسنامه\",\n    \"اطلاعات\",\n    \"زیستگاه\",\n    \"مورفولوژی\",\n    \"معرفی\",\n    \"داستان نامگذاری\",\n    \"سفرنامه\",\n    \"گیاهتان نماد چیست\",\n    \"نقشی سبز در زندگی\",\n    \"در ستایش زیباییهایش\",\n    \"آفات\",\n    \"بیماری‌ها ( قارچ و ..)\",\n    \"بیماری‌های فیزیولوژیک\",\n    \"معرفی گیاه شمعدانی\",\n    \"انواع شمعدانی طبیعی\",\n    \"نگهداری از گیاه شمعدانی\"\n  ],\n  \"terms\": [\n    [\n      \"برای مشاهده شرایط نگهداری کلیک کنید\",\n      \"https://anguor.com/blog/%D8%B4%D9%85%D8%B9%D8%AF%D8%A7%D9%86%DB%8C/#hold\"\n    ],\n    [\n      \"برای مشاهده شرایط نگهداری کلیک کنید\",\n      \"https://anguor.com/"
+        },
+        {
+          "kind": "ang_robots_full",
+          "url": "https://anguor.com/robots.txt",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n[\n  \"Allow: /\",\n  \"Disallow: /aitest/\",\n  \"Disallow: /aitest/*\",\n  \"Disallow: /wp-admin/\",\n  \"Allow: /wp-admin/admin-ajax.php\",\n  \"Disallow: /home-test/\",\n  \"Disallow: /home-test/*\",\n  \"Disallow: /aitest/\",\n  \"Disallow: /aitest/*\",\n  \"Disallow: /YVES-ROCHER/*\",\n  \"Disallow: /blog/author/*\",\n  \"Disallow: /product/*\",\n  \"Disallow: /major/*\",\n  \"Disallow: /gift/*\",\n  \"Disallow: /filter/*\",\n  \"Disallow: /search/*\",\n  \"Disallow: /blog/car/*\",\n  \"Disallow: */1000\",\n  \"Disallow: /pluginnew/*\",\n  \"Disallow: */page/*\",\n  \"Disallow: */msg-file/*\",\n  \"Disallow: /*?add-to-cart=*\",\n  \"Disallow: *?*  # General disallow for query parameters (placed last to avoid conflicts)\",\n  \"Sitemap: https://"
+        },
+        {
+          "kind": "ang_map",
+          "url": "https://anguor.com/sitemap_index.xml",
+          "observed_on": "2026-11-24",
+          "evidence": [
+            "<loc>https://anguor.com/post-sitemap1.xml</loc>",
+            "<loc>https://anguor.com/post-sitemap2.xml</loc>",
+            "<loc>https://anguor.com/post-sitemap3.xml</loc>",
+            "<loc>https://anguor.com/post-sitemap4.xml</loc>",
+            "<loc>https://anguor.com/post-sitemap5.xml</loc>",
+            "<loc>https://anguor.com/page-sitemap.xml</loc>",
+            "<loc>https://anguor.com/product-sitemap1.xml</loc>",
+            "<loc>https://anguor.com/product-sitemap2.xml</loc>",
+            "<loc>https://anguor.com/product-sitemap3.xml</loc>",
+            "<loc>https://anguor.com/product-sitemap4.xml</loc>",
+            "<loc>https://anguor.com/product-sitemap5.xml</loc>",
+            "<loc>https://anguor.com/product-sitemap6.xml</loc>",
+            "<loc>https://anguor.com/product-sitemap7.xml</loc>",
+            "<loc>https://anguor.com/product-sitemap8.xml</loc>",
+            "<loc>https://anguor.com/product-sitemap9.xml</loc>",
+            "<loc>https://anguor.com/product-sitemap10.xml</loc>",
+            "<loc>https://anguor.com/product-sitemap11.xml</loc>",
+            "<loc>https://anguor.com/product-sitemap12.xml</loc>"
+          ]
+        },
+        {
+          "kind": "anguor_terms",
+          "url": "https://anguor.com/anguor-terms/",
+          "observed_on": "2026-11-24",
+          "title": "شرایط و قوانین استفاده از سرویس خرید اینترنتی گل | انگور"
+        }
+      ],
+      "followup_policy": {
+        "policy": "Wildcard disallows */page/* and several commerce and utility paths. A separate group lists named user agents and permits public pages except /aitest/. Use the published post sitemaps for any general crawler.",
+        "reuse": "The purchase-terms page was inspected. Content reuse remains unverified."
+      }
+    },
+    {
+      "id": "golsetan",
+      "benchmark": true,
+      "checks": [
+        {
+          "kind": "discovery",
+          "url": "https://www.golsetan.com/plant-type-glossary-with-pictures/",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "robots",
+          "url": "https://www.golsetan.com/robots.txt",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "detail",
+          "url": "https://www.golsetan.com/blog/about-schefflera-elegantissima/",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        }
+      ],
+      "reuse_status": "unverified",
+      "followup_checks": [
+        {
+          "kind": "golsetan_glossary",
+          "url": "https://www.golsetan.com/plant-type-glossary-with-pictures/",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"title\": \"انواع گیاه آپارتمانی با عکس – 140 گیاه (فهرست الفبایی گیاهان خانگی) – گُل‌سِتان\",\n  \"text\": \"خرید گیاه آپارتمانی با تضمین کیفیت و ارسال رایگان خرید گیاه آپارتمانی\\nگل‌‌ها\\nمناسبت‌ها\\nگیاهان\\nشکلات و رزجاودان\\nباغبانی وخدمات گیاه‌پزشک درمحل\\nارسال روز\\nورود/ثبت نام\\n09120785191\\n0\\nانواع گیاه آپارتمانی با عکس – 140 گیاه (فهرست الفبایی گیاهان خانگی)\\n انواع گیاهان آپارتمانی و روش نگهداری آنها (140 نوع گیاه)\\n\\nاین مرجع تصویری گیاهان برای آشنایی بیش‌تر شما با اسامی و تصویر گیاه، روش نگهداری و مراقبت  و تشخیص تصویر گل با نام آن از روی عکس آنها تنظیم شده است.\\nدر این مرجع فهرست گیاهان آپارتمانی، اسامی گیاهان با عکس گردآوری شده و به ترتیب حروف الفبا مرتب \",\n  \"links\": [\n  "
+        },
+        {
+          "kind": "golsetan_retry_detail",
+          "url": "https://www.golsetan.com/blog/about-schefflera-elegantissima/",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"title\": \"معرفی و روش نگهداری گیاه آرالیا دروغین | گُل‌سِتان\",\n  \"h\": [\n    \"روش نگهداری گیاه آرالیا دروغین (Schefflera Elegantissima)\",\n    \"معرفی آرالیای دروغین\",\n    \"شرایط نگهداری\",\n    \"رطوبت و دما\",\n    \"نور\",\n    \"آبیاری\",\n    \"خاک\",\n    \"هرس کردن\",\n    \"کوددهی\",\n    \"تکثیر\",\n    \"آفات و بیماری ها\",\n    \"سمی بودن\",\n    \"حرف آخر\",\n    \"سوال‌های پرتکرار درمورد آرالیای دروغین\"\n  ]\n}"
+        },
+        {
+          "kind": "golsetan_robots",
+          "url": "https://www.golsetan.com/robots.txt",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n\"User-agent: *\\nDisallow: /wp-admin/\\nDisallow: /test51522ax/\\nDisallow: /cdn-cgi/\\nAllow: /wp-admin/admin-ajax.php\\n\\nSitemap: https://www.golsetan.com/sitemap_index.xml\""
+        },
+        {
+          "kind": "gol_sitemap",
+          "url": "https://www.golsetan.com/sitemap_index.xml",
+          "observed_on": "2026-11-24"
+        },
+        {
+          "kind": "gol_terms_page",
+          "url": "https://www.golsetan.com/terms-and-conditions/",
+          "observed_on": "2026-11-24",
+          "evidence": [
+            "استفاده از مطالب گل فروشی اینترنتی گُل‌سِتان تنها برای مقاصد غیر تجاری و با ذکر منبع بلامانع است. کلیه حقوق این سایت متعلق به شرکت ارزش آفرینان فردای روشن (گل فروشی آنلاین گُل‌ستان) است."
+          ]
+        }
+      ],
+      "followup_policy": {
+        "policy": "Robots declares an XML index, whose URL rendered a site not-found page.",
+        "reuse": "The published terms permit noncommercial use with attribution."
+      }
+    },
+    {
+      "id": "nargil",
+      "benchmark": true,
+      "checks": [
+        {
+          "kind": "discovery",
+          "url": "https://nargil.ir/Plants-List.aspx",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "robots",
+          "url": "https://nargil.ir/robots.txt",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "alternate_discovery",
+          "url": "https://nargil.ir/site-map.aspx",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        }
+      ],
+      "reuse_status": "unverified",
+      "followup_checks": [
+        {
+          "kind": "nargil_index",
+          "url": "https://nargil.ir/Plants-List.aspx",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"controls\": [\n    [\n      \"txtHeaderSearch\",\n      \"\",\n      \"جستجو در نارگیل...\",\n      \"\"\n    ],\n    [\n      \"\",\n      \"\",\n      null,\n      \"🔍\"\n    ],\n    [\n      \"\",\n      \"\",\n      null,\n      \"ورود\"\n    ],\n    [\n      \"npKeywordInput\",\n      \"\",\n      \"نام فارسی، نام لاتین یا نام علمی گیاه...\",\n      \"\"\n    ],\n    [\n      \"npSearchBtn\",\n      \"\",\n      null,\n      \"جستجو\"\n    ],\n    [\n      \"npClearSearchBtn\",\n      \"\",\n      null,\n      \"پاک کردن\"\n    ]\n  ],\n  \"links\": [\n    [\n      \"دانشنامه\",\n      \"https://nargil.ir/Plants-List.aspx\"\n    ],\n    [\n      \"دانشنامه\",\n      \"https://nargil.ir/Plants-List.aspx\"\n    ],\n    [\n      \"آب تره\\nNasturtium officinale\",\n      \"h"
+        },
+        {
+          "kind": "nargil_site_map",
+          "url": "https://nargil.ir/site-map.aspx",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n\"\\t\\n\\t١٣/٦/١٤٤٨\\t---\\t11/24/2026\\t---\\t۱۴۰۵ سه شنبه ۳ آذر\\tامروز\\n\\t \\n\\n\\n\\nپایگاه اطلاع رسانی گل و گیاه، باغبانی و فضای سبز\\n\\n\\n   \\tصفحه اصلی  | پرسش و پاسخ  | خدمات  | سرگرمی ها  | نقشه سایت  | لیست گیاهان  | تماس با ما  | RSS  | درباره ما\\t\\nلینک های اصلی\\n\\n\\n\\n\\n\\n\\n\\n\\t  \\n\\t\\nآخرین اخبار:\\n\\nگل مارگریت درختچه‌ای؛ زیبایی گل‌های رنگارنگ، گلدهی طولانی، شرایط نگهداری و کاربرد در باغچه و فضای سبز\\n\\n\\n\\nآخرین مطالب\\n\\n\\n>گل مارگریت درختچه‌ای؛ زیبایی گل‌های رنگارنگ، گلدهی طولانی، شرایط نگهداری و کاربرد در باغچه و فضای سب\\n\\n\\n>قبل از اولین یخبندان دست‌به‌کار شوید! کدام گیاهان در خطرند و چگونه آن‌ها را نجات دهیم؟\\n\\n\\n>معرفی گیاه ارکیده نر منبع پودر غذایی ثعلب قلوه‌ای\\n\\n\\n>اش"
+        },
+        {
+          "kind": "nargil_about",
+          "url": "https://nargil.ir/About.aspx",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n[\n  \" >  محصولات آموزشی\",\n  \"© تمام حقوق مادی و معنوی این سایت متعلق به نارگیل است. استفاده از مطالب در رسانه های آموزشی با ذکر منبع و لینک به صفحه مربوطه بلا مانع است\\tآخرین مطالب :\"\n]"
+        },
+        {
+          "kind": "nargil_detail",
+          "url": "https://nargil.ir/Plant.aspx?Name=Dracaena-trifasciata&cid=5019",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"title\": \"سانسیویریا تریفاسکیاتا؛ گیاه مقاوم و کم‌نیاز برای آپارتمان و محل کار | نارگیل\",\n  \"headings\": [\n    [\n      \"H1\",\n      \"\",\n      \"سانسیویریا تریفاسکیاتا؛ گیاه مقاوم و کم‌نیاز برای آپارتمان و محل کار\"\n    ],\n    [\n      \"H1\",\n      \"\",\n      \"سانسوریا شمشیری - تریفاسکیتا\"\n    ],\n    [\n      \"H2\",\n      \"\",\n      \"دانستنیهای علمی\"\n    ],\n    [\n      \"H3\",\n      \"\",\n      \"رده‌بندی گیاهشناسی\"\n    ],\n    [\n      \"H3\",\n      \"\",\n      \"منطقه بومی و زیستگاه\"\n    ],\n    [\n      \"H3\",\n      \"\",\n      \"تاریخچه کشف و نام‌گذاری علمی\"\n    ],\n    [\n      \"H3\",\n      \"\",\n      \"نام‌های رایج محلی و جهانی\"\n    ],\n    [\n      \"H2\",\n      \"\",\n      \"خصوصیات - معرفی\"\n    ],\n    [\n    "
+        },
+        {
+          "kind": "n_fields",
+          "url": "https://nargil.ir/Plant.aspx?Name=Dracaena-trifasciata&cid=5019",
+          "observed_on": "2026-11-24",
+          "evidence": {
+            "family": "Ruscaceae",
+            "temperature": [
+              "دمای مورد نیاز",
+              "20 درجه سانتیگراد",
+              "آبیاری و رطوبت"
+            ],
+            "taxonomy": "Sansevieria trifasciata که امروزه در بسیاری از منابع با نام پذیرفته‌شده Dracaena trifasciata نیز معرفی می‌شود، گیاهی تک‌لپه‌ای از تیره Asparagaceae (زیرتیره Nolinoideae) است. این گونه در گذشته به جنس Sansevieria نسبت داده می‌شد، اما مطالعات رده‌بندی ",
+            "pest": [
+              "برای سگ و گربه گیاهی سمی (toxic) محسوب می‌شود. جویدن برگ‌ها می‌تواند سبب دل‌درد، استفراغ، اسهال، افس"
+            ]
+          }
+        }
+      ],
+      "followup_policy": {
+        "policy": "Robots disallows /plant/images/cvs/ for *. An HTML sitemap was reachable.",
+        "reuse": "The About page permits use in educational media with attribution and a link."
+      }
+    },
+    {
+      "id": "plantfinder",
+      "benchmark": true,
+      "checks": [
+        {
+          "kind": "discovery",
+          "url": "https://plantfinder.ir/",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "robots",
+          "url": "https://plantfinder.ir/robots.txt",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "detail",
+          "url": "https://plantfinder.ir/product/euonymus-japonicus/",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        }
+      ],
+      "reuse_status": "unverified",
+      "followup_checks": [
+        {
+          "kind": "plant_list",
+          "url": "https://plantfinder.ir/plant-list/",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"title\": \"لیست گیاهان | گیاه یاب\",\n  \"sample\": \"پرش به محتوا\\nگیاه یاب\\nبانک جامع گیاهشناسی\\nعضویت\\nورود\\nلیست گیاهان\\nنام گیاه:\\nگل صد تومانی\\nنام علمی:\\nPaeonia Hybrids\\nنوع گیاه:\\nبوته ای و برگساره ای\\nثبت کننده:\\nنگین منظمی\\nویرایش\\nنام گیاه:\\nکوکب\\nنام علمی:\\nDahlia Spp\\nنوع گیاه:\\nبوته ای و برگساره ای\\nثبت کننده:\\nهانیه مهدوی\\nویرایش\\nنام گیاه:\\nگل جعفری\\nنام علمی:\\nTagetes Patula\\nنوع گیاه:\\nبوته ای و برگساره ای\\nثبت کننده:\\nسونیا بهشتی\\nویرایش\\nنام گیاه:\\nمریم گلی\\nنام علمی:\\nSalvia Splendens\\nنوع گیاه:\\nبوته ای و برگساره ای\\nثبت کننده:\\nساحل باقری\\nویرایش\\nنام گیاه:\\nمریم\\nنام علمی:\\nAgave Amica\\nنوع گیاه:\\nبوته ای و برگساره ای\\nثبت کننده:\\nنرگس نصیری\\nویرایش\\nنام گیا"
+        },
+        {
+          "kind": "plant_advanced",
+          "url": "https://plantfinder.ir/advanced-search/",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"title\": \"جستجوی پیشرفته | گیاه یاب\",\n  \"text\": \"پرش به محتوا\\nگیاه یاب\\nبانک جامع گیاهشناسی\\nعضویت\\nورود\\nجستجوی پیشرفته\\n\\n[search-form id=”Search”]\\n\\nدیدگاهتان را بنویسید\\n\\nنشانی ایمیل شما منتشر نخواهد شد. بخش‌های موردنیاز علامت‌گذاری شده‌اند *\\n\\nدیدگاه * \\n\\nنام * \\n\\nایمیل * \\n\\nوب‌ سایت \\n\\n© گیاه یاب؛ از سال 1396 – کلیه حقوق برای وب سایت معمارمنظر محفوظ است. ©\",\n  \"inputs\": [\n    [\n      \"menu-toggle-262\",\n      \"\",\n      null,\n      \"\",\n      \"submit\"\n    ],\n    [\n      \"author\",\n      \"author\",\n      \"\",\n      \"\",\n      \"text\"\n    ],\n    [\n      \"email\",\n      \"email\",\n      \"\",\n      \"\",\n      \"email\"\n    ],\n    [\n      \"url\",\n      \"url\",\n      \"\",\n      \"\",\n    "
+        },
+        {
+          "kind": "plantfinder_map",
+          "url": "https://plantfinder.ir/sitemap_index.xml",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n\"This document cannot be formatted as intended. It uses XSLT, which the browser does not support. You might be able to install a browser extension that allows you to view it.\\n\\n<?xml-stylesheet type=\\\"text/xsl\\\" href=\\\"//plantfinder.ir/main-sitemap.xsl\\\"?>\\n<sitemapindex xmlns=\\\"http://www.sitemaps.org/schemas/sitemap/0.9\\\">\\n<sitemap>\\n<loc>https://plantfinder.ir/post-sitemap.xml</loc>\\n<lastmod>2023-11-14T06:41:56+00:00</lastmod>\\n</sitemap>\\n<sitemap>\\n<loc>https://plantfinder.ir/page-sitemap.xml</loc>\\n<lastmod>2026-07-27T16:01:31+00:00</lastmod>\\n</sitemap>\\n<sitemap>\\n<loc>https://plantfinder.ir/plants-sitemap.xml</loc>\\n<lastmod>2025-01-25T10:05:52+00:00</lastmod>\\n</sitem"
+        },
+        {
+          "kind": "plant_index",
+          "url": "https://plantfinder.ir/plants-sitemap.xml",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"count\": 36,\n  \"sample\": [\n    \"http://www.w3.org/2001/XMLSchema-instance\\\"\",\n    \"http://www.google.com/schemas/sitemap-image/1.1\\\"\",\n    \"http://www.sitemaps.org/schemas/sitemap/0.9\\\"\",\n    \"http://www.sitemaps.org/schemas/sitemap/0.9\",\n    \"http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\",\n    \"http://www.google.com/schemas/sitemap-image/1.1\",\n    \"http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd\\\">\",\n    \"https://plantfinder.ir/plants/\",\n    \"https://plantfinder.ir/plants/paeonia-hybrids/\",\n    \"https://plantfinder.ir/wp-content/uploads/2024/05/Paeonia-Hybrids-01.webp\"\n  ],\n  \"hits\": []\n}"
+        },
+        {
+          "kind": "plant_detail",
+          "url": "https://plantfinder.ir/product/euonymus-japonicus/",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"title\": \"شمشاد رسمی | گیاه یاب\",\n  \"text\": \"پرش به محتوا\\nگیاه یاب\\nبانک جامع گیاهشناسی\\nعضویت\\nورود\\nخانه / درختچه / شمشاد رسمی\\n🔍\\nشمشاد رسمی\\n\\nنام فارسی: شمشاد رسمی\\nنام انگلیسی: Green Spire\\nنامهای دیگر: Japanese Spindle – Japanese Euonymus\\nنام علمی: Euonymus Japonicus\\n\\nدسته: درختچه\\nتوضیحاتتوضیحات تکمیلی\\nتوضیحات\\n\\nمنابع:\\n\\nسایت نارگیل\\nglassy-garden.com\\nمحصولات مرتبط\\nطاووسی\\nاطلاعات بیشتر\\nپیچ امین الدوله\\nاطلاعات بیشتر\\nزرشک زینتی\\nاطلاعات بیشتر\\nشمشاد معمولی\\nاطلاعات بیشتر\\n\\n© گیاه یاب؛ از سال 1396 – کلیه حقوق برای وب سایت معمارمنظر محفوظ است. ©\",\n  \"links\": []\n}"
+        },
+        {
+          "kind": "plant_reference",
+          "url": "https://plantfinder.ir/reference-help/",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"title\": \"راهنمای منابع | گیاه یاب\",\n  \"text\": [\n    \"راهنمای منابع\",\n    \"منابع مورد استفاده برای سامانه گیاه شناسی کاربردی در طراحی منظر:\",\n    \"© گیاه یاب؛ از سال 1396 – کلیه حقوق برای وب سایت معمارمنظر محفوظ است. ©\"\n  ]\n}"
+        },
+        {
+          "kind": "plant_all",
+          "url": "https://plantfinder.ir/plant-list/",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"labels\": [],\n  \"visible_names\": 14,\n  \"nav\": []\n}"
+        }
+      ],
+      "followup_policy": {
+        "policy": "Robots disallows /?s=* and /search/. Plant sitemap and rendered catalog were inspected.",
+        "reuse": "Footer reserves rights. No affirmative reuse grant was observed."
+      }
+    },
+    {
+      "id": "netplantclub",
+      "benchmark": true,
+      "checks": [
+        {
+          "kind": "discovery",
+          "url": "https://netplantclub.ir/plants_list.php",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "robots",
+          "url": "https://netplantclub.ir/robots.txt",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "alternate_discovery",
+          "url": "https://netplantclub.ir/plants_search.php",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        }
+      ],
+      "reuse_status": "unverified",
+      "followup_checks": [
+        {
+          "kind": "net_search",
+          "url": "https://netplantclub.ir/plants_search.php",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"title\": \"گیاه، جستجوی پیشرفته\",\n  \"text\": \"دیدن زیبایی و لذت دانستن از گیاهان ایران زمین\\n  \\nباشگاه شبکه گیاهی ایران\\nباشگاه شبکه گیاهی ایران\\nخانه\\nوبلاگ\\nباشگاه \\n گیاه \\n کسب و کار \\nورود\\nگیاه، جستجوی پیشرفته\\nنام علمی گیاه\\nمحتوا\\nمساوی\\nآغاز می شود با ...\\nبیشتر از...\\nکمتر از ...\\nبين\\nخالی\\nخالي نمي باشد\\nنام فارسی\\nمحتوا\\nمساوی\\nآغاز می شود با ...\\nبیشتر از...\\nکمتر از ...\\nبين\\nخالی\\nخالي نمي باشد\\nنام انگلیسی\\nمحتوا\\nمساوی\\nآغاز می شود با ...\\nبیشتر از...\\nکمتر از ...\\nبين\\nخالی\\nخالي نمي باشد\\nخانواده\\nمحتوا\\nمساوی\\nآغاز می شود با ...\\nبیشتر از...\\nکمتر از ...\\nبين\\nخا\"\n}"
+        },
+        {
+          "kind": "net_robots",
+          "url": "https://netplantclub.ir/robots.txt",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n\"404\\nNot Found\\n\\nThe resource requested could not be found on this server!\\n\\n\\nProudly powered by LiteSpeed Web Server\\n\\nPlease be advised that LiteSpeed Technologies Inc. is not a web hosting company and, as such, has no control over content found on this site.\""
+        },
+        {
+          "kind": "net_sitemap",
+          "url": "https://netplantclub.ir/sitemap.xml",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"title\": \"\",\n  \"text\": \"This XML file does not appear to have any style information associated with it. The document tree is shown below.\\n\\n<urlset xmlns=\\\"http://www.sitemaps.org/schemas/sitemap/0.9\\\" xmlns:xhtml=\\\"http://www.w3.org/1999/xhtml\\\">\\n<url>\\n<loc>https://netplantclub.ir/</loc>\\n<lastmod>2024-06-08T04:48:34+00:00</lastmod>\\n<changefreq>daily</changefreq>\\n<priority>1.0000</priority>\\n</url>\\n<url>\\n<loc>https://netplantclub.ir/home_dashboard.php?page=dashboard</loc>\\n<lastmod>2024-06-29T15:01:03+00:00</lastmod>\\n<changefreq>daily</changefreq>\\n<priority>0.8000</priority>\\n</url>\\n<url>\\n<loc>https://netplantclub.ir/home_dashboard.php</loc>\\n<lastmod>2024-06-29T15"
+        },
+        {
+          "kind": "net_submit",
+          "url": "https://netplantclub.ir/plants_search.php",
+          "observed_on": "2026-11-24",
+          "evidence": "### Result\n{\n  \"controls\": [\n    [\n      \"searchButton1\",\n      \"\",\n      \"<a type=\\\"button\\\" title=\\\"\\\" class=\\\"btn btn-primary   \\n\\t\\\" id=\\\"searchButton1\\\" data-page=\\\"undefined\\\">\\n\\t\\t\\t\\t\\t\\t\\tجستجو\\t\\t\\t</a>\"\n    ]\n  ],\n  \"forms\": [\n    [\n      \"\",\n      \"https://netplantclub.ir/plants_list.php\"\n    ]\n  ],\n  \"termLinks\": []\n}"
+        },
+        {
+          "kind": "check_net",
+          "url": "https://netplantclub.ir/plants_view.php?editid1=1966",
+          "observed_on": "2026-11-24",
+          "title": "گیاه: Araceae| Monstera deliciosa| برگ انجیری"
+        }
+      ],
+      "followup_policy": {
+        "policy": "The robots URL rendered a 404. The public XML sitemap and advanced-search route loaded.",
+        "reuse": "Copyright notice observed on the sample detail. No affirmative reuse grant was observed."
+      }
+    },
+    {
+      "id": "goldonyar",
+      "benchmark": false,
+      "checks": [
+        {
+          "kind": "discovery",
+          "url": "https://goldonyar.ir/botany",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "robots",
+          "url": "https://goldonyar.ir/robots.txt",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        }
+      ],
+      "reuse_status": "unverified",
+      "followup_checks": [
+        {
+          "kind": "robots",
+          "url": "https://goldonyar.ir/robots.txt",
+          "observed_on": "2026-11-24",
+          "evidence": "زبان \nEnglish\nفارسی\nبه\nPinoox\nخوش آمدید\n/home/h415322/public_html/apps/ir_goldon_app\n\nاپلیکیشن آماده است، اما مسیر (Route) تعریف نشده. با چند خط کد در فایل روتر شروع کنید.\n\nشروع سریع\nفایل routes/web.php را در اپ خود باز کنید.\nیک مسیر GET برای / اضافه کنید و صفحه را رفرش کنید.\nuse function Pinoox\\Router\\get;\n\nget('/', '@index')->name('home');\nمستندات روتر در pinoox.com\nمستندات\nراهنما API\nآموزش\nساخت اولین اپ\nجامعه\nسوالات متداول تماس با ما تلگرام",
+          "title": "راهنمای Pinoox"
+        },
+        {
+          "kind": "discovery",
+          "url": "https://goldonyar.ir/botany",
+          "observed_on": "2026-11-24",
+          "evidence": [
+            "آبیاری معتدل",
+            "نور فیلترشده",
+            "نور فیلترشده",
+            "نور فیلترشده",
+            "نور فیلترشده",
+            "نور فیلترشده"
+          ],
+          "title": "بانک گیاه‌شناسی، راهنمای نگهداری، خواص دارویی و مشخصات ۱۰۰۰ گیاه | گلدون"
+        },
+        {
+          "kind": "detail",
+          "url": "https://goldonyar.ir/botany/hymenocallis-littoralis",
+          "observed_on": "2026-11-24",
+          "evidence": [
+            "نام علمی: Hymenocallis littoralis",
+            "دوره آبیاری",
+            "خشکی سطح خاک",
+            "نیاز نوری",
+            "نور متوسط غیرمستقیم",
+            "سوسن عنکبوتی با نام علمی (Hymenocallis littoralis) گیاهی پیازی و همیشه‌سبز در مناطق گ"
+          ],
+          "title": "راهنمای جامع نگهداری، خواص و مشخصات سوسن عنکبوتی (Hymenocallis littoralis) | گلدون"
+        }
+      ],
+      "discovery_followup": {
+        "url": "https://goldonyar.ir/botany",
+        "value": {
+          "title": "بانک گیاه‌شناسی، راهنمای نگهداری، خواص دارویی و مشخصات ۱۰۰۰ گیاه | گلدون",
+          "headings": [
+            "بانک اطلاعات، خواص و مشخصات گیاهان",
+            "سوسن عنکبوتی",
+            "پیراکانتا",
+            "دورانتا",
+            "گل شب‌بو درختی",
+            "پلومباگو",
+            "مان دویلا",
+            "گل ساعتی",
+            "موچسب ژاپنی",
+            "موچسب ویرجینیا"
+          ],
+          "links": []
+        }
+      },
+      "followup_policy": {
+        "policy": "The robots URL returned an application guide instead of directives. No valid sitemap was confirmed.",
+        "reuse": "Unverified."
+      }
+    },
+    {
+      "id": "plantland",
+      "benchmark": false,
+      "checks": [
+        {
+          "kind": "discovery",
+          "url": "https://plantlandtehran.com/",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "robots",
+          "url": "https://plantlandtehran.com/robots.txt",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        }
+      ],
+      "reuse_status": "unverified",
+      "followup_checks": [
+        {
+          "kind": "robots",
+          "url": "https://plantlandtehran.com/robots.txt",
+          "observed_on": "2026-11-24",
+          "evidence": "User-agent: *\nDisallow: /wp-content/uploads/wc-logs/\nDisallow: /wp-content/uploads/woocommerce_transient_files/\nDisallow: /wp-content/uploads/woocommerce_uploads/\nDisallow: /*?add-to-cart=\nDisallow: /*?*add-to-cart=\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\n# Artiman Guard AI access policy\nUser-agent: OAI-SearchBot\nAllow: /\nDisallow: /wp-admin/\nDisallow: /wp-login.php\n\nUser-agent: ChatGPT-User\nAllow: /\nDisallow: /wp-admin/\nDisallow: /wp-login.php\n\nUser-agent: Claude-SearchBot\nAllow: /\nDisallow: /wp-admin/\nDisallow: /wp-login.php\n\nUser-agent: Claude-User\nAllow: /\nDisallow: /wp-admin/\nDisallow: /wp-login.php\n\nUser-agent: PerplexityBot\nAllow: /\nDisallow: /wp-admin/\nDisallow: /wp-login.php\n\nUser-agent: Perplexity-User\nAllow: /\nDisallow: /wp-admin/\nDisallow: /wp-login.php\n\nUser-agent: GPTBot\nDisallow: /\n\nUser-agent: ClaudeBot\nDisallow: /\n\nUser-agent: Google-Extended\nDisallow: /\n\n# START YOAST BLOCK\n# ---------------------------\nUser-agent: *\nDisallow:\n\nSitemap: https://plantlandtehran.com/sitemap_index.xml\n# ---------------------------\n# END YOAST BLOCK"
+        },
+        {
+          "kind": "detail",
+          "url": "https://plantlandtehran.com/product/%da%af%db%8c%d8%a7%d9%87-%d8%b3%d8%a7%d9%86%d8%b3%d9%88%d8%b1%db%8c%d8%a7-%d8%a8%d9%86%d8%b3%d9%84/",
+          "observed_on": "2026-11-24",
+          "evidence": [
+            "نور فیلتر شده – غیر مستقیم",
+            "مقاومت بالا: سانسوریا بنسل یکی از مقاوم ترین گیاهان آپارتمانی است که با شرایط نوری مخ",
+            "شرایط نوری: نور فیلتر شده – غیر مستقیم",
+            "آبیاری: هر ۷ تا ۱۰ روز یک بار به صورت کامل سیراب شود",
+            "انواع خاک"
+          ],
+          "title": "قیمت و خرید گیاه سانسوریا بنسل با ارسال فوری از تهران"
+        },
+        {
+          "kind": "terms",
+          "url": "https://plantlandtehran.com/privacy-policy/",
+          "observed_on": "2026-11-24",
+          "evidence": [
+            "انواع خاک",
+            "انواع خاک"
+          ],
+          "title": "قوانین و مقررات - خرید گل آپارتمانی پلنت لند"
+        },
+        {
+          "kind": "sitemap",
+          "url": "https://plantlandtehran.com/sitemap_index.xml",
+          "observed_on": "2026-11-24",
+          "evidence": []
+        }
+      ],
+      "discovery_followup": {
+        "url": "https://plantlandtehran.com/",
+        "value": {
+          "title": "خرید گل و گیاه آپارتمانی | گل فروشی آنلاین در تهران با ارسال فوری",
+          "headings": [
+            "بازیابی رمز عبور",
+            "ثبت نام",
+            "خرید گل",
+            "گل فروشی آنلاین",
+            "خرید انواع گل و گیاه",
+            "سفارش اینترنتی و خرید انواع گل آپارتمانی در تهران و شهرستان ها",
+            "گیاهان رونده",
+            "گیاهان سایز بزرگ",
+            "گیاهان لاکچری",
+            "گیاهان تخفیف دار"
+          ],
+          "links": [
+            [
+              "<img width=\"84\" height=\"78\" src=\"https://plantlandtehran.com/wp-content/uploads/2023/09/iiicon.png\" class=\"wd-nav-img\" alt=\"سانسوریا\" loading=\"lazy\" decoding=\"async\" />سانسوریا",
+              "https://plantlandtehran.com/product-category/%d8%b3%d8%a7%d9%86%d8%b3%d9%88%d8%b1%db%8c%d8%a7/"
+            ],
+            [
+              "<img width=\"84\" height=\"78\" src=\"https://plantlandtehran.com/wp-content/uploads/2023/09/iiicon-3.png\" class=\"wd-nav-img\" alt=\"زاموفیلیا\" loading=\"lazy\" decoding=\"async\" />زاموفیلیا",
+              "https://plantlandtehran.com/product-category/%d8%b2%d8%a7%d9%85%d9%88%d9%81%db%8c%d9%84%db%8c%d8%a7/"
+            ],
+            [
+              "<img width=\"84\" height=\"78\" src=\"https://plantlandtehran.com/wp-content/uploads/2025/04/iiicon-14-2.png\" class=\"wd-nav-img\" alt=\"آگلونما\" loading=\"lazy\" decoding=\"async\" />آگلونما",
+              "https://plantlandtehran.com/product-category/%d8%a2%da%af%d9%84%d9%88%d9%86%d9%85%d8%a7/"
+            ],
+            [
+              "ثبت نام در  به منزله پذیرش قوانین و مقررات میباشد .",
+              "https://plantlandtehran.com/"
+            ],
+            [
+              "سانسوریا",
+              "https://plantlandtehran.com/#"
+            ],
+            [
+              "زاموفیلیا",
+              "https://plantlandtehran.com/#"
+            ],
+            [
+              "گیاه سانسوریا بنسل",
+              "https://plantlandtehran.com/product/%da%af%db%8c%d8%a7%d9%87-%d8%b3%d8%a7%d9%86%d8%b3%d9%88%d8%b1%db%8c%d8%a7-%d8%a8%d9%86%d8%b3%d9%84/"
+            ],
+            [
+              "سانسوریا بنسل",
+              "https://plantlandtehran.com/product/%d8%b3%d8%a7%d9%86%d8%b3%d9%88%d8%b1%db%8c%d8%a7-%d8%a8%d9%86%d8%b3%d9%84/"
+            ],
+            [
+              "قوانین و مقررات ارسال و خرید",
+              "https://plantlandtehran.com/privacy-policy/"
+            ],
+            [
+              "زاموفیلیا",
+              "https://plantlandtehran.com/product-category/%d8%b2%d8%a7%d9%85%d9%88%d9%81%db%8c%d9%84%db%8c%d8%a7/"
+            ],
+            [
+              "سانسوریا",
+              "https://plantlandtehran.com/product-category/%d8%b3%d8%a7%d9%86%d8%b3%d9%88%d8%b1%db%8c%d8%a7/"
+            ],
+            [
+              "قوانین و مقررات",
+              "https://plantlandtehran.com/privacy-policy/"
+            ]
+          ]
+        }
+      },
+      "followup_policy": {
+        "policy": "Readable WooCommerce robots rules and a declared sitemap URL.",
+        "reuse": "The linked terms concern purchase and delivery. Content reuse remains unverified."
+      }
+    },
+    {
+      "id": "tarhegol",
+      "benchmark": false,
+      "checks": [
+        {
+          "kind": "discovery",
+          "url": "https://tarhegol.com/product-category/flowers-and-plants/houseplants/shade-loving-apartment-plants/",
+          "status": "verified",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "robots",
+          "url": "https://tarhegol.com/robots.txt",
+          "status": "verified",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "detail",
+          "url": "https://tarhegol.com/product/زاموفیلیا-بلک-zamioculcas-black/",
+          "status": "verified",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "sitemap",
+          "url": "https://tarhegol.com/sitemap_index.xml",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "faq",
+          "url": "https://tarhegol.com/سوالات-متداول",
+          "status": "verified",
+          "observed_on": "2026-11-23"
+        }
+      ],
+      "robots_directives": [
+        "User-agent: *",
+        "Disallow: /wp-admin/",
+        "Allow: /wp-admin/admin-ajax.php",
+        "Sitemap: https://tarhegol.com/sitemap_index.xml"
+      ],
+      "reuse_status": "unverified",
+      "followup_checks": []
+    },
+    {
+      "id": "vipshop",
+      "benchmark": false,
+      "checks": [
+        {
+          "kind": "discovery",
+          "url": "https://vipshop.flowers/plants/",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "robots",
+          "url": "https://vipshop.flowers/robots.txt",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        }
+      ],
+      "reuse_status": "unverified",
+      "followup_checks": [
+        {
+          "kind": "robots",
+          "url": "https://vipshop.flowers/robots.txt",
+          "observed_on": "2026-11-24",
+          "evidence": "# =========================================\n# VIPShop Custom Robots.txt Rules\n# =========================================\n\nUser-agent: *\n\n# -----------------------------------------\n# WordPress administration\n# -----------------------------------------\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\nDisallow: /wp-login.php\n\n# -----------------------------------------\n# WooCommerce transactional pages\n# -----------------------------------------\n\n# -----------------------------------------\n# Internal search\n# -----------------------------------------\nDisallow: /search/\nDisallow: /*?s=\n\n# -----------------------------------------\n# Faceted navigation and product filters\n# -----------------------------------------\nDisallow: /*?*filter_\nDisallow: /*?*attribute_pa_\nDisallow: /*?*orderby=\nDisallow: /*?*min_price=\nDisallow: /*?*max_price=\nDisallow: /*?*rating=\nDisallow: /*?*rating_filter=\nDisallow: /*?*on_sale=\nDisallow: /*?*stock=\nDisallow: /*?*stock_status=\nDisallow: /*?*sku=\n\n# -----------------------------------------\n# Product grid and pagination parameters\n# -----------------------------------------\nDisallow: /*?*shop_view=\nDisallow: /*?*per_row=\nDisallow: /*?*per_page=\nDisallow: /*?*product_count=\nDisallow: /*?*product_order=\nDisallow: /*?*product-page=\n\n# -----------------------------------------\n# WooCommerce action URLs\n# -----------------------------------------\nDisallo"
+        },
+        {
+          "kind": "detail",
+          "url": "https://vipshop.flowers/plants/sansevieria/",
+          "observed_on": "2026-11-24",
+          "evidence": [
+            "این گیاه نور روشن و غیرمستقیم را ترجیح می‌دهد، ولی می‌تواند شرایط نوری کمتر را نیز تا",
+            "اگر قرار است گیاه را در پذیرایی یا فضای اداری قرار دهید، نور کافی و غیرمستقیم به حفظ ",
+            "این ویژگی آن را برای دکوراسیون‌های روشن، مینیمال و فضاهایی با رنگ‌های کرم، سفید یا خا",
+            "سبز خاکستری",
+            "برای حفظ رشد مناسب و ظاهر مطلوب، بهتر است گیاه نور کافی و غیرمستقیم دریافت کند. از قر",
+            "لوله‌ای\tسبز خاکستری\tاستوانه‌ای\tدکور معاصر"
+          ],
+          "title": "انواع سانسوریا : جامع‌ترین‌ راهنمای گل سانسوریا {0‌ تا 100} - VIP"
+        },
+        {
+          "kind": "terms",
+          "url": "https://vipshop.flowers/terms-and-conditions/",
+          "observed_on": "2026-11-24",
+          "evidence": [
+            "مالکیت مادی و معنوی کلیه ی محتوای موجود بر روی سایت www.vipshop.flowers که شامل عکس ه",
+            "عید نوروز"
+          ],
+          "title": "شرایط و قوانین - VipShop"
+        }
+      ],
+      "discovery_followup": {
+        "url": "https://vipshop.flowers/plants/",
+        "value": {
+          "title": "اسم گیاهان آپارتمانی با عکس (50+ مورد) | VIP Shop",
+          "headings": [
+            "اسم گیاهان آپارتمانی بر اساس حروف الفبا",
+            "راهنمای شناسایی و پیدا کردن نام گیاهان آپارتمانی",
+            "کدام گیاه آپارتمانی برای من مناسب است؟",
+            "سؤالات متداول درباره گیاهان آپارتمانی",
+            "انواع گیاه های آپارتمانی",
+            "سانسوریا؛ گیاهان هم کروات دارند!",
+            "پتوس؛ ارتشی با برگ های چریکی",
+            "انواع نخل؛ در دکوراسیون داخلی غوغا کنید!",
+            "زاموفیلیا؛ بکشید و پاداش بگیرید…",
+            "فیکوس؛ بزرگ خاندان گیاهان آپارتمانی"
+          ],
+          "links": [
+            [
+              "سانسوریا",
+              "https://vipshop.flowers/plants/sansevieria/"
+            ],
+            [
+              "زاموفولیا",
+              "https://vipshop.flowers/mag/zamofilia/"
+            ],
+            [
+              "آگلونما",
+              "https://vipshop.flowers/mag/aglaonema/"
+            ],
+            [
+              "خرید سانسوریا؛ گیاهان هم کروات دارند!",
+              "https://vipshop.flowers/product-category/houseplants/shopping-sansevieria/"
+            ],
+            [
+              "خرید زاموفیلیا؛ بکشید و پاداش بگیرید…",
+              "https://vipshop.flowers/product-category/houseplants/buying-zz-plant/"
+            ],
+            [
+              "شرایط و قوانین",
+              "https://vipshop.flowers/terms-and-conditions/"
+            ],
+            [
+              "شرایط و قوانین",
+              "https://vipshop.flowers/terms-and-conditions/"
+            ]
+          ]
+        }
+      },
+      "followup_policy": {
+        "policy": "Readable customized robots rules. Sitemap inventory was not confirmed.",
+        "reuse": "Terms assert ownership of site content. No affirmative reuse grant was verified."
+      }
+    },
+    {
+      "id": "golsatan",
+      "benchmark": false,
+      "checks": [
+        {
+          "kind": "discovery",
+          "url": "https://golsatan.ir/",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "robots",
+          "url": "https://golsatan.ir/robots.txt",
+          "status": "unavailable",
+          "error": "net::ERR_CONNECTION_CLOSED",
+          "observed_on": "2026-11-23"
+        }
+      ],
+      "reuse_status": "unverified",
+      "followup_checks": [
+        {
+          "kind": "robots",
+          "url": "https://golsatan.ir/robots.txt",
+          "observed_on": "2026-11-24",
+          "evidence": "User-agent: *\nDisallow: /wp-content/uploads/wc-logs/\nDisallow: /wp-content/uploads/woocommerce_transient_files/\nDisallow: /wp-content/uploads/woocommerce_uploads/\nDisallow: /*?add-to-cart=\nDisallow: /*?*add-to-cart=\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://golsatan.ir/sitemap_index.xml\n"
+        },
+        {
+          "kind": "detail",
+          "url": "https://golsatan.ir/product/%d8%b3%d8%a7%d9%86%d8%b3%d9%88%d8%b1%db%8c%d8%a7-%d8%a7%d9%85%d8%b1%db%8c%da%a9%d9%86/",
+          "observed_on": "2026-11-24",
+          "evidence": [
+            "نور موردنیاز: نور غیرمستقیم خورشید",
+            "آبیاری گیاه: بسته به دمای محیط ۷ الی ۱۰ روز یکبار",
+            "خاک مناسب: خاک باغچه+شن+ماسه"
+          ],
+          "title": "سانسوریا امریکن - گل‌ ساتان"
+        },
+        {
+          "kind": "terms",
+          "url": "https://golsatan.ir/قوانین/",
+          "observed_on": "2026-11-24",
+          "evidence": [],
+          "title": "قوانین - گل‌ ساتان"
+        },
+        {
+          "kind": "sitemap",
+          "url": "https://golsatan.ir/sitemap_index.xml",
+          "observed_on": "2026-11-24",
+          "evidence": []
+        }
+      ],
+      "discovery_followup": {
+        "url": "https://golsatan.ir/",
+        "value": {
+          "title": "خرید آنلاین گیاهان آپارتمانی و گلدان | گل‌ساتان",
+          "headings": [
+            "خانه را با گل‌ساتان\nگلستان کنید",
+            "برای داشتن گیاهان سالم و شاداب،\nاز مشاوره تخصصی ما کمک بگیرید.",
+            "خرید گیاه آپارتمانی",
+            "برای داشتن گیاهان سالم و شاداب،از مشاوره تخصصی ما کمک بگیرید."
+          ],
+          "links": [
+            [
+              "<img loading=\"lazy\" decoding=\"async\" src=\"https://golsatan.ir/wp-content/uploads/2026/11/gs-reference-sansevieria.webp\" width=\"960\" height=\"800\" alt=\"سانسوریا امریکن\" loading=\"lazy\">",
+              "https://golsatan.ir/product/%D8%B3%D8%A7%D9%86%D8%B3%D9%88%D8%B1%DB%8C%D8%A7-%D8%A7%D9%85%D8%B1%DB%8C%DA%A9%D9%86/"
+            ],
+            [
+              "سانسوریا امریکن",
+              "https://golsatan.ir/product/%d8%b3%d8%a7%d9%86%d8%b3%d9%88%d8%b1%db%8c%d8%a7-%d8%a7%d9%85%d8%b1%db%8c%da%a9%d9%86/"
+            ],
+            [
+              "زاموفیلیا بلک",
+              "https://golsatan.ir/product/%d8%b2%d8%a7%d9%85%d9%88%d9%81%db%8c%d9%84%db%8c%d8%a7-%d8%a8%d9%84%da%a9/"
+            ],
+            [
+              "آگلونما برفی",
+              "https://golsatan.ir/product/%d8%a2%da%af%d9%84%d9%88%d9%86%d9%85%d8%a7-%d8%a8%d8%b1%d9%81%db%8c/"
+            ],
+            [
+              "سانسوریا ابلق چندغلاف",
+              "https://golsatan.ir/product/%d8%b3%d8%a7%d9%86%d8%b3%d9%88%d8%b1%db%8c%d8%a7-%d8%a7%d8%a8%d9%84%d9%82-%da%86%d9%86%d8%af%d8%ba%d9%84%d8%a7%d9%81/"
+            ],
+            [
+              "آگلونما سبز",
+              "https://golsatan.ir/product/%d8%a2%da%af%d9%84%d9%88%d9%86%d9%85%d8%a7-%d8%b3%d8%a8%d8%b2/"
+            ],
+            [
+              "زاموفیلیا بلک",
+              "https://golsatan.ir/product/%d8%b2%d8%a7%d9%85%d9%88%d9%81%db%8c%d9%84%db%8c%d8%a7-%d8%a8%d9%84%da%a9/"
+            ],
+            [
+              "آگلونما برفی",
+              "https://golsatan.ir/product/%d8%a2%da%af%d9%84%d9%88%d9%86%d9%85%d8%a7-%d8%a8%d8%b1%d9%81%db%8c/"
+            ],
+            [
+              "سانسوریا ابلق چندغلاف",
+              "https://golsatan.ir/product/%d8%b3%d8%a7%d9%86%d8%b3%d9%88%d8%b1%db%8c%d8%a7-%d8%a7%d8%a8%d9%84%d9%82-%da%86%d9%86%d8%af%d8%ba%d9%84%d8%a7%d9%81/"
+            ],
+            [
+              "آگلونما سبز",
+              "https://golsatan.ir/product/%d8%a2%da%af%d9%84%d9%88%d9%86%d9%85%d8%a7-%d8%b3%d8%a8%d8%b2/"
+            ],
+            [
+              "بهترین خاک برای سانسوریا؛ راهنمای گام‌به‌گام\nاکتبر 29, 2026\nیاد بگیرید چگونه با انتخاب بهترین خاک برای سانسوریا، گیاهی شاداب و سالم داشته باشید. این راهنمای جامع شامل چک‌لیست...",
+              "https://golsatan.ir/%d8%a8%d9%87%d8%aa%d8%b1%db%8c%d9%86-%d8%ae%d8%a7%da%a9-%d8%a8%d8%b1%d8%a7%db%8c-%d8%b3%d8%a7%d9%86%d8%b3%d9%88%d8%b1%db%8c%d8%a7/"
+            ],
+            [
+              "قوانین و مقررات",
+              "https://golsatan.ir/%d9%82%d9%88%d8%a7%d9%86%db%8c%d9%86/"
+            ]
+          ]
+        }
+      },
+      "followup_policy": {
+        "policy": "Readable WooCommerce robots rules and a declared sitemap URL.",
+        "reuse": "Purchase terms loaded. Content reuse remains unverified."
+      }
+    },
+    {
+      "id": "floraofiran",
+      "benchmark": false,
+      "checks": [
+        {
+          "kind": "discovery",
+          "url": "https://floraofiran.net/",
+          "status": "verified",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "robots",
+          "url": "https://floraofiran.net/robots.txt",
+          "status": "verified",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "sitemap",
+          "url": "https://floraofiran.net/sitemap.xml",
+          "status": "verified",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "terms",
+          "url": "https://floraofiran.net/index.php?page1=conditionsOfUse",
+          "status": "verified",
+          "observed_on": "2026-11-23"
+        },
+        {
+          "kind": "detail_discovery",
+          "url": "https://floraofiran.net/index.php?menu=lesnouveautes&lg=EN",
+          "status": "unavailable",
+          "error": "net::ERR_EMPTY_RESPONSE",
+          "observed_on": "2026-11-23"
+        }
+      ],
+      "robots_directives": [
+        "User-agent: *",
+        "Disallow: /IP/"
+      ],
+      "reuse_status": "restricted",
+      "followup_checks": []
+    }
+  ],
+  "targets": [
+    {
+      "id": "pothos",
+      "persian": "پتوس",
+      "scientific": "Epipremnum aureum",
+      "rank": "species"
+    },
+    {
+      "id": "monstera",
+      "persian": "برگ انجیری",
+      "scientific": "Monstera deliciosa",
+      "rank": "species"
+    },
+    {
+      "id": "snake_plant",
+      "persian": "سانسوریا",
+      "scientific": "Sansevieria trifasciata",
+      "rank": "species",
+      "alternate_query": "Dracaena trifasciata",
+      "alternate_query_basis": "Earlier project intake reports the POWO synonym mapping. The direct Kew recheck displayed a challenge on 24 November.",
+      "authority_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:540541-1"
+    },
+    {
+      "id": "zz_plant",
+      "persian": "زامیفولیا",
+      "scientific": "Zamioculcas zamiifolia",
+      "rank": "species"
+    },
+    {
+      "id": "aglaonema",
+      "persian": "آگلونما",
+      "scientific": "Aglaonema",
+      "rank": "genus"
+    },
+    {
+      "id": "spathiphyllum",
+      "persian": "اسپاتی‌فیلوم",
+      "scientific": "Spathiphyllum",
+      "rank": "genus"
+    },
+    {
+      "id": "rubber_plant",
+      "persian": "فیکوس الاستیکا",
+      "scientific": "Ficus elastica",
+      "rank": "species"
+    },
+    {
+      "id": "schefflera",
+      "persian": "شفلرا",
+      "scientific": "Schefflera",
+      "rank": "genus"
+    },
+    {
+      "id": "dracaena",
+      "persian": "دراسنا",
+      "scientific": "Dracaena",
+      "rank": "genus"
+    },
+    {
+      "id": "aloe",
+      "persian": "آلوئه‌ورا",
+      "scientific": "Aloe vera",
+      "rank": "species"
+    }
+  ],
+  "totals": {
+    "planned_pairs": 50,
+    "outcomes": {
+      "found": 23,
+      "not_found": 16,
+      "ambiguous": 11,
+      "unavailable": 0,
+      "not_tested": 0
+    },
+    "lookup_attempted": 50,
+    "profiles_inspected": 34,
+    "field_coverage_samples": 34,
+    "extraction_agreement_samples": 4,
+    "automation_attempted": 34,
+    "automation_succeeded": 20
+  },
+  "rows": [
+    {
+      "source_id": "anguor",
+      "target_id": "pothos",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://anguor.com/blog/category/treasure-of-plants/page/12/",
+        "terms": [
+          "پتوس",
+          "Epipremnum aureum"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "پتوس طلایی"
+      },
+      "detail_url": "https://anguor.com/blog/%d9%be%d8%aa%d9%88%d8%b3-%d8%b7%d9%84%d8%a7%db%8c%db%8c/",
+      "observation": {
+        "persian": "پتوس طلایی",
+        "scientific_verbatim": "Epipremnum Aureum",
+        "identity_precision": "species_candidate",
+        "fields": {
+          "taxonomy": {
+            "locator": "شناسنامه",
+            "value": "اسامی رایج\t\nپتوس\nانگور نقره‌ای\n\nنام انگلیسی\t\nEpipremnum\nTongavines Pothos\n‏Devil’s Vives\nCentipede tongavines\n\nنام علمی\t\n\nEpipremnum Aureum\n\n\nرده"
+          },
+          "morphology": {
+            "locator": "مورفولوژی",
+            "value": "رنگ برگ\tسبز و زرد\nعرض برگ\t45 سانتی‌متر\nرنگ گل\tسفید، بنفش، صورتی\nاندازه گل\t۱۰ تا ۱۸ سانتی‌متر عرض"
+          },
+          "pests": {
+            "locator": "آفات",
+            "value": "آفت\tزمان ظهور\tعلائم\tدرمان\nشته\t\n\nاواسط بهار و اوایل تابستان\n\n\t\nوجود حشرات ریز سبز رنگ زیر برگ و روی شاخه‌ها\nچسبناک شدن شاخ و برگ\nتوقف رشد\nباز نشدن"
+          },
+          "diseases": {
+            "locator": "بیماری‌ها ( قارچ و ..)",
+            "value": "نام بیماری\tزمان ظهور\tعلائم\tدرمان\nسفیدک پودری\t\n\nاوایل بهار\n\n\t\nلکه‌های بدون حاشیه مشخص و پودری خاکستری-سفید روی برگها\nکاهش رشد\nزردشدگی گیاه\n\t\n\nبنوم"
+          }
+        },
+        "dates": [
+          "2024/07/10"
+        ],
+        "attribution": "editorial profile",
+        "authority": {
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:87014-1",
+          "status": "reported_in_earlier_intake"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Epipremnum Aureum",
+        "identity_from_heading": null,
+        "field_locators": {
+          "taxonomy": "شناسنامه",
+          "morphology": "مورفولوژی",
+          "pests": "آفات",
+          "diseases": "بیماری‌ها ( قارچ و ..)"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "anguor",
+      "target_id": "monstera",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://anguor.com/blog/category/treasure-of-plants/page/11/",
+        "terms": [
+          "برگ انجیری",
+          "Monstera deliciosa"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "مونسترا (برگ انجیری)"
+      },
+      "detail_url": "https://anguor.com/blog/%d9%85%d9%88%d9%86%d8%b3%d8%aa%d8%b1%d8%a7/",
+      "observation": {
+        "persian": "مونسترا (برگ انجیری)",
+        "scientific_verbatim": "Monstera deliciosa",
+        "identity_precision": "species_candidate",
+        "fields": {
+          "taxonomy": {
+            "locator": "شناسنامه",
+            "value": "اسامی رایج\t\nمونسترا\nبرگ انجیری\n\nنام انگلیسی\t\nMonstera\nSwiss cheese plant\n Fruit salad plant\nMexican breadfruit\n\nنام علمی\t\n\nMonstera deliciosa\n\n\nر"
+          },
+          "morphology": {
+            "locator": "مورفولوژی",
+            "value": "رنگ برگ\tسبز، سفید\nعرض برگ\t۱۵ تا ۴۰ سانتی‌متر\nرنگ گل\tبنفش، قرمز، زرد، نارنجی، سفید، صورتی\nاندازه گل\t۱۵ تا ۳۰ سانتی‌متر"
+          },
+          "pests": {
+            "locator": "آفات",
+            "value": "آفت\tزمان ظهور\tعلائم\tدرمان\nشپشک آردآلود\t\n\nاوایل بهار تا اواخر تابستان\n\n\t\nایجاد لکه‌های پودری سفید رنگ و برجسته لابلای برگ و شاخه‌ها\nوجود حشرات ریز"
+          },
+          "diseases": {
+            "locator": "بیماری‌ها ( قارچ و ..)",
+            "value": "نام بیماری\tزمان ظهور\tعلائم\tدرمان\nلکه برگی\t\n\nاواسط بهار و تابستان\n\n\t\nلکه‌های قهوه‌ای با هاله زرد\nدارای شکل گرد\nپراکنده در تمام قسمت های گیاه\nایجاد"
+          }
+        },
+        "dates": [
+          "2024/11/09"
+        ],
+        "attribution": "editorial profile",
+        "authority": {
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:87478-1",
+          "status": "reported_in_earlier_intake"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Monstera deliciosa",
+        "identity_from_heading": null,
+        "field_locators": {
+          "taxonomy": "شناسنامه",
+          "morphology": "مورفولوژی",
+          "pests": "آفات",
+          "diseases": "بیماری‌ها ( قارچ و ..)"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "anguor",
+      "target_id": "snake_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "ambiguous",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://anguor.com/blog/category/treasure-of-plants/page/4/",
+        "terms": [
+          "سانسوریا",
+          "Sansevieria trifasciata",
+          "Dracaena trifasciata"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "سانسوریا ابلق"
+      },
+      "detail_url": "https://anguor.com/blog/%d8%b3%d8%a7%d9%86%d8%b3%d9%88%d8%b1%db%8c%d8%a7-%d8%a7%d8%a8%d9%84%d9%82/",
+      "observation": {
+        "persian": "سانسوریا ابلق",
+        "scientific_verbatim": "Sansevieria trifasciata var. laurentii",
+        "identity_precision": "variant_or_unresolved",
+        "fields": {
+          "taxonomy": {
+            "locator": "شناسنامه",
+            "value": "اسامی رایج\t\nسانسوریا ابلق\nسانسوریا لب طلایی\n\nنام انگلیسی\t\nVariegated snake plant\nMother-in-law’s tongue\nAfrican spear\nBowstring hemp\nGoldband san"
+          },
+          "morphology": {
+            "locator": "مورفولوژی",
+            "value": "رنگ برگ\tسبز-زرد\nعرض برگ\t۶ سانتی‌متر\nرنگ گل\tسبز، سفید\nاندازه گل\t1سانتی‌متر"
+          },
+          "pests": {
+            "locator": "آفات",
+            "value": "آفت\tزمان ظهور\tعلائم\tدرمان\nشپشک آردآلود\t\n\nاوایل بهار تا اواخر تابستان\n\n\t\nایجاد لکه‌های پودری سفید رنگ و برجسته لابه‌لای برگ و شاخه‌ها\nوجود حشرات ر"
+          },
+          "diseases": {
+            "locator": "بیماری‌ها ( قارچ و ..)",
+            "value": "نام بیماری\tزمان ظهور\tعلائم\tدرمان\nسفیدک پودری\t\nبهار\n\t\nلکه‌های بدون حاشیه مشخص و پودری خاکستری-سفید روی برگها\nکاهش رشد\nزردشدگی گیاه\n\t\nسم بنومیل\n\nبل"
+          }
+        },
+        "dates": [
+          "2024/12/15"
+        ],
+        "attribution": "editorial profile",
+        "authority": {
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77164235-1",
+          "status": "earlier_mapping_current_synonym_probe_challenged"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Sansevieria trifasciata var. laurentii",
+        "identity_from_heading": null,
+        "field_locators": {
+          "taxonomy": "شناسنامه",
+          "morphology": "مورفولوژی",
+          "pests": "آفات",
+          "diseases": "بیماری‌ها ( قارچ و ..)"
+        },
+        "success": true
+      },
+      "reason": "The selected archive entry is the variegated form. The displayed infraspecific name is preserved."
+    },
+    {
+      "source_id": "anguor",
+      "target_id": "zz_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://anguor.com/blog/category/treasure-of-plants/page/4/",
+        "terms": [
+          "زامیفولیا",
+          "Zamioculcas zamiifolia"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "زاموفیلیا"
+      },
+      "detail_url": "https://anguor.com/blog/%d8%b2%d8%a7%d9%85%d9%88%d9%81%db%8c%d9%84%db%8c%d8%a7/",
+      "observation": {
+        "persian": "زاموفیلیا",
+        "scientific_verbatim": "Zamioculcas zamiifolia",
+        "identity_precision": "species_candidate",
+        "fields": {
+          "taxonomy": {
+            "locator": "شناسنامه",
+            "value": "اسامی رایج\t\nزاموفیلیا\nجواهر زنگبار\nگل ابدی\nزامیوکالکاس\nنخل زمرد\n\nنام انگلیسی\t\nAroid palm\nEmerald palm\nZanzibar gem\nZZ\n\nنام علمی\t\n\nZamioculcas zam"
+          },
+          "morphology": {
+            "locator": "مورفولوژی",
+            "value": "رنگ برگ\tسبز\nعرض برگ\t3 تا 6 سانتی‌متر\nرنگ گل\tسفید، سبز، کرم\nاندازه گل\t5 تا 7 سانتی‌متر"
+          },
+          "pests": {
+            "locator": "آفات",
+            "value": "آفت\tزمان ظهور\tعلائم\tدرمان\nشپشک آردآلود\t\n\nاوایل بهار تا اواخر تابستان\n\n\t\nایجاد لکه‌های پودری سفید رنگ و برجسته لابه‌لای برگ و شاخه‌ها\nوجود حشرات ر"
+          },
+          "diseases": {
+            "locator": "بیماری‌ها ( قارچ و ..)",
+            "value": "نام بیماری\tزمان ظهور\tعلائم\tدرمان\nپوسیدگی طوقه و ریشه\t\nتمام فصول\n\t\nبوی بد خاک\nنرم شدن تنه\nمستحکم نبودن گیاه داخل خاک\nاز بین رفتن ریشه\n\t\nتعویض خاک "
+          }
+        },
+        "dates": [
+          "2025/01/07"
+        ],
+        "attribution": "editorial profile",
+        "authority": {
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:89402-1",
+          "status": "reported_in_earlier_intake"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Zamioculcas zamiifolia",
+        "identity_from_heading": null,
+        "field_locators": {
+          "taxonomy": "شناسنامه",
+          "morphology": "مورفولوژی",
+          "pests": "آفات",
+          "diseases": "بیماری‌ها ( قارچ و ..)"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "anguor",
+      "target_id": "aglaonema",
+      "observed_on": "2026-11-24",
+      "outcome": "ambiguous",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://anguor.com/blog/category/treasure-of-plants/page/20/",
+        "terms": [
+          "آگلونما",
+          "Aglaonema"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "آگلونما نقره‌ای"
+      },
+      "detail_url": "https://anguor.com/blog/%d8%a2%da%af%d9%84%d9%88%d9%86%d9%85%d8%a7-%d9%86%d9%82%d8%b1%d9%87%d8%a7%db%8c/",
+      "observation": {
+        "persian": "آگلونما نقره‌ای",
+        "scientific_verbatim": "‘Aglaonema nitidum ‘Silver Bay",
+        "identity_precision": "genus_candidate",
+        "fields": {
+          "taxonomy": {
+            "locator": "شناسنامه",
+            "value": "اسامی رایج\t\nآگلونمای نقره‌ای\n\nنام انگلیسی\t\nAglaonema silver bay\n\nنام علمی\t\n\n‘Aglaonema nitidum ‘Silver Bay\n\n\nرده‌بندی\t\n\nگونه: Aglaonema\n\nخانواده:"
+          },
+          "morphology": {
+            "locator": "مورفولوژی",
+            "value": "رنگ برگ\tسبز، سفید، نقره‌ای\nعرض برگ\t5 تا 8 سانتی‌متر\nرنگ گل\tسفید سبز\nاندازه گل\t۸ سانتی‌متر"
+          },
+          "pests": {
+            "locator": "آفات",
+            "value": "آفت\tزمان ظهور\tعلائم\tدرمان\nشته\t\n\nبهار و اوایل تابستان\n\n\t\nترشحات چسبناک\nپیچ خوردگی برگ\nلکه‌های زرد روی برگ\nضعف و توقف رشد\n\t\nسم کلروپیریفوس\nسم پالیز"
+          },
+          "diseases": {
+            "locator": "بیماری‌ها ( قارچ و ..)",
+            "value": "نام بیماری\tزمان ظهور\tعلائم\tدرمان\nسفیدک پودری\t\n\nبهار\n\n\t\nلکه‌های بدون حاشیه مشخص و پودری خاکستری-سفید روی برگها\nکاهش رشد\nزردشدگی گیاه\n\t\n\nبنومیل\n\n\nق"
+          }
+        },
+        "dates": [
+          "2024/05/28"
+        ],
+        "attribution": "editorial profile",
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "‘Aglaonema nitidum ‘Silver Bay",
+        "identity_from_heading": null,
+        "field_locators": {
+          "taxonomy": "شناسنامه",
+          "morphology": "مورفولوژی",
+          "pests": "آفات",
+          "diseases": "بیماری‌ها ( قارچ و ..)"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "anguor",
+      "target_id": "spathiphyllum",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://anguor.com/blog/category/treasure-of-plants/page/20/",
+        "terms": [
+          "اسپاتی‌فیلوم",
+          "Spathiphyllum"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "اسپاتی فیلوم"
+      },
+      "detail_url": "https://anguor.com/blog/%d8%a7%d8%b3%d9%be%d8%a7%d8%aa%db%8c-%d9%81%db%8c%d9%84%d9%88%d9%85/",
+      "observation": {
+        "persian": "اسپاتی فیلوم",
+        "scientific_verbatim": "Spathiphyllum cochlearispathum",
+        "identity_precision": "genus_candidate",
+        "fields": {
+          "care": {
+            "locator": "آبیاری:",
+            "value": "اسپاتی فیلوم"
+          },
+          "taxonomy": {
+            "locator": "شناسنامه",
+            "value": "اسامی رایج\t\nاسپاتی‌فیلوم\nنیلوفر صلح\nچمچمه\n\nنام انگلیسی\t\nSpathiphyllum\nPeace lilies\n\nنام علمی\t\n\nSpathiphyllum cochlearispathum\n\n\nرده‌‌بندی\t\n\nجنس: "
+          },
+          "morphology": {
+            "locator": "مورفولوژی",
+            "value": "رنگ برگ\tسبز\nعرض برگ\t5 تا 20 سانتی‌متر\nرنگ گل\tسبز - سفید\nاندازه گل\t2 سانتی‌متر عرض"
+          },
+          "pests": {
+            "locator": "آفات",
+            "value": "آفت\tزمان ظهور\tعلائم\tدرمان\nکنه عنکبوتی\t\n\nاواخر بهار و تابستان\n\n\t\nتارهای نامنظم زیر برگ و لابه لای شاخه‌ها\nلکه‌های زرد نقطه روی برگ\nوجود حشرات قرمز"
+          },
+          "diseases": {
+            "locator": "بیماری‌ها ( قارچ و ..)",
+            "value": "نام بیماری\tزمان ظهور\tعلائم\tدرمان\nسفیدک پودری\t\n\nاوایل بهار\n\n\t\nلکه‌های بدون حاشیه مشخص و پودری خاکستری-سفید روی برگها\nکاهش رشد\nزردشدگی گیاه\n\t\n\nبنوم"
+          },
+          "symptoms": {
+            "locator": "۲.۱ پوسیدگی ریشه (Root Rot)",
+            "value": "مشخصات: پوسیدگی ریشه باعث سیاه شدن و نرمی ریشه‌ها می‌شود. برگ‌های گیاه زرد و پژمرده شده و گیاه ضعیف به نظر می‌رسد."
+          },
+          "remedies": {
+            "locator": "آفات، بیماری‌ها، دلایل به وجود آمدن، مشخصات و روش‌های درمان اسپاتی‌فیلوم (Spathiphyllum)",
+            "value": "اسپاتی‌فیلوم (Spathiphyllum) گیاهی مقاوم است، اما در شرایط نامناسب یا در صورت مراقبت نادرست، ممکن است به آفات و بیماری‌هایی دچار شود. در ادامه، ب"
+          }
+        },
+        "dates": [
+          "2024/11/16"
+        ],
+        "attribution": "editorial profile",
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Spathiphyllum cochlearispathum",
+        "identity_from_heading": null,
+        "field_locators": {
+          "care": "آبیاری:",
+          "taxonomy": "شناسنامه",
+          "morphology": "مورفولوژی",
+          "pests": "آفات",
+          "diseases": "بیماری‌ها ( قارچ و ..)",
+          "symptoms": "۲.۱ پوسیدگی ریشه (Root Rot)",
+          "remedies": "آفات، بیماری‌ها، دلایل به وجود آمدن، مشخصات و روش‌های درمان اسپاتی‌فیلوم (Spathiphyllum)"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "anguor",
+      "target_id": "rubber_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://anguor.com/blog/category/treasure-of-plants/page/9/",
+        "terms": [
+          "فیکوس الاستیکا",
+          "Ficus elastica"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "فیکوس الاستیکا"
+      },
+      "detail_url": "https://anguor.com/blog/%d9%81%db%8c%da%a9%d9%88%d8%b3-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%db%8c%da%a9%d8%a7/",
+      "observation": {
+        "persian": "فیکوس الاستیکا",
+        "scientific_verbatim": "Ficus elastica",
+        "identity_precision": "species_candidate",
+        "fields": {
+          "taxonomy": {
+            "locator": "شناسنامه",
+            "value": "اسامی رایج\t\nفیکوس الاستیکا\n\nنام انگلیسی\t\nRubber tree\nRubber fig\nIndian rubber plant\n\nنام علمی\t\nFicus elastica\n\nرده‌بندی\t\n\nگونه: Ficus\n\nخانواده: M"
+          },
+          "morphology": {
+            "locator": "مورفولوژی",
+            "value": "رنگ برگ\tسبز\nعرض برگ\t۲ تا ۶ سانتی‌متر\nرنگ گل\tسبز\nاندازه گل\t۲/۵ سانتی‌متر"
+          },
+          "pests": {
+            "locator": "آفات",
+            "value": "آفت\tزمان ظهور\tعلائم\tدرمان\nتریپس\t\nتابستان\n\t\nخوردگی برگ\n\t\nسم روایت\nسم کنفیدور\n\nشپشک آردآلود\t\nزمستان و بهار\n\t\nپوشش سفید پودری روی برگ\n ضعف گیاه\nنرم "
+          },
+          "diseases": {
+            "locator": "بیماری‌ها ( قارچ و ..)",
+            "value": "نام بیماری\tزمان ظهور\tعلائم\tدرمان\nلکه برگی\t\nاواسط بهار و تابستان\n\t\nلکه‌های قهوه ای با هاله زرد\nدارای شکل گرد\nپراکنده در تمام قسمت‌های گیاه\nایجاد ض"
+          }
+        },
+        "dates": [
+          "2024/08/16"
+        ],
+        "attribution": "editorial profile",
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Ficus elastica",
+        "identity_from_heading": null,
+        "field_locators": {
+          "taxonomy": "شناسنامه",
+          "morphology": "مورفولوژی",
+          "pests": "آفات",
+          "diseases": "بیماری‌ها ( قارچ و ..)"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "anguor",
+      "target_id": "schefflera",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://anguor.com/blog/category/treasure-of-plants/page/7/",
+        "terms": [
+          "شفلرا",
+          "Schefflera"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "شفلرا آمیت"
+      },
+      "detail_url": "https://anguor.com/blog/%d8%b4%d9%81%d9%84%d8%b1%d8%a7-%d8%a2%d9%85%db%8c%d8%aa/",
+      "observation": {
+        "persian": "شفلرا آمیت",
+        "scientific_verbatim": "Schefflera actinophylla",
+        "identity_precision": "genus_candidate",
+        "fields": {
+          "taxonomy": {
+            "locator": "شناسنامه",
+            "value": "اسامی رایج\t\nشفلرا آمیت\n\nنام انگلیسی\t\nOctopus tree\n\nنام علمی\t\nSchefflera actinophylla\n\nرده‌بندی\t\n\nگونه: Schefflera\n\nخانواده: Araliaceae\n\nراسته: Ap"
+          },
+          "morphology": {
+            "locator": "مورفولوژی",
+            "value": "رنگ برگ\tسبز\nعرض برگ\t۳ تا ۷ سانتی‌متر\nرنگ گل\tقرمز\nاندازه گل\t۲/۵ سانتی‌متر"
+          },
+          "pests": {
+            "locator": "آفات",
+            "value": "آفت\tزمان ظهور\tعلائم\tدرمان\nشپشک آردآلود\t\n\nاوایل بهار تا اواخر تابستان\n\n\t\nایجاد لکه‌های پودری سفید رنگ و برجسته لابه‌لای برگ و شاخه‌ها\nوجود حشرات ر"
+          },
+          "diseases": {
+            "locator": "بیماری‌ها ( قارچ و ..)",
+            "value": "نام بیماری\tزمان ظهور\tعلائم\tدرمان\nآبسوختگی\t\nتابستان و پاییز\n\t\nلکه‌های بی شکل\nپوسیدگی و نرم شدن بافت\nپژمردگی و بیحالی گیاه\n\t\nسم ایپرودیون کاربندازی"
+          }
+        },
+        "dates": [
+          "2024/09/29"
+        ],
+        "attribution": "editorial profile",
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Schefflera actinophylla",
+        "identity_from_heading": null,
+        "field_locators": {
+          "taxonomy": "شناسنامه",
+          "morphology": "مورفولوژی",
+          "pests": "آفات",
+          "diseases": "بیماری‌ها ( قارچ و ..)"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "anguor",
+      "target_id": "dracaena",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://anguor.com/blog/category/treasure-of-plants/page/13/",
+        "terms": [
+          "دراسنا",
+          "Dracaena"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "دراسنا پرچمی"
+      },
+      "detail_url": "https://anguor.com/blog/%d8%af%d8%b1%d8%a7%d8%b3%d9%86%d8%a7-%d9%be%d8%b1%da%86%d9%85%db%8c/",
+      "observation": {
+        "persian": "دراسنا پرچمی",
+        "scientific_verbatim": "Dracaena reflexa var. angustifolia",
+        "identity_precision": "genus_candidate",
+        "fields": {
+          "taxonomy": {
+            "locator": "شناسنامه",
+            "value": "اسامی رایج\t\nدرخت اژدها\nدراسنا پرچمی\n\nنام انگلیسی\t\nMadagascar dragon tree\nMoney tree\n\nنام علمی\t\n\nDracaena reflexa var. angustifolia\n\n\nرده‌‌بندی\t\n\n"
+          },
+          "morphology": {
+            "locator": "مورفولوژی",
+            "value": "رنگ برگ\tسبز و زرد و سفید و صورتی\nعرض برگ\t۲ تا ۱۵ سانتی‌متر\nرنگ گل\tنارنجی، قرمز، سبز\nاندازه گل\t۱ تا ۲ سانتی‌متر عرض"
+          },
+          "pests": {
+            "locator": "آفات",
+            "value": "آفت\tزمان ظهور\tعلائم\tدرمان\nکنه عنکبوتی\t\n\nاواخر بهار و تابستان\n\n\t\nتارهای نامنظم زیر برگ و لابه لای شاخه‌ها\nلکه‌های زرد نقطه روی برگ\nوجود حشرات قرمز"
+          },
+          "diseases": {
+            "locator": "بیماری‌ها ( قارچ و ..)",
+            "value": "نام بیماری\tزمان ظهور\tعلائم\tدرمان\nسفیدک پودری\t\n\nاوایل بهار\n\n\t\nلکه‌های بدون حاشیه مشخص و پودری خاکستری-سفید روی برگها\nکاهش رشد\nزردشدگی گیاه\n\t\n\nسم ب"
+          }
+        },
+        "dates": [
+          "2024/06/27"
+        ],
+        "attribution": "editorial profile",
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Dracaena reflexa var. angustifolia",
+        "identity_from_heading": null,
+        "field_locators": {
+          "taxonomy": "شناسنامه",
+          "morphology": "مورفولوژی",
+          "pests": "آفات",
+          "diseases": "بیماری‌ها ( قارچ و ..)"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "anguor",
+      "target_id": "aloe",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://anguor.com/blog/category/treasure-of-plants/page/18/",
+        "terms": [
+          "آلوئه‌ورا",
+          "Aloe vera"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "آلوئه ورا"
+      },
+      "detail_url": "https://anguor.com/blog/%d8%a2%d9%84%d9%88%d8%a6%d9%87-%d9%88%d8%b1%d8%a7/",
+      "observation": {
+        "persian": "آلوئه ورا",
+        "scientific_verbatim": "Aloe vera",
+        "identity_precision": "species_candidate",
+        "fields": {
+          "taxonomy": {
+            "locator": "شناسنامه",
+            "value": "اسامی رایج\t\nآلوئه‌ورا\nآلوئه چینی\nعصای بهشت\n\nنام انگلیسی\t\nChinese aloe\nWand of heaven\nBurn aloe\nAloe vera\n\nنام علمی\t\nAloe vera\n\nرده‌بندی\t\n\nگونه: A"
+          },
+          "morphology": {
+            "locator": "مورفولوژی",
+            "value": "رنگ برگ\tسبز، خاکستری، نقره، آبی\nعرض برگ\t۱۵ تا ۴۰ سانتی‌متر\nرنگ گل\tنارنجی، سبز، زرد\nاندازه گل\t۵ تا ۱۰ سانتی‌متر عرض"
+          },
+          "pests": {
+            "locator": "آفات",
+            "value": "آفت\tزمان ظهور\tعلائم\tدرمان\nشته سبز\t\n\nاوایل بهار و تابستان\n\n\t\nترشحات چسبناک\nپیچ خوردگی برگ\nلکه‌های زرد روی برگ\nضعف و توقف رشد\n\t\nسم کلروپیریفوس\nسم پ"
+          },
+          "diseases": {
+            "locator": "بیماری‌ها ( قارچ و ..)",
+            "value": "نام بیماری\tزمان ظهور\tعلائم\tدرمان\nسفیدک پودری\t\n\nاوایل بهار\n\n\t\nلکه‌های بدون حاشیه مشخص و پودری خاکستری-سفید روی برگ‌ها\nکاهش رشد\nزردشدگی گیاه\n\t\n\nبنو"
+          }
+        },
+        "dates": [
+          "2024/05/28"
+        ],
+        "attribution": "editorial profile",
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Aloe vera",
+        "identity_from_heading": null,
+        "field_locators": {
+          "taxonomy": "شناسنامه",
+          "morphology": "مورفولوژی",
+          "pests": "آفات",
+          "diseases": "بیماری‌ها ( قارچ و ..)"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "golsetan",
+      "target_id": "pothos",
+      "observed_on": "2026-11-24",
+      "outcome": "ambiguous",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://www.golsetan.com/plant-type-glossary-with-pictures/",
+        "terms": [
+          "پتوس",
+          "Epipremnum aureum"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "روش نگهداری پوتوس"
+      },
+      "detail_url": "https://www.golsetan.com/blog/about-pothos-plant/",
+      "observation": {
+        "persian": "همه چیز درباره روش نگهداری گیاه پتوس یا پوتوس",
+        "scientific_verbatim": null,
+        "identity_precision": "common_name_only",
+        "fields": {
+          "care": {
+            "locator": "آبیاری",
+            "value": "اولین نکته‌ای که در نگهداری از گیاه پتوس یا پوتوس باید درنظر داشته باشید این است که بیش‌از حد آن را آبیاری نکنید، چون آبیاری بیش‌از حد باعث پوسید"
+          },
+          "symptoms": {
+            "locator": "دلایل زرد شدن برگ‌ها در طول نگهداری گیاه پوتوس یا پتوس",
+            "value": "1. کمبود مواد مغذی یا کوددهی بیش‌از حد"
+          }
+        },
+        "dates": [],
+        "attribution": "editorial article",
+        "authority": {
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:87014-1",
+          "status": "reported_in_earlier_intake"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": null,
+        "identity_from_heading": null,
+        "field_locators": {
+          "care": "آبیاری",
+          "symptoms": "دلایل زرد شدن برگ‌ها در طول نگهداری گیاه پوتوس یا پتوس"
+        },
+        "success": false
+      }
+    },
+    {
+      "source_id": "golsetan",
+      "target_id": "monstera",
+      "observed_on": "2026-11-24",
+      "outcome": "ambiguous",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://www.golsetan.com/plant-type-glossary-with-pictures/",
+        "terms": [
+          "برگ انجیری",
+          "Monstera deliciosa"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "روش نگهداری برگ انجیری"
+      },
+      "detail_url": "https://www.golsetan.com/blog/how-care-swiss-cheese-plant/",
+      "observation": {
+        "persian": "روش نگهداری گیاه برگ انجیری (Swiss Cheese Plant)",
+        "scientific_verbatim": null,
+        "identity_precision": "common_name_only",
+        "fields": {
+          "care": {
+            "locator": "شرایط نگهداری",
+            "value": "نور و دما"
+          },
+          "symptoms": {
+            "locator": "علت زرد شدن برگهای برگ انجیری چیست؟",
+            "value": "در اغلب اوقات، دلیل زرد شدن برگهای این گیاه به میزان آبیاری مربوط است.\nاگر متوجه شدید برگهای بخش پایینی گیاه (به ویژه برگ‌های قدیمی‌) در حال زرد "
+          }
+        },
+        "dates": [],
+        "attribution": "editorial article",
+        "authority": {
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:87478-1",
+          "status": "reported_in_earlier_intake"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": null,
+        "identity_from_heading": null,
+        "field_locators": {
+          "care": "شرایط نگهداری",
+          "symptoms": "علت زرد شدن برگهای برگ انجیری چیست؟"
+        },
+        "success": false
+      }
+    },
+    {
+      "source_id": "golsetan",
+      "target_id": "snake_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "ambiguous",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://www.golsetan.com/plant-type-glossary-with-pictures/",
+        "terms": [
+          "سانسوریا",
+          "Sansevieria trifasciata",
+          "Dracaena trifasciata"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "روش نگهداری سانسوریا"
+      },
+      "detail_url": "https://www.golsetan.com/blog/snake-plant-care/",
+      "observation": {
+        "persian": "راهنمای جامع نگهداری از سانسوریا و پاسخ به سوالات شما درباره آن",
+        "scientific_verbatim": null,
+        "identity_precision": "common_name_only",
+        "fields": {
+          "pests": {
+            "locator": "آفات و بیماری‌ها در طول نگهداری از گیاه سانسوریا",
+            "value": "آفت‌ها"
+          },
+          "diseases": {
+            "locator": "آفات و بیماری‌ها در طول نگهداری از گیاه سانسوریا",
+            "value": "آفت‌ها"
+          },
+          "symptoms": {
+            "locator": "علت زرد شدن و کمرنگ شدن برگ‌های سانسوریا",
+            "value": "زرد شدن برگ‌های سانسوریا به کمبود نور و خالی شدن خاک از مواد مغذی برمی‌گردد. برای حل این مشکل گیاه را به محلی پرنورتر با نور غیرمستقیم منتقل کرده"
+          },
+          "remedies": {
+            "locator": "آیا می توانیم با استفاده از سموم مخصوص بیماری های گیاه سانسوریا را کنترل و درمان کنیم؟",
+            "value": "جواب منفی است. بیماری‌های سانسوریا اغلب به‌خاطر آبیاری نادرست ایجاد می‌شوند که قابل حل با مواد شیمیایی نیست. البته می‌توانید کمی الکل به برگ‌ها ا"
+          }
+        },
+        "dates": [],
+        "attribution": "editorial article",
+        "authority": {
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77164235-1",
+          "status": "earlier_mapping_current_synonym_probe_challenged"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": null,
+        "identity_from_heading": null,
+        "field_locators": {
+          "pests": "آفات و بیماری‌ها در طول نگهداری از گیاه سانسوریا",
+          "diseases": "آفات و بیماری‌ها در طول نگهداری از گیاه سانسوریا",
+          "symptoms": "علت زرد شدن و کمرنگ شدن برگ‌های سانسوریا",
+          "remedies": "آیا می توانیم با استفاده از سموم مخصوص بیماری های گیاه سانسوریا را کنترل و درمان کنیم؟"
+        },
+        "success": false
+      }
+    },
+    {
+      "source_id": "golsetan",
+      "target_id": "zz_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "ambiguous",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://www.golsetan.com/plant-type-glossary-with-pictures/",
+        "terms": [
+          "زامیفولیا",
+          "Zamioculcas zamiifolia"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "روش نگهداری زاموفیلیا"
+      },
+      "detail_url": "https://www.golsetan.com/blog/how-care-zamiifolia/",
+      "observation": {
+        "persian": "روش نگهداری گیاه زیبا و پرطرفدار زاموفیلیا یا همان زامیفولیا",
+        "scientific_verbatim": null,
+        "identity_precision": "common_name_only",
+        "fields": {
+          "care": {
+            "locator": "آبیاری",
+            "value": "در طول نگهداری از زاموفیلیا موقع آبیاری اجازه ندهید، خاک گیاه غرقاب شود، زامیفولیا نباید برای مدت طولانی خیسی خاک را تجربه کند، زیرا به پوسیدگی ر"
+          },
+          "symptoms": {
+            "locator": "علت زرد شدن برگ‌های زامیفولیا چیست؟",
+            "value": "گذشت زمان، مسن شدن برگ‌ها و فرارسیدن فصل زمستان یکی از عوامل زرد شدن برگ‌های زامیفولیاست. پس اگر زرد شدن در آستانه آغاز سرما رخ داده است، جای نگر"
+          }
+        },
+        "dates": [],
+        "attribution": "editorial article",
+        "authority": {
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:89402-1",
+          "status": "reported_in_earlier_intake"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": null,
+        "identity_from_heading": null,
+        "field_locators": {
+          "care": "آبیاری",
+          "symptoms": "علت زرد شدن برگ‌های زامیفولیا چیست؟"
+        },
+        "success": false
+      }
+    },
+    {
+      "source_id": "golsetan",
+      "target_id": "aglaonema",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://www.golsetan.com/plant-type-glossary-with-pictures/",
+        "terms": [
+          "آگلونما",
+          "Aglaonema"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "روش نگهداری آگلونما نقره ای"
+      },
+      "detail_url": "https://www.golsetan.com/blog/introduction-and-care-aglaonema-silver-bay/",
+      "observation": {
+        "persian": "معرفی و روش نگهداری گیاه آگلونما نقره ای (Aglaonema Silver Bay)",
+        "scientific_verbatim": "Aglaonema Silver Bay",
+        "identity_precision": "genus_candidate",
+        "fields": {
+          "care": {
+            "locator": "آبیاری",
+            "value": "هنگامی که چندسانتی‌متر رویی خاک خشک شد، گیاه را آبیاری کنید. اگر گیاه برای مدت طولانی در خاکی خیس قرار بگیرد، برگ‌های آن زرد شده و شروع به ریزش م"
+          }
+        },
+        "dates": [],
+        "attribution": "editorial article",
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": null,
+        "identity_from_heading": "Aglaonema Silver Bay",
+        "field_locators": {
+          "care": "آبیاری"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "golsetan",
+      "target_id": "spathiphyllum",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://www.golsetan.com/plant-type-glossary-with-pictures/",
+        "terms": [
+          "اسپاتی‌فیلوم",
+          "Spathiphyllum"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "روش نگهداری اسپاتی فیلوم"
+      },
+      "detail_url": "https://www.golsetan.com/blog/how-to-care-for-spathiphyllum/",
+      "observation": {
+        "persian": "روش نگهداری گل اسپاتی فیلوم (Spathiphyllum) و بررسی مشکلات آن",
+        "scientific_verbatim": "Spathiphyllum",
+        "identity_precision": "genus_candidate",
+        "fields": {
+          "care": {
+            "locator": "دما",
+            "value": "دمای رایج در منزل و مقداری گرم تر برای رشد بهتر این گیاه مناسب است. مکان هایی که ناگهان گرم و سرد میشوند دلپذیر این گیاه نیست. در کل دمای بین 12 "
+          },
+          "pests": {
+            "locator": "چگونه از آفات گل اسپاتی فیلوم خلاص شویم",
+            "value": "پس از شرح روش نگهداری گل اسپاتی فیلوم به بررسی آفات احتمالی آن میپردازیم:\nخلاص شدن از آفات اسپاتی فیلوم به راحتی صورت میگیرد:"
+          },
+          "diseases": {
+            "locator": "10- بیماری‌ها",
+            "value": "ما بدترین اتفاق را برای آخرین گزینه کنار گذاشتیم! زیرا تقریبا هیچ درمان قابل قبولی برای دو بیماری اصلی اسپاتی فیلوم وجود ندارد:\nقارچ سیلیندروکلاد"
+          },
+          "symptoms": {
+            "locator": "علت زرد شدن برگ‌های اسپاتی فیلوم چیست؟",
+            "value": "علت قهوه‌ای شدن نوک برگ‌های اسپاتی فیلوم چیست؟"
+          }
+        },
+        "dates": [],
+        "attribution": "editorial article",
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": null,
+        "identity_from_heading": "Spathiphyllum",
+        "field_locators": {
+          "care": "دما",
+          "pests": "چگونه از آفات گل اسپاتی فیلوم خلاص شویم",
+          "diseases": "10- بیماری‌ها",
+          "symptoms": "علت زرد شدن برگ‌های اسپاتی فیلوم چیست؟"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "golsetan",
+      "target_id": "rubber_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://www.golsetan.com/plant-type-glossary-with-pictures/",
+        "terms": [
+          "فیکوس الاستیکا",
+          "Ficus elastica"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "روش نگهداری فیکوس الاستیکا"
+      },
+      "detail_url": "https://www.golsetan.com/blog/how-care-ficus-elastica/",
+      "observation": {
+        "persian": "روش نگهداری گیاه فیکوس الاستیکا (Ficus Elastica)",
+        "scientific_verbatim": "Ficus Elastica",
+        "identity_precision": "species_candidate",
+        "fields": {
+          "care": {
+            "locator": "نور",
+            "value": "گیاه فیکوس نور غیر مستقیمی که گرم نباشد را ترجیح میدهد. نور مستقیم خورشید میتواند منجر به سوخته شدن برگهایش شود. میتوانید این گیاه را نزدیک به پن"
+          },
+          "pests": {
+            "locator": "آفات",
+            "value": "حشرات آردی، کرم ریز، اسکال (Scale) و شته ها از آفات رایجی هستند که می توانند در فیکوس شما خانه برگزینند.\nاگر به موقع متوجه شوید میتوانید این حشرا"
+          },
+          "symptoms": {
+            "locator": "علت زرد شدن برگهای فیکوس الاستیکا چیست؟",
+            "value": "آبیاری"
+          }
+        },
+        "dates": [],
+        "attribution": "editorial article",
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": null,
+        "identity_from_heading": "Ficus Elastica",
+        "field_locators": {
+          "care": "نور",
+          "pests": "آفات",
+          "symptoms": "علت زرد شدن برگهای فیکوس الاستیکا چیست؟"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "golsetan",
+      "target_id": "schefflera",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://www.golsetan.com/plant-type-glossary-with-pictures/",
+        "terms": [
+          "شفلرا",
+          "Schefflera"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "روش نگهداری شفلرا"
+      },
+      "detail_url": "https://www.golsetan.com/blog/how-care-schefflera/",
+      "observation": {
+        "persian": "روش نگهداری گیاه شفلرا (Schefflera Ol Lava)",
+        "scientific_verbatim": "Schefflera Nora",
+        "identity_precision": "genus_candidate",
+        "fields": {
+          "care": {
+            "locator": "آبیاری",
+            "value": "در طول فصول رشد، گیاه را هر هفته آبیاری کرده و با اسپری برگ‌ها را مرطوب کنید. می‌توانید تا خشک شدن کامل خاک صبر کنید و سپس خاک را در مقدار زیادی "
+          }
+        },
+        "dates": [],
+        "attribution": "editorial article",
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Schefflera Nora",
+        "identity_from_heading": null,
+        "field_locators": {
+          "care": "آبیاری"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "golsetan",
+      "target_id": "dracaena",
+      "observed_on": "2026-11-24",
+      "outcome": "ambiguous",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://www.golsetan.com/plant-type-glossary-with-pictures/",
+        "terms": [
+          "دراسنا",
+          "Dracaena"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "روش نگهداری دراسنا"
+      },
+      "detail_url": "https://www.golsetan.com/blog/about-dracaena/",
+      "observation": {
+        "persian": "همه آنچه درباره نگهداری از گیاه دراسنا و انواع مختلف آن باید بدانید",
+        "scientific_verbatim": null,
+        "identity_precision": "common_name_only",
+        "fields": {
+          "care": {
+            "locator": "آبیاری",
+            "value": "شهرت دراسنا، به نیاز کم آن به آبیاری است!برای این گیاه همیشه آبیاری کم بهتر از آبیاری زیاد است، اما نباید اجازه دهید که خاک گیاه کاملا خشک شود و "
+          },
+          "diseases": {
+            "locator": "3. بیماری لکه برگی از دیگر دلایل قهوه‌ای شدن برگ‌ها در طول نگهداری از گیاه دراسنا",
+            "value": "اگر در سطح برگ دراسنا، لکه‌های قهوه‌ای پوشیده شده با نوار زرد رنگ ایجاد شده‌اند، گیاه شما به بیماری لکه برگی مبتلا شده است. حمله قارچ‌ها و باکتری"
+          },
+          "symptoms": {
+            "locator": "علت زرد شدن برگ‌های دراسنا چیست؟",
+            "value": "زرد شدن برگها، نشانه‌ نامناسب بودن شرایط است. در این صورت باید سریعا وارد عمل شوید.\nبرگ‌های زرد، چنین ویژگی‌هایی دارند:"
+          },
+          "remedies": {
+            "locator": "روش درمان:",
+            "value": "بهترین روش برای تشخیص زمان صحیح آبیاری از طریق کنار زدن سطح خاک است. به‌این‌منظور چند سانتی‌‌متر از عمق خاک را کنار بزنید و رطوبت آن را بسنجید. ا"
+          }
+        },
+        "dates": [],
+        "attribution": "editorial article",
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": null,
+        "identity_from_heading": null,
+        "field_locators": {
+          "care": "آبیاری",
+          "diseases": "3. بیماری لکه برگی از دیگر دلایل قهوه‌ای شدن برگ‌ها در طول نگهداری از گیاه دراسنا",
+          "symptoms": "علت زرد شدن برگ‌های دراسنا چیست؟",
+          "remedies": "روش درمان:"
+        },
+        "success": false
+      }
+    },
+    {
+      "source_id": "golsetan",
+      "target_id": "aloe",
+      "observed_on": "2026-11-24",
+      "outcome": "ambiguous",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://www.golsetan.com/plant-type-glossary-with-pictures/",
+        "terms": [
+          "آلوئه‌ورا",
+          "Aloe vera"
+        ],
+        "method": "Rendered archive or glossary labels and article detail. Scientific names checked on the article where shown.",
+        "selected_label": "روش نگهداری آلوئه ورا"
+      },
+      "detail_url": "https://www.golsetan.com/blog/about-aloe-vera-and-uses/",
+      "observation": {
+        "persian": "روش نگهداری گیاه آلوئه ورا و سوالات پرتکرار شما درباره آن",
+        "scientific_verbatim": null,
+        "identity_precision": "common_name_only",
+        "fields": {
+          "care": {
+            "locator": "آبیاری",
+            "value": "برخلاف اکثر گیاهان آپارتمانی آلوئه ورا آب را دربرگ‌های خود ذخیره می‌کند، نه در خاک و ریشه. پس نیازی نیست مرتبا آن را آبیاری کنید. درنتیجه قبل از "
+          },
+          "remedies": {
+            "locator": "خواص درمانی گیاه آلوئه ورا",
+            "value": "بد نیست علاوه‌بر شرایط نگهداری گیاه آلوئه ورا کمی نیز درباره خواص درمانی این گیاه حرف بزنیم. آلوئه ورا دارای خواص بی‌نظیر و اثبات شده برای پوست و"
+          }
+        },
+        "dates": [],
+        "attribution": "editorial article",
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": null,
+        "identity_from_heading": null,
+        "field_locators": {
+          "care": "آبیاری",
+          "remedies": "خواص درمانی گیاه آلوئه ورا"
+        },
+        "success": false
+      }
+    },
+    {
+      "source_id": "nargil",
+      "target_id": "pothos",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://nargil.ir/Plants-List.aspx",
+        "method": "Public in-list search",
+        "queries": [
+          {
+            "query": "پتوس",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": false
+          },
+          {
+            "query": "Epipremnum aureum",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": false
+          },
+          {
+            "query": "پوتوس",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [
+              [
+                "پوتوس\nEpipremnum aureum",
+                "https://nargil.ir/Plant.aspx?Name=Epipremnum-aureum&cid=5013"
+              ],
+              [
+                "پوتوس طلایی\nEpipremnum aureum Golden",
+                "https://nargil.ir/Plant.aspx?Name=Epipremnum-aureum-Golden&cid=5011"
+              ]
+            ],
+            "empty": false
+          }
+        ]
+      },
+      "detail_url": "https://nargil.ir/Plant.aspx?Name=Epipremnum-aureum&cid=5013",
+      "observation": {
+        "persian": "پوتوس",
+        "scientific_verbatim": "Epipremnum aureum",
+        "identity_precision": "species_candidate",
+        "fields": {
+          "care": "شرایط محیط رشد",
+          "pests": "مقابله به آفات پوتوس",
+          "diseases": null,
+          "taxonomy": null,
+          "sources": [],
+          "date": "1391/04/11"
+        },
+        "attribution": {
+          "profile": "editorial",
+          "community": "پرسش‌ها و نظرات این مقاله"
+        },
+        "authority": {
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:87014-1",
+          "status": "reported_in_earlier_intake"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Epipremnum aureum",
+        "success": false,
+        "scope": "The initial evaluator identified section headings. A field value was independently extracted on the snake-plant recheck."
+      }
+    },
+    {
+      "source_id": "nargil",
+      "target_id": "monstera",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://nargil.ir/Plants-List.aspx",
+        "method": "Public in-list search",
+        "queries": [
+          {
+            "query": "برگ انجیری",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [
+              [
+                "برگ انجیری\nMonstera deliciosa",
+                "https://nargil.ir/Plant.aspx?Name=Monstera-deliciosa&cid=5005"
+              ],
+              [
+                "فیلودندرون برگ انجیری\nPhilodendron Bipinnatifidum",
+                "https://nargil.ir/Plant.aspx?Name=Philodendron-Bipinnatifidum&cid=5231"
+              ],
+              [
+                "کدو برگ انجیری\nCucurbita ficifolia",
+                "https://nargil.ir/Plant.aspx?Name=Cucurbita-ficifolia&cid=6563"
+              ]
+            ],
+            "empty": false
+          },
+          {
+            "query": "Monstera deliciosa",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": true
+          }
+        ]
+      },
+      "detail_url": "https://nargil.ir/Plant.aspx?Name=Monstera-deliciosa&cid=5005",
+      "observation": {
+        "persian": "برگ انجیری",
+        "scientific_verbatim": "Monstera deliciosa",
+        "identity_precision": "species_candidate",
+        "fields": {
+          "care": "شرایط محیط رشد",
+          "pests": "مقابله به آفات برگ انجیری",
+          "diseases": null,
+          "taxonomy": "رده‌بندی",
+          "sources": [],
+          "date": "1391/04/11"
+        },
+        "attribution": {
+          "profile": "editorial",
+          "community": "پرسش‌ها و نظرات این مقاله"
+        },
+        "authority": {
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:87478-1",
+          "status": "reported_in_earlier_intake"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Monstera deliciosa",
+        "success": false,
+        "scope": "The initial evaluator identified section headings. A field value was independently extracted on the snake-plant recheck."
+      }
+    },
+    {
+      "source_id": "nargil",
+      "target_id": "snake_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://nargil.ir/Plants-List.aspx",
+        "method": "Public in-list search",
+        "queries": [
+          {
+            "query": "سانسوریا",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [
+              [
+                "سانسوریا (نیزه آفریقایی)\nDracaena angolensis",
+                "https://nargil.ir/Plant.aspx?Name=Dracaena-angolensis&cid=5249"
+              ],
+              [
+                "سانسوریا دونِری\nDracaena dooneri",
+                "https://nargil.ir/Plant.aspx?Name=Dracaena-dooneri&cid=5351"
+              ],
+              [
+                "سانسوریا روبوستا\nDracaena trifasciata Robusta",
+                "https://nargil.ir/Plant.aspx?Name=Dracaena-trifasciata-Robusta&cid=5352"
+              ],
+              [
+                "سانسوریا شمشیری - تریفاسکیتا\nDracaena trifasciata",
+                "https://nargil.ir/Plant.aspx?Name=Dracaena-trifasciata&cid=5019"
+              ]
+            ],
+            "empty": false
+          },
+          {
+            "query": "Sansevieria trifasciata",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": true
+          },
+          {
+            "query": "Dracaena trifasciata",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": true
+          }
+        ]
+      },
+      "detail_url": "https://nargil.ir/Plant.aspx?Name=Dracaena-trifasciata&cid=5019",
+      "observation": {
+        "persian": "سانسوریا شمشیری - تریفاسکیتا",
+        "scientific_verbatim": "Dracaena trifasciata",
+        "identity_precision": "species_candidate",
+        "fields": {
+          "care": "شرایط محیط رشد",
+          "pests": "مقابله به آفات سانسوریا شمشیری - تریفاسکیتا",
+          "diseases": null,
+          "taxonomy": "رده‌بندی گیاهشناسی",
+          "sources": [],
+          "date": "1391/04/11",
+          "care_example": {
+            "locator": "شرایط محیط رشد → دمای مورد نیاز",
+            "value": "20 درجه سانتیگراد",
+            "conditions": "Listed in the site's growth-conditions section."
+          }
+        },
+        "attribution": {
+          "profile": "editorial",
+          "community": "پرسش‌ها و نظرات این مقاله"
+        },
+        "conflicts": [
+          {
+            "left": {
+              "locator": "خانواده (تيره)",
+              "value": "Ruscaceae"
+            },
+            "right": {
+              "locator": "رده‌بندی گیاهشناسی",
+              "value": "Asparagaceae"
+            },
+            "context": "Family classification of the same profile, independent of cultivation conditions."
+          }
+        ],
+        "authority": {
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77164235-1",
+          "status": "earlier_mapping_current_synonym_probe_challenged"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Dracaena trifasciata",
+        "success": true,
+        "scope": "The initial evaluator identified section headings. A field value was independently extracted on the snake-plant recheck.",
+        "taxonomy_value": "Ruscaceae"
+      }
+    },
+    {
+      "source_id": "nargil",
+      "target_id": "zz_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://nargil.ir/Plants-List.aspx",
+        "method": "Public in-list search",
+        "queries": [
+          {
+            "query": "زامیفولیا",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [
+              [
+                "زامیفولیا\nZamioculcas Zamiifolia",
+                "https://nargil.ir/Plant.aspx?Name=Zamioculcas-Zamiifolia&cid=5258"
+              ]
+            ],
+            "empty": false
+          },
+          {
+            "query": "Zamioculcas zamiifolia",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": true
+          }
+        ]
+      },
+      "detail_url": "https://nargil.ir/Plant.aspx?Name=Zamioculcas-Zamiifolia&cid=5258",
+      "observation": {
+        "persian": "زامیفولیا",
+        "scientific_verbatim": "Zamioculcas Zamiifolia",
+        "identity_precision": "species_candidate",
+        "fields": {
+          "care": "شرایط محیط رشد",
+          "pests": "مقابله به آفات زامیفولیا",
+          "diseases": "بیماری‌ها و مشکلات فیزیولوژیک",
+          "taxonomy": null,
+          "sources": [],
+          "date": "1391/04/11"
+        },
+        "attribution": {
+          "profile": "editorial",
+          "community": "پرسش‌ها و نظرات این مقاله"
+        },
+        "authority": {
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:89402-1",
+          "status": "reported_in_earlier_intake"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Zamioculcas Zamiifolia",
+        "success": false,
+        "scope": "The initial evaluator identified section headings. A field value was independently extracted on the snake-plant recheck."
+      }
+    },
+    {
+      "source_id": "nargil",
+      "target_id": "aglaonema",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://nargil.ir/Plants-List.aspx",
+        "method": "Public in-list search",
+        "queries": [
+          {
+            "query": "آگلونما",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [
+              [
+                "آگلونما\nAglaonema commutatum",
+                "https://nargil.ir/Plant.aspx?Name=Aglaonema-commutatum&cid=5003"
+              ],
+              [
+                "آگلونما پاتایا\nAglaonema 'Pattaya Beauty'",
+                "https://nargil.ir/Plant.aspx?Name=Aglaonema-%27Pattaya-Beauty%27&cid=5349"
+              ],
+              [
+                "آگلونما پیکتوم\nAglaonema Pictum",
+                "https://nargil.ir/Plant.aspx?Name=Aglaonema-Pictum&cid=5263"
+              ],
+              [
+                "آگلونما ماریا\nAglaonema 'Maria'",
+                "https://nargil.ir/Plant.aspx?Name=Aglaonema-%27Maria%27&cid=5347"
+              ],
+              [
+                "آگلونما نیتیدوم\nAglaonema Nitidum",
+                "https://nargil.ir/Plant.aspx?Name=Aglaonema-Nitidum&cid=5262"
+              ]
+            ],
+            "empty": false
+          },
+          {
+            "query": "Aglaonema",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": false
+          }
+        ]
+      },
+      "detail_url": "https://nargil.ir/Plant.aspx?Name=Aglaonema-commutatum&cid=5003",
+      "observation": {
+        "persian": "آگلونما",
+        "scientific_verbatim": "Aglaonema commutatum",
+        "identity_precision": "genus_candidate",
+        "fields": {
+          "care": "شرایط محیط رشد",
+          "pests": "مقابله به آفات آگلونما",
+          "diseases": null,
+          "taxonomy": "رده‌بندی و خانواده",
+          "sources": [],
+          "date": "1391/04/11"
+        },
+        "attribution": {
+          "profile": "editorial",
+          "community": "پرسش‌ها و نظرات این مقاله"
+        },
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Aglaonema commutatum",
+        "success": false,
+        "scope": "The initial evaluator identified section headings. A field value was independently extracted on the snake-plant recheck."
+      }
+    },
+    {
+      "source_id": "nargil",
+      "target_id": "spathiphyllum",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://nargil.ir/Plants-List.aspx",
+        "method": "Public in-list search",
+        "queries": [
+          {
+            "query": "اسپاتی‌فیلوم",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": true
+          },
+          {
+            "query": "Spathiphyllum",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": true
+          },
+          {
+            "query": "اسپاتی فیلوم",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [
+              [
+                "اسپاتی فیلوم آبزی\nSpathiphyllum 'Tasson'",
+                "https://nargil.ir/Plant.aspx?Name=Spathiphyllum-%27Tasson%27&cid=5448"
+              ],
+              [
+                "اسپاتی فیلوم سِن سیشن\nSpathiphyllum 'Sensation'",
+                "https://nargil.ir/Plant.aspx?Name=Spathiphyllum-%27Sensation%27&cid=5350"
+              ],
+              [
+                "اسپاتی فیلوم مونا لوا\nSpathiphyllum 'Mauna Loa Supreme'",
+                "https://nargil.ir/Plant.aspx?Name=Spathiphyllum-%27Mauna-Loa-Supreme%27&cid=5083"
+              ],
+              [
+                "گل اسپاتی فیلوم\nSpathiphyllum wallisii",
+                "https://nargil.ir/Plant.aspx?Name=Spathiphyllum-wallisii&cid=5081"
+              ]
+            ],
+            "empty": false
+          }
+        ]
+      },
+      "detail_url": "https://nargil.ir/Plant.aspx?Name=Spathiphyllum-%27Tasson%27&cid=5448",
+      "observation": {
+        "persian": "اسپاتی فیلوم آبزی",
+        "scientific_verbatim": "Spathiphyllum 'Tasson'",
+        "identity_precision": "genus_candidate",
+        "fields": {
+          "care": "شرایط محیط رشد",
+          "pests": null,
+          "diseases": null,
+          "taxonomy": null,
+          "sources": [],
+          "date": "1391/04/11"
+        },
+        "attribution": {
+          "profile": "editorial",
+          "community": "پرسش‌ها و نظرات این مقاله"
+        },
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Spathiphyllum 'Tasson'",
+        "success": false,
+        "scope": "The initial evaluator identified section headings. A field value was independently extracted on the snake-plant recheck."
+      }
+    },
+    {
+      "source_id": "nargil",
+      "target_id": "rubber_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://nargil.ir/Plants-List.aspx",
+        "method": "Public in-list search",
+        "queries": [
+          {
+            "query": "فیکوس الاستیکا",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [
+              [
+                "فیکوس الاستیکا\nFicus elastica",
+                "https://nargil.ir/Plant.aspx?Name=Ficus-elastica&cid=5033"
+              ]
+            ],
+            "empty": false
+          },
+          {
+            "query": "Ficus elastica",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": true
+          }
+        ]
+      },
+      "detail_url": "https://nargil.ir/Plant.aspx?Name=Ficus-elastica&cid=5033",
+      "observation": {
+        "persian": "فیکوس الاستیکا",
+        "scientific_verbatim": "Ficus elastica",
+        "identity_precision": "species_candidate",
+        "fields": {
+          "care": "شرایط محیط رشد",
+          "pests": "مقابله به آفات فیکوس الاستیکا",
+          "diseases": "بیماری‌ها",
+          "taxonomy": null,
+          "sources": [],
+          "date": "1391/04/11"
+        },
+        "attribution": {
+          "profile": "editorial",
+          "community": "پرسش‌ها و نظرات این مقاله"
+        },
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Ficus elastica",
+        "success": false,
+        "scope": "The initial evaluator identified section headings. A field value was independently extracted on the snake-plant recheck."
+      }
+    },
+    {
+      "source_id": "nargil",
+      "target_id": "schefflera",
+      "observed_on": "2026-11-24",
+      "outcome": "ambiguous",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://nargil.ir/Plants-List.aspx",
+        "method": "Public in-list search",
+        "queries": [
+          {
+            "query": "شفلرا",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [
+              [
+                "شفلرا آربوریکلا\nHeptapleurum arboricola",
+                "https://nargil.ir/Plant.aspx?Name=Heptapleurum-arboricola&cid=5096"
+              ],
+              [
+                "شفلرا آکتینوفیلا\nSchefflera Actinophylla",
+                "https://nargil.ir/Plant.aspx?Name=Schefflera-Actinophylla&cid=5094"
+              ]
+            ],
+            "empty": false
+          },
+          {
+            "query": "Schefflera",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": true
+          }
+        ]
+      },
+      "detail_url": "https://nargil.ir/Plant.aspx?Name=Heptapleurum-arboricola&cid=5096",
+      "observation": {
+        "persian": "شفلرا آربوریکلا",
+        "scientific_verbatim": "Heptapleurum arboricola",
+        "identity_precision": "mixed_genus_candidates",
+        "fields": {
+          "care": "شرایط محیط رشد",
+          "pests": "مقابله به آفات شفلرا آربوریکلا",
+          "diseases": null,
+          "taxonomy": null,
+          "sources": [],
+          "date": "1391/04/11"
+        },
+        "attribution": {
+          "profile": "editorial",
+          "community": "پرسش‌ها و نظرات این مقاله"
+        },
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Heptapleurum arboricola",
+        "success": false,
+        "scope": "The initial evaluator identified section headings. A field value was independently extracted on the snake-plant recheck."
+      }
+    },
+    {
+      "source_id": "nargil",
+      "target_id": "dracaena",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://nargil.ir/Plants-List.aspx",
+        "method": "Public in-list search",
+        "queries": [
+          {
+            "query": "دراسنا",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [
+              [
+                "دراسنا استودنری\nDracaena steudneri",
+                "https://nargil.ir/Plant.aspx?Name=Dracaena-steudneri&cid=5199"
+              ],
+              [
+                "دراسنا کامپکتا\nDracaena fragrans Compacta",
+                "https://nargil.ir/Plant.aspx?Name=Dracaena-fragrans-Compacta&cid=5198"
+              ]
+            ],
+            "empty": false
+          },
+          {
+            "query": "Dracaena",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": true
+          }
+        ]
+      },
+      "detail_url": "https://nargil.ir/Plant.aspx?Name=Dracaena-steudneri&cid=5199",
+      "observation": {
+        "persian": "دراسنا استودنری",
+        "scientific_verbatim": "Dracaena steudneri",
+        "identity_precision": "genus_candidate",
+        "fields": {
+          "care": "شرایط محیط رشد",
+          "pests": "مقابله به آفات دراسنا استودنری",
+          "diseases": null,
+          "taxonomy": "رده‌بندی گیاه‌شناسی",
+          "sources": [],
+          "date": "1394/08/14"
+        },
+        "attribution": {
+          "profile": "editorial",
+          "community": "پرسش‌ها و نظرات این مقاله"
+        },
+        "authority": {
+          "url": null,
+          "status": "independent_verification_pending"
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Dracaena steudneri",
+        "success": false,
+        "scope": "The initial evaluator identified section headings. A field value was independently extracted on the snake-plant recheck."
+      }
+    },
+    {
+      "source_id": "nargil",
+      "target_id": "aloe",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://nargil.ir/Plants-List.aspx",
+        "method": "Public in-list search",
+        "queries": [
+          {
+            "query": "آلوئه‌ورا",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": true
+          },
+          {
+            "query": "Aloe vera",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": true
+          },
+          {
+            "query": "آلوئه ورا",
+            "url": "https://nargil.ir/Plants-List.aspx",
+            "hits": [],
+            "empty": true
+          }
+        ]
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "Each tested spelling showed the list’s empty state."
+    },
+    {
+      "source_id": "plantfinder",
+      "target_id": "pothos",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "routes": [
+          "https://plantfinder.ir/plant-list/",
+          "https://plantfinder.ir/plants-sitemap.xml"
+        ],
+        "terms": [
+          "پتوس",
+          "Epipremnum aureum"
+        ],
+        "method": "Rendered catalog labels and public sitemap entries",
+        "scope": "14 published catalog names and the declared plant sitemap. Advanced search rendered a shortcode only. Robots disallows the standard WordPress search routes."
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "No candidate in the inspected catalog or sitemap. Legacy product coverage is unknown."
+    },
+    {
+      "source_id": "plantfinder",
+      "target_id": "monstera",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "routes": [
+          "https://plantfinder.ir/plant-list/",
+          "https://plantfinder.ir/plants-sitemap.xml"
+        ],
+        "terms": [
+          "برگ انجیری",
+          "Monstera deliciosa"
+        ],
+        "method": "Rendered catalog labels and public sitemap entries",
+        "scope": "14 published catalog names and the declared plant sitemap. Advanced search rendered a shortcode only. Robots disallows the standard WordPress search routes."
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "No candidate in the inspected catalog or sitemap. Legacy product coverage is unknown."
+    },
+    {
+      "source_id": "plantfinder",
+      "target_id": "snake_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "routes": [
+          "https://plantfinder.ir/plant-list/",
+          "https://plantfinder.ir/plants-sitemap.xml"
+        ],
+        "terms": [
+          "سانسوریا",
+          "Sansevieria trifasciata",
+          "Dracaena trifasciata"
+        ],
+        "method": "Rendered catalog labels and public sitemap entries",
+        "scope": "14 published catalog names and the declared plant sitemap. Advanced search rendered a shortcode only. Robots disallows the standard WordPress search routes."
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "No candidate in the inspected catalog or sitemap. Legacy product coverage is unknown."
+    },
+    {
+      "source_id": "plantfinder",
+      "target_id": "zz_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "routes": [
+          "https://plantfinder.ir/plant-list/",
+          "https://plantfinder.ir/plants-sitemap.xml"
+        ],
+        "terms": [
+          "زامیفولیا",
+          "Zamioculcas zamiifolia"
+        ],
+        "method": "Rendered catalog labels and public sitemap entries",
+        "scope": "14 published catalog names and the declared plant sitemap. Advanced search rendered a shortcode only. Robots disallows the standard WordPress search routes."
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "No candidate in the inspected catalog or sitemap. Legacy product coverage is unknown."
+    },
+    {
+      "source_id": "plantfinder",
+      "target_id": "aglaonema",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "routes": [
+          "https://plantfinder.ir/plant-list/",
+          "https://plantfinder.ir/plants-sitemap.xml"
+        ],
+        "terms": [
+          "آگلونما",
+          "Aglaonema"
+        ],
+        "method": "Rendered catalog labels and public sitemap entries",
+        "scope": "14 published catalog names and the declared plant sitemap. Advanced search rendered a shortcode only. Robots disallows the standard WordPress search routes."
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "No candidate in the inspected catalog or sitemap. Legacy product coverage is unknown."
+    },
+    {
+      "source_id": "plantfinder",
+      "target_id": "spathiphyllum",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "routes": [
+          "https://plantfinder.ir/plant-list/",
+          "https://plantfinder.ir/plants-sitemap.xml"
+        ],
+        "terms": [
+          "اسپاتی‌فیلوم",
+          "Spathiphyllum"
+        ],
+        "method": "Rendered catalog labels and public sitemap entries",
+        "scope": "14 published catalog names and the declared plant sitemap. Advanced search rendered a shortcode only. Robots disallows the standard WordPress search routes."
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "No candidate in the inspected catalog or sitemap. Legacy product coverage is unknown."
+    },
+    {
+      "source_id": "plantfinder",
+      "target_id": "rubber_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "routes": [
+          "https://plantfinder.ir/plant-list/",
+          "https://plantfinder.ir/plants-sitemap.xml"
+        ],
+        "terms": [
+          "فیکوس الاستیکا",
+          "Ficus elastica"
+        ],
+        "method": "Rendered catalog labels and public sitemap entries",
+        "scope": "14 published catalog names and the declared plant sitemap. Advanced search rendered a shortcode only. Robots disallows the standard WordPress search routes."
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "No candidate in the inspected catalog or sitemap. Legacy product coverage is unknown."
+    },
+    {
+      "source_id": "plantfinder",
+      "target_id": "schefflera",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "routes": [
+          "https://plantfinder.ir/plant-list/",
+          "https://plantfinder.ir/plants-sitemap.xml"
+        ],
+        "terms": [
+          "شفلرا",
+          "Schefflera"
+        ],
+        "method": "Rendered catalog labels and public sitemap entries",
+        "scope": "14 published catalog names and the declared plant sitemap. Advanced search rendered a shortcode only. Robots disallows the standard WordPress search routes."
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "No candidate in the inspected catalog or sitemap. Legacy product coverage is unknown."
+    },
+    {
+      "source_id": "plantfinder",
+      "target_id": "dracaena",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "routes": [
+          "https://plantfinder.ir/plant-list/",
+          "https://plantfinder.ir/plants-sitemap.xml"
+        ],
+        "terms": [
+          "دراسنا",
+          "Dracaena"
+        ],
+        "method": "Rendered catalog labels and public sitemap entries",
+        "scope": "14 published catalog names and the declared plant sitemap. Advanced search rendered a shortcode only. Robots disallows the standard WordPress search routes."
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "No candidate in the inspected catalog or sitemap. Legacy product coverage is unknown."
+    },
+    {
+      "source_id": "plantfinder",
+      "target_id": "aloe",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "routes": [
+          "https://plantfinder.ir/plant-list/",
+          "https://plantfinder.ir/plants-sitemap.xml"
+        ],
+        "terms": [
+          "آلوئه‌ورا",
+          "Aloe vera"
+        ],
+        "method": "Rendered catalog labels and public sitemap entries",
+        "scope": "14 published catalog names and the declared plant sitemap. Advanced search rendered a shortcode only. Robots disallows the standard WordPress search routes."
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "No candidate in the inspected catalog or sitemap. Legacy product coverage is unknown."
+    },
+    {
+      "source_id": "netplantclub",
+      "target_id": "pothos",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://netplantclub.ir/plants_search.php",
+        "method": "Public advanced-search URL pattern observed from the search button. One contains filter per query.",
+        "queries": [
+          {
+            "term": "پتوس",
+            "field": "persianName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(persianName~contains~%D9%BE%D8%AA%D9%88%D8%B3)&page=undefined",
+            "title": "گیاه",
+            "hits": [
+              [
+                "Eucalyptus globulus",
+                "https://netplantclub.ir/plants_view.php?editid1=10330",
+                "نظرات\t\nEucalyptus globulus Labill.\n\t\nMyrtaceae\n\t\nTasmanian Blue Gum\n\t\nاوکالیپتوس،تب بر\n\t\n\t\n130"
+              ],
+              [
+                "Eucalyptus rostrata",
+                "https://netplantclub.ir/plants_view.php?editid1=8439",
+                "نظرات\t\nEucalyptus rostrata Schltdl.\n\t\nMyrtaceae\n\t\nred gum, blue gum, creek gum, flooded gum, forest gum, victorian red gum, white بیشتر ...\n\t\nاوکالیپتوس جویباری\n\t\n\t\n120"
+              ],
+              [
+                "Eucalyptus microtheca",
+                "https://netplantclub.ir/plants_view.php?editid1=3705",
+                "نظرات\t\nEucalyptus microtheca F.Muell.\n\t\nMyrtaceae\n\t\nbastard box, black box, dwarf box, flooded box, narrow-leaved box, coolibah\n\t\nاوکالیپتوس سیاه\n\t\n\t\n115"
+              ]
+            ],
+            "state": []
+          },
+          {
+            "term": "Epipremnum aureum",
+            "field": "scientificName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(scientificName~contains~Epipremnum%20aureum)&page=undefined",
+            "title": "گیاه",
+            "hits": [],
+            "state": []
+          }
+        ]
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "The Persian substring returned Eucalyptus records. The isolated scientific query returned no target candidate."
+    },
+    {
+      "source_id": "netplantclub",
+      "target_id": "monstera",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://netplantclub.ir/plants_search.php",
+        "method": "Public advanced-search URL pattern observed from the search button. One contains filter per query.",
+        "queries": [
+          {
+            "term": "برگ انجیری",
+            "field": "persianName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(persianName~contains~%D8%A8%D8%B1%DA%AF%20%D8%A7%D9%86%D8%AC%DB%8C%D8%B1%DB%8C)&page=undefined",
+            "title": "گیاه",
+            "hits": [
+              [
+                "Alcea ficifolia",
+                "https://netplantclub.ir/plants_view.php?editid1=6520",
+                "نظرات\t\nAlcea ficifolia L.\n\t\nMalvaceae\n\t\n\t\nختمی برگ انجیری\n\t\n\t\n230"
+              ],
+              [
+                "Monstera deliciosa",
+                "https://netplantclub.ir/plants_view.php?editid1=1966",
+                "نظرات\t\nMonstera deliciosa Liebm.\n\t\nAraceae\n\t\nceriman, monstera, braed fruit Mexican\n\t\nبرگ انجیری\n\t\n\t\n131"
+              ],
+              [
+                "Valeriana ficariifolia",
+                "https://netplantclub.ir/plants_view.php?editid1=7727",
+                "نظرات\t\nValeriana ficariifolia Boiss.\n\t\nCaprifoliaceae\n\t\n\t\nوالرین برگ انجیری\n\t\n\t\n115"
+              ]
+            ],
+            "state": []
+          },
+          {
+            "term": "Monstera deliciosa",
+            "field": "scientificName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(scientificName~contains~Monstera%20deliciosa)&page=undefined",
+            "title": "گیاه",
+            "hits": [
+              [
+                "Monstera deliciosa",
+                "https://netplantclub.ir/plants_view.php?editid1=1966",
+                "نظرات\t\nMonstera deliciosa Liebm.\n\t\nAraceae\n\t\nceriman, monstera, braed fruit Mexican\n\t\nبرگ انجیری\n\t\n\t\n131"
+              ]
+            ],
+            "state": []
+          }
+        ]
+      },
+      "detail_url": "https://netplantclub.ir/plants_view.php?editid1=1966",
+      "observation": {
+        "persian": "برگ انجیری",
+        "scientific_verbatim": "Monstera deliciosa Liebm.",
+        "identity_precision": "species_candidate",
+        "fields": {
+          "taxon": "Monstera deliciosa",
+          "family": "Araceae",
+          "genus": "Monstera",
+          "status": "Accepted/پذیرفته شده",
+          "sources": [
+            "اطلاعات سایت GBIF",
+            "فلور و منابع"
+          ]
+        },
+        "attribution": {
+          "taxonomy": "source-rendered GBIF panel",
+          "care": "AI-labelled section excluded from assessed field coverage"
+        },
+        "authority": {
+          "url": "https://www.gbif.org/species/2868241",
+          "status": "challenge",
+          "alternate": {
+            "url": "https://www.worldfloraonline.org/taxon/wfo-0000245734",
+            "error": "Error: browserBackend.callTool: net::ERR_TIMED_OUT at https://www.worldfloraonline.org/taxon/wfo-0000245734"
+          }
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Monstera deliciosa Liebm.",
+        "taxonomy": {
+          "family": "Araceae",
+          "genus": "Monstera"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "netplantclub",
+      "target_id": "snake_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://netplantclub.ir/plants_search.php",
+        "method": "Public advanced-search URL pattern observed from the search button. One contains filter per query.",
+        "queries": [
+          {
+            "term": "سانسوریا",
+            "field": "persianName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(persianName~contains~%D8%B3%D8%A7%D9%86%D8%B3%D9%88%D8%B1%DB%8C%D8%A7)&page=undefined",
+            "title": "گیاه",
+            "hits": [],
+            "state": []
+          },
+          {
+            "term": "Sansevieria trifasciata",
+            "field": "scientificName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(scientificName~contains~Sansevieria%20trifasciata)&page=undefined",
+            "title": "گیاه",
+            "hits": [],
+            "state": []
+          },
+          {
+            "term": "Dracaena trifasciata",
+            "field": "scientificName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(scientificName~contains~Dracaena%20trifasciata)&page=undefined",
+            "title": "گیاه",
+            "hits": [],
+            "state": []
+          }
+        ]
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "No target candidate appeared in the rendered result table."
+    },
+    {
+      "source_id": "netplantclub",
+      "target_id": "zz_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://netplantclub.ir/plants_search.php",
+        "method": "Public advanced-search URL pattern observed from the search button. One contains filter per query.",
+        "queries": [
+          {
+            "term": "زامیفولیا",
+            "field": "persianName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(persianName~contains~%D8%B2%D8%A7%D9%85%DB%8C%D9%81%D9%88%D9%84%DB%8C%D8%A7)&page=undefined",
+            "title": "گیاه",
+            "hits": [],
+            "state": []
+          },
+          {
+            "term": "Zamioculcas zamiifolia",
+            "field": "scientificName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(scientificName~contains~Zamioculcas%20zamiifolia)&page=undefined",
+            "title": "گیاه",
+            "hits": [],
+            "state": []
+          }
+        ]
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "No target candidate appeared in the rendered result table."
+    },
+    {
+      "source_id": "netplantclub",
+      "target_id": "aglaonema",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://netplantclub.ir/plants_search.php",
+        "method": "Public advanced-search URL pattern observed from the search button. One contains filter per query.",
+        "queries": [
+          {
+            "term": "آگلونما",
+            "field": "persianName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(persianName~contains~%D8%A2%DA%AF%D9%84%D9%88%D9%86%D9%85%D8%A7)&page=undefined",
+            "title": "گیاه",
+            "hits": [
+              [
+                "Aglaonema commutatum",
+                "https://netplantclub.ir/plants_view.php?editid1=1962",
+                "نظرات\t\nAglaonema commutatum Schott\n\t\nAraceae\n\t\nChinese evergreen\n\t\nآگلونما\n\t\n\t\n146"
+              ]
+            ],
+            "state": []
+          },
+          {
+            "term": "Aglaonema",
+            "field": "scientificName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(scientificName~contains~Aglaonema)&page=undefined",
+            "title": "گیاه",
+            "hits": [
+              [
+                "Aglaonema commutatum",
+                "https://netplantclub.ir/plants_view.php?editid1=1962",
+                "نظرات\t\nAglaonema commutatum Schott\n\t\nAraceae\n\t\nChinese evergreen\n\t\nآگلونما\n\t\n\t\n146"
+              ]
+            ],
+            "state": []
+          }
+        ]
+      },
+      "detail_url": "https://netplantclub.ir/plants_view.php?editid1=1962",
+      "observation": {
+        "persian": "آگلونما",
+        "scientific_verbatim": "Aglaonema commutatum Schott",
+        "identity_precision": "genus_candidate",
+        "fields": {
+          "taxon": "Aglaonema commutatum",
+          "family": "Araceae",
+          "genus": "Aglaonema",
+          "status": "Accepted/پذیرفته شده",
+          "sources": [
+            "اطلاعات سایت GBIF",
+            "فلور و منابع"
+          ]
+        },
+        "attribution": {
+          "taxonomy": "source-rendered GBIF panel",
+          "care": "AI-labelled section excluded from assessed field coverage"
+        },
+        "authority": {
+          "url": "https://www.gbif.org/species/2866467",
+          "status": "challenge",
+          "alternate": {
+            "url": "https://www.worldfloraonline.org/taxon/wfo-0000916353",
+            "error": "Error: browserBackend.callTool: net::ERR_TIMED_OUT at https://www.worldfloraonline.org/taxon/wfo-0000916353"
+          }
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Aglaonema commutatum Schott",
+        "taxonomy": {
+          "family": "Araceae",
+          "genus": "Aglaonema"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "netplantclub",
+      "target_id": "spathiphyllum",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://netplantclub.ir/plants_search.php",
+        "method": "Public advanced-search URL pattern observed from the search button. One contains filter per query.",
+        "queries": [
+          {
+            "term": "اسپاتی‌فیلوم",
+            "field": "persianName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(persianName~contains~%D8%A7%D8%B3%D9%BE%D8%A7%D8%AA%DB%8C%E2%80%8C%D9%81%DB%8C%D9%84%D9%88%D9%85)&page=undefined",
+            "title": "گیاه",
+            "hits": [],
+            "state": []
+          },
+          {
+            "term": "Spathiphyllum",
+            "field": "scientificName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(scientificName~contains~Spathiphyllum)&page=undefined",
+            "title": "گیاه",
+            "hits": [],
+            "state": []
+          }
+        ]
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "No target candidate appeared in the rendered result table."
+    },
+    {
+      "source_id": "netplantclub",
+      "target_id": "rubber_plant",
+      "observed_on": "2026-11-24",
+      "outcome": "found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://netplantclub.ir/plants_search.php",
+        "method": "Public advanced-search URL pattern observed from the search button. One contains filter per query.",
+        "queries": [
+          {
+            "term": "فیکوس الاستیکا",
+            "field": "persianName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(persianName~contains~%D9%81%DB%8C%DA%A9%D9%88%D8%B3%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%DB%8C%DA%A9%D8%A7)&page=undefined",
+            "title": "گیاه",
+            "hits": [],
+            "state": []
+          },
+          {
+            "term": "Ficus elastica",
+            "field": "scientificName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(scientificName~contains~Ficus%20elastica)&page=undefined",
+            "title": "گیاه",
+            "hits": [
+              [
+                "Ficus elastica",
+                "https://netplantclub.ir/plants_view.php?editid1=8188",
+                "نظرات\t\nFicus elastica Roxb.\n\t\nMoraceae\n\t\nIndia-rubber tree, Indian-rubber fig, rubber plant, assam cautchouc tree\n\t\nفیکوس\n\t\n\t\n160"
+              ]
+            ],
+            "state": []
+          }
+        ]
+      },
+      "detail_url": "https://netplantclub.ir/plants_view.php?editid1=8188",
+      "observation": {
+        "persian": "فیکوس",
+        "scientific_verbatim": "Ficus elastica Roxb.",
+        "identity_precision": "species_candidate",
+        "fields": {
+          "taxon": "Ficus elastica",
+          "family": "Moraceae",
+          "genus": "Ficus",
+          "status": "Accepted/پذیرفته شده",
+          "sources": [
+            "اطلاعات سایت GBIF",
+            "فلور و منابع"
+          ]
+        },
+        "attribution": {
+          "taxonomy": "source-rendered GBIF panel",
+          "care": "AI-labelled section excluded from assessed field coverage"
+        },
+        "authority": {
+          "url": "https://www.gbif.org/species/7835333",
+          "status": "challenge",
+          "alternate": {
+            "url": "https://www.worldfloraonline.org/taxon/wfo-0000688216",
+            "error": "Error: browserBackend.callTool: net::ERR_TIMED_OUT at https://www.worldfloraonline.org/taxon/wfo-0000688216"
+          }
+        }
+      },
+      "automation": {
+        "identity_name_from_label": "Ficus elastica Roxb.",
+        "taxonomy": {
+          "family": "Moraceae",
+          "genus": "Ficus"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "netplantclub",
+      "target_id": "schefflera",
+      "observed_on": "2026-11-24",
+      "outcome": "not_found",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://netplantclub.ir/plants_search.php",
+        "method": "Public advanced-search URL pattern observed from the search button. One contains filter per query.",
+        "queries": [
+          {
+            "term": "شفلرا",
+            "field": "persianName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(persianName~contains~%D8%B4%D9%81%D9%84%D8%B1%D8%A7)&page=undefined",
+            "title": "گیاه",
+            "hits": [],
+            "state": []
+          },
+          {
+            "term": "Schefflera",
+            "field": "scientificName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(scientificName~contains~Schefflera)&page=undefined",
+            "title": "گیاه",
+            "hits": [],
+            "state": []
+          }
+        ]
+      },
+      "detail_url": null,
+      "observation": null,
+      "automation": null,
+      "reason": "No target candidate appeared in the rendered result table."
+    },
+    {
+      "source_id": "netplantclub",
+      "target_id": "dracaena",
+      "observed_on": "2026-11-24",
+      "outcome": "ambiguous",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://netplantclub.ir/plants_search.php",
+        "method": "Public advanced-search URL pattern observed from the search button. One contains filter per query.",
+        "queries": [
+          {
+            "term": "دراسنا",
+            "field": "persianName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(persianName~contains~%D8%AF%D8%B1%D8%A7%D8%B3%D9%86%D8%A7)&page=undefined",
+            "title": "گیاه",
+            "hits": [
+              [
+                "Dracaena australis",
+                "https://netplantclub.ir/plants_view.php?editid1=5494",
+                "نظرات\t\nDracaena australis G.Forst.\n\t\nAsparagaceae\n\t\ngiant dracena, tikouka, club palm\n\t\nدراسنا\n\t\n\t\n99"
+              ]
+            ],
+            "state": []
+          },
+          {
+            "term": "Dracaena",
+            "field": "scientificName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(scientificName~contains~Dracaena)&page=undefined",
+            "title": "گیاه",
+            "hits": [
+              [
+                "Dracaena australis",
+                "https://netplantclub.ir/plants_view.php?editid1=5494",
+                "نظرات\t\nDracaena australis G.Forst.\n\t\nAsparagaceae\n\t\ngiant dracena, tikouka, club palm\n\t\nدراسنا\n\t\n\t\n99"
+              ]
+            ],
+            "state": []
+          }
+        ]
+      },
+      "detail_url": "https://netplantclub.ir/plants_view.php?editid1=5494",
+      "observation": {
+        "persian": "دراسنا",
+        "scientific_verbatim": "Dracaena australis G.Forst.",
+        "identity_precision": "other_accepted_genus",
+        "fields": {
+          "taxon": "Cordyline australis",
+          "family": "Asparagaceae",
+          "genus": "Cordyline",
+          "status": "Synonym/مترادف",
+          "sources": [
+            "اطلاعات سایت GBIF",
+            "فلور و منابع"
+          ]
+        },
+        "attribution": {
+          "taxonomy": "source-rendered GBIF panel",
+          "care": "AI-labelled section excluded from assessed field coverage"
+        },
+        "authority": {
+          "url": "https://www.gbif.org/species/5303648",
+          "status": "challenge",
+          "alternate": {
+            "url": "https://www.worldfloraonline.org/taxon/wfo-0000765678",
+            "error": "Error: browserBackend.callTool: net::ERR_TIMED_OUT at https://www.worldfloraonline.org/taxon/wfo-0000765678"
+          }
+        },
+        "conflicts": [
+          {
+            "left": {
+              "locator": "نام علمی گیاه",
+              "value": "Dracaena australis G.Forst."
+            },
+            "right": {
+              "locator": "اطلاعات سایت GBIF → گونه مورد تایید",
+              "value": "Cordyline australis"
+            },
+            "context": "A historical name returned by the genus lookup."
+          }
+        ]
+      },
+      "automation": {
+        "identity_name_from_label": "Dracaena australis G.Forst.",
+        "taxonomy": {
+          "family": "Asparagaceae",
+          "genus": "Cordyline"
+        },
+        "success": true
+      }
+    },
+    {
+      "source_id": "netplantclub",
+      "target_id": "aloe",
+      "observed_on": "2026-11-24",
+      "outcome": "ambiguous",
+      "lookup_run": true,
+      "lookup": {
+        "route": "https://netplantclub.ir/plants_search.php",
+        "method": "Public advanced-search URL pattern observed from the search button. One contains filter per query.",
+        "queries": [
+          {
+            "term": "آلوئه‌ورا",
+            "field": "persianName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(persianName~contains~%D8%A2%D9%84%D9%88%D8%A6%D9%87%E2%80%8C%D9%88%D8%B1%D8%A7)&page=undefined",
+            "title": "گیاه",
+            "hits": [],
+            "state": []
+          },
+          {
+            "term": "Aloe vera",
+            "field": "scientificName",
+            "url": "https://netplantclub.ir/plants_list.php?q=(scientificName~contains~Aloe%20vera)&page=undefined",
+            "title": "گیاه",
+            "hits": [
+              [
+                "Aloe vera",
+                "https://netplantclub.ir/plants_view.php?editid1=7924",
+                "نظرات\t\nAloe vera L., 1753\n\t\nAsphodelaceae\n\t\nmedicine aloe, medicine plant true aloe, common aloe, yellow-flowered aloe\n\t\nصبر زرد طبی\n\t\n\t\n470"
+              ]
+            ],
+            "state": []
+          }
+        ]
+      },
+      "detail_url": "https://netplantclub.ir/plants_view.php?editid1=7924",
+      "observation": {
+        "persian": "صبر زرد طبی",
+        "scientific_verbatim": "Aloe vera L., 1753",
+        "identity_precision": "conflicting_status",
+        "fields": {
+          "taxon": "Aloe vera",
+          "family": "Asphodelaceae",
+          "genus": "Aloe",
+          "status": "Heterotypic synonym/مشکوک",
+          "sources": [
+            "اطلاعات سایت GBIF",
+            "فلور و منابع"
+          ]
+        },
+        "attribution": {
+          "taxonomy": "source-rendered GBIF panel",
+          "care": "AI-labelled section excluded from assessed field coverage"
+        },
+        "authority": {
+          "url": "https://www.gbif.org/species/7473344",
+          "status": "challenge"
+        },
+        "conflicts": [
+          {
+            "left": {
+              "locator": "اطلاعات سایت GBIF → وضعیت نام گونه",
+              "value": "Heterotypic synonym/مشکوک"
+            },
+            "right": {
+              "locator": "اطلاعات سایت GBIF → گونه مورد تایید",
+              "value": "Aloe vera"
+            },
+            "context": "Name status and accepted-name display on the same record."
+          }
+        ]
+      },
+      "automation": {
+        "identity_name_from_label": "Aloe vera L., 1753",
+        "taxonomy": {
+          "family": "Asphodelaceae",
+          "genus": "Aloe"
+        },
+        "success": true
+      }
+    }
+  ],
+  "initial_run": {
+    "observed_on": "2026-11-23",
+    "totals": {
+      "planned_pairs": 50,
+      "outcomes": {
+        "found": 0,
+        "not_found": 0,
+        "ambiguous": 0,
+        "unavailable": 50,
+        "not_tested": 0
+      },
+      "lookup_attempted": 0,
+      "profiles_inspected": 0,
+      "field_coverage_samples": 0,
+      "extraction_agreement_samples": 0,
+      "automation_attempted": 0
+    }
+  },
+  "by_source": {
+    "anguor": {
+      "found": 8,
+      "ambiguous": 2,
+      "not_found": 0,
+      "unavailable": 0,
+      "not_tested": 0,
+      "profiles": 10,
+      "automation_success": 10,
+      "automation_attempts": 10
+    },
+    "golsetan": {
+      "found": 4,
+      "ambiguous": 6,
+      "not_found": 0,
+      "unavailable": 0,
+      "not_tested": 0,
+      "profiles": 10,
+      "automation_success": 4,
+      "automation_attempts": 10
+    },
+    "nargil": {
+      "found": 8,
+      "ambiguous": 1,
+      "not_found": 1,
+      "unavailable": 0,
+      "not_tested": 0,
+      "profiles": 9,
+      "automation_success": 1,
+      "automation_attempts": 9
+    },
+    "plantfinder": {
+      "found": 0,
+      "ambiguous": 0,
+      "not_found": 10,
+      "unavailable": 0,
+      "not_tested": 0,
+      "profiles": 0,
+      "automation_success": 0,
+      "automation_attempts": 0
+    },
+    "netplantclub": {
+      "found": 3,
+      "ambiguous": 2,
+      "not_found": 5,
+      "unavailable": 0,
+      "not_tested": 0,
+      "profiles": 5,
+      "automation_success": 5,
+      "automation_attempts": 5
+    }
+  },
+  "rechecks": [
+    {
+      "source": "anguor",
+      "url": "https://anguor.com/blog/%d9%be%d8%aa%d9%88%d8%b3-%d8%b7%d9%84%d8%a7%db%8c%db%8c/",
+      "manual": "The identity label names Epipremnum Aureum and the morphology table includes leaf color and width.",
+      "extracted": {
+        "scientific": "Epipremnum Aureum",
+        "morphology": {
+          "locator": "مورفولوژی",
+          "value": "رنگ برگ\tسبز و زرد\nعرض برگ\t45 سانتی‌متر\nرنگ گل\tسفید، بنفش، صورتی\nاندازه گل\t۱۰ تا ۱۸ سانتی‌متر عرض"
+        }
+      },
+      "agreement": true
+    },
+    {
+      "source": "golsetan",
+      "url": "https://www.golsetan.com/blog/about-pothos-plant/",
+      "manual": "The article identifies پتوس or پوتوس in the title. The visible آبیاری passage contains care guidance. A scientific name was not established.",
+      "extracted": {
+        "title": "همه چیز درباره روش نگهداری گیاه پتوس یا پوتوس",
+        "care": {
+          "locator": "آبیاری",
+          "value": "اولین نکته‌ای که در نگهداری از گیاه پتوس یا پوتوس باید درنظر داشته باشید این است که بیش‌از حد آن را آبیاری نکنید، چون آبیاری بیش‌از حد باعث پوسید"
+        },
+        "scientific": null
+      },
+      "agreement": true
+    },
+    {
+      "source": "nargil",
+      "url": "https://nargil.ir/Plant.aspx?Name=Dracaena-trifasciata&cid=5019",
+      "manual": "The identity summary gives Dracaena trifasciata and Ruscaceae. The taxonomy prose disagrees on family.",
+      "extracted": {
+        "scientific": "Dracaena trifasciata",
+        "family": "Ruscaceae"
+      },
+      "agreement": true
+    },
+    {
+      "source": "plantfinder",
+      "url": "https://plantfinder.ir/product/euonymus-japonicus/",
+      "manual": "The old record identifies Euonymus Japonicus and displays a bibliography in its default view. This profile is outside the targets.",
+      "extracted": {
+        "scientific": "Euonymus Japonicus",
+        "sources": [
+          "منابع:"
+        ],
+        "qualifying_field": null
+      },
+      "agreement": true,
+      "outside_target_matrix": true
+    },
+    {
+      "source": "netplantclub",
+      "url": "https://netplantclub.ir/plants_view.php?editid1=1966",
+      "manual": "The profile and embedded GBIF panel display Monstera deliciosa Liebm. and the panel lists Araceae. An AI-labelled block begins after the taxonomy panel.",
+      "extracted": {
+        "scientific": "Monstera deliciosa Liebm.",
+        "family": "Araceae"
+      },
+      "agreement": true
+    }
+  ],
+  "evaluators": {
+    "anguor_and_golsetan": "()=>{const blocks=[...document.querySelectorAll('article,main')].filter(e=>e.getClientRects().length&&e.querySelector('h1'));const root=blocks.sort((a,b)=>a.innerText.length-b.innerText.length)[0]||document.body;const lines=root.innerText.split('\\n').map(s=>s.trim()).filter(Boolean);const heads=[...root.querySelectorAll('h1,h2,h3,h4,strong')].filter(e=>e.getClientRects().length).map(e=>[e,e.innerText.trim()]).filter(x=>x[1]&&x[1].length<130);const value=p=>{const i=lines.findIndex(x=>p.test(x));if(i<0)return null;const line=lines[i];return line.match(/[:：]\\s*(\\S.*)$/)?.[1]||line.match(/[\\t ]{2,}(\\S.*)$/)?.[1]||lines[i+1]||null;};const candidate=lines.filter(l=>/نام علم|نام لاتین|نام لاتين|scientific name/i.test(l)).slice(0,12);const italics=[...root.querySelectorAll('em,i')].filter(e=>e.getClientRects().length).map(e=>e.innerText.trim()).filter(x=>/^[A-Z][a-z]+(?:\\s+[a-z-]+){1,3}$/.test(x)).slice(0,12);const fields={};for(const [key,p] of Object.entries({care:/شرایط (محیط رشد|نگهداری)|^(نور|آبیاری|دما|رطوبت)\\s*[:：]?$/,taxonomy:/رده‌بندی|شناسنامه/,morphology:/مورفولوژی|ریخت‌شناسی/,pests:/آفات/,diseases:/بیماری/,symptoms:/علائم|نشانه|زرد شدن|پوسیدگی/,remedies:/درمان|پیشگیری|مقابله/,sources:/^(منابع|منبع|مراجع)(\\s|:|$)/,community:/پرسش.*نظرات|دیدگاه.*بنویسید|نظرات کاربران/})){const hit=heads.find(x=>p.test(x[1]));if(!hit)continue;const i=lines.indexOf(hit[1]);const next=hit[0].nextElementSibling?.innerText?.trim();fields[key]={locator:hit[1],value:(next||lines[i+1]||'').slice(0,145)};}return {title:document.title,persian:root.querySelector('h1')?.innerText.trim()||null,scientific_label:value(/^نام\\s+علم[یي](\\s|:|：|$)/),candidate_lines:candidate,italics,latin_lines:lines.slice(0,100).filter(x=>/[A-Z][a-z]{3,} [a-z]{3,}/.test(x)).map(x=>x.slice(0,150)).slice(0,12),fields,dates:lines.filter(x=>/تاریخ انتشار|\\d{4}[/.-]\\d{1,2}[/.-]\\d{1,2}/.test(x)).map(x=>x.slice(0,90)).slice(0,6)};}",
+    "nargil": "()=>{const lines=document.body.innerText.split('\\n').map(x=>x.trim()).filter(Boolean);const value=p=>{const i=lines.findIndex(x=>p.test(x));return i<0?null:lines[i].includes(':')&&lines[i].split(':').slice(1).join(':').trim()||lines[i+1]||null};const h=[...document.querySelectorAll('h1,h2,h3,h4')].map(x=>x.innerText.trim()).filter(Boolean);return {page_title:document.title,persian:h.filter((_,i)=>i<[...document.querySelectorAll('h1')].length).slice(-1)[0]||null,scientific:value(/^نام [عإع]لم[یي]\\s*[:：]?($|\\s)/),date:value(/^تاریخ انتشار/),taxonomy:h.find(x=>/رده‌بندی/.test(x))||null,care:h.find(x=>/شرایط محیط رشد|شرایط نگهداری/.test(x))||null,pest:h.find(x=>/آفات/.test(x))||null,disease:h.find(x=>/بیماری/.test(x))||null,community:h.find(x=>/پرسش‌ها و نظرات/.test(x))||null,source_labels:lines.filter(x=>/^منابع?[ :：]/.test(x)).slice(0,5),headings:h.slice(0,24),observed_labels:lines.filter(x=>/نام علم|خانواده|منابع|تاریخ انتشار/.test(x)&&x.length<75).slice(0,15)}}",
+    "plantfinder_and_netplantclub_recheck": "()=>{const lines=document.body.innerText.split('\\n').map(x=>x.trim()).filter(Boolean);const take=(re)=>{const i=lines.findIndex(x=>re.test(x));return i<0?null:lines[i].match(/[:：]\\s*(\\S.*)$/)?.[1]||lines[i+1]||null;};const headings=[...document.querySelectorAll('h1,h2,h3')].map(x=>x.innerText.trim());return {title:document.title,identity:take(/^نام علمی(?: گیاه)?(?:[:：\\s]|$)/),family:take(/^(?:تیره|خانواده(?: \\(تيره\\))?)\\s*[:：]?$/),taxonomy:take(/^گونه مورد تایید$/),care:take(/^شرایط محیط رشد$/),sources:lines.filter(x=>/^(منابع|اطلاعات سایت GBIF|فلور و منابع)/.test(x)).slice(0,8),headings:headings.slice(0,20)};}",
+    "netplantclub_detail": "()=>{const lines=document.body.innerText.split('\\n').map(x=>x.trim()).filter(Boolean);const fields=Object.fromEntries(lines.flatMap((s,i)=>/^(نام علمی(?: گیاه)?|نام فارسی|خانواده|جنس|رتبه|وضعیت|پراکنش|منطقه بومی|زیستگاه|نام پذیرفته شده|علمی)$/u.test(s)?[[s,lines[i+1]||null]]:[]));return {title:document.title,fields,lines:lines.slice(12,85),authority:[...new Map([...document.links].filter(a=>/kew.org|gbif.org|tropicos.org|ipni.org|worldfloraonline.org/i.test(a.href)).map(a=>[a.href,a.innerText.trim()]))].slice(0,12), notes:lines.filter(x=>/هوش مصنوعی|منابع|مترادف/.test(x)).slice(0,8)}}"
+  },
+  "field_coverage": {
+    "denominator": 34,
+    "observed_positive_counts": {
+      "care": 19,
+      "pests": 21,
+      "diseases": 15,
+      "symptoms": 8,
+      "remedies": 4,
+      "sources": 5,
+      "dates": 19
+    },
+    "method": "Counts observed markers only. Some templates use prose or tables, so an uncaptured marker does not establish absence. NetPlantClub AI text excluded."
+  }
+}
