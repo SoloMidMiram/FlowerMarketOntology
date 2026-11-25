@@ -1,5 +1,7 @@
 # Public knowledge export
 
+This document covers public schema 1. The separate [rights-aware schema v2 contract](publication-policy-v2.md) describes the explicit v2 export option.
+
 ## Baseline and boundary
 
 GitHub `main`, the local remote-tracking ref and the clean baseline worktree all resolved to `32eac01cce3b956a8d3035bda0d445153b807df8`. The original local checkout had staged and unstaged work on an older branch. Validation ran in the isolated worktree with Python 3.11.4 and installed Pydantic 2.14.1.

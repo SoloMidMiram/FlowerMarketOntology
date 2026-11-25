@@ -266,11 +266,17 @@ def git_snapshot(root: Path, destination: Path) -> str:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output", type=Path, help="New directory for knowledge.json and manifest.json")
+    parser.add_argument("--schema-version", choices=(1, 2), type=int, default=1,
+                        help="Public schema version (default: 1)")
     args = parser.parse_args()
+    build_selected_release = build_release
+    if args.schema_version == 2:
+        from public_export_v2 import build_release_v2
+        build_selected_release = build_release_v2
     try:
         with TemporaryDirectory() as directory:
             root = Path(directory).resolve()
-            artifact, manifest = build_release(root, git_snapshot(ROOT, root))
+            artifact, manifest = build_selected_release(root, git_snapshot(ROOT, root))
         args.output.mkdir()
         try:
             (args.output / ARTIFACT_NAME).write_bytes(artifact)
