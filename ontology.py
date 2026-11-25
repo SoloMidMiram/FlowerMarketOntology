@@ -281,9 +281,9 @@ def load_json(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def build(root=ROOT) -> Dataset:
+def build(root=ROOT, *, read_json=load_json) -> Dataset:
     directory = root / "research" / "batches"
-    first, second, third, fourth = (load_json(directory / f"batch-{number:02}.json") for number in (1, 2, 3, 4))
+    first, second, third, fourth = (read_json(directory / f"batch-{number:02}.json") for number in (1, 2, 3, 4))
     reports = []
     for batch in (first, second, third, fourth):
         report = (directory / batch["report"]).resolve()
@@ -329,7 +329,7 @@ def build(root=ROOT) -> Dataset:
     evidence["nargil-golden-pothos"] = Evidence(
         url=listing["url"], provenance="reported", locator="پتوس طلایی"
     )
-    publication = load_json(root / "research" / "publication.json")
+    publication = read_json(root / "research" / "publication.json")
     for key, source in publication["evidence"].items():
         if key not in evidence:
             raise ValueError(f"Unknown publication evidence ID: {key}")
@@ -383,12 +383,12 @@ def build(root=ROOT) -> Dataset:
         ),
     }
     presentations = [PresentationObservation.model_validate(item)
-                     for item in load_json(directory / "product-presentation-audit.json")]
+                     for item in read_json(directory / "product-presentation-audit.json")]
     return Dataset(taxa=taxa, evidence=evidence, treatments=treatments, aliases=aliases,
                    profile=Profile(id=pilot["profile_id"], taxon_id="87014-1", claims=claims,
                                    image_candidates=images, preferred_image_id="ncstate-dell-enecks",
                                    listing_label="پتوس طلایی", listing_evidence_id="nargil-golden-pothos"),
-                   facets=list(load_json(root / "taxonomy.json")["facets"]),
+                   facets=list(read_json(root / "taxonomy.json")["facets"]),
                    symptoms={"yellow-leaves": "زرد شدن برگ"}, observations=observations, fixtures=fixtures,
                    presentation_observations=presentations)
 
