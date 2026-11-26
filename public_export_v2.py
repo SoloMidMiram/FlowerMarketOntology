@@ -89,12 +89,27 @@ class AuthorizedExcerpt(Record):
     archive: Archive
 
 
+def doi_link(value: HttpUrl) -> HttpUrl:
+    if (value.host != "doi.org" or value.query is not None or value.fragment is not None
+            or not re.fullmatch(r"/10\.[0-9]{4,}/.+", value.path or "")):
+        raise ValueError("DOI attribution requires a canonical https://doi.org/10.… link")
+    return value
+
+
+class CitationAttribution(Record):
+    credit: Text
+    doi_url: Annotated[SourceURL, AfterValidator(doi_link)] | None = None
+    license_url: SourceURL
+    modifications: Text
+
+
 class CitationOnly(Record):
     mode: Literal["citation_only"]
     source: EvidenceSource
     passages: Annotated[list[EvidencePassage], Nonempty]
     rights: RightsCitation
     recheck: Approval
+    public_attribution: CitationAttribution | None = None
 
 
 class Withheld(Record):
@@ -178,14 +193,19 @@ def project_evidence(root, source_id, selection, policy):
     if source.observed_at > policy.release_date:
         raise ValueError(f"Evidence date after release: {source_id}")
     evidence_revision = evidence_digest(source_id, source, passages)
-    selection.rights.citation.check(policy, f"{source_id}/citation", "citation", evidence_revision)
+    citation_details = {}
+    if isinstance(selection, CitationOnly) and selection.public_attribution is not None:
+        citation_details["public_attribution"] = selection.public_attribution.model_dump(
+            mode="json", exclude_none=True)
+    selection.rights.citation.check(
+        policy, f"{source_id}/citation", "citation", evidence_revision, **citation_details)
     public_passages = [
         {"id": part.id, "locator": part.locator, "relation": part.relation} for part in passages
     ]
     reference = {
         "source_id": source_id, "url": str(source.url), "distribution": source.distribution,
         "observed_at": source.observed_at.isoformat(), "version": source.version,
-        "mode": selection.mode, "passages": public_passages,
+        "mode": selection.mode, "passages": public_passages, **citation_details,
     }
     reviewed_at = max(source.observed_at, selection.rights.citation.reviewed_at)
     if isinstance(selection, CitationOnly):
@@ -220,7 +240,8 @@ def project_evidence(root, source_id, selection, policy):
             public.update(first_line=part.lines.first_line, last_line=part.lines.last_line, excerpt=excerpt)
         reference.update(archive_sha256=selection.archive.sha256, attribution=selection.rights.attribution,
                          reuse_basis=selection.rights.public_reuse_basis)
-    binding = selection.model_dump(mode="json", exclude={"passages"})
+    binding = selection.model_dump(mode="json", exclude={"passages", "public_attribution"})
+    binding.update(citation_details)
     binding["evidence_revision"] = evidence_revision
     return reference, revision({"kind": "disclosure-v2", "binding": binding}), reviewed_at
 

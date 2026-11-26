@@ -78,7 +78,11 @@ class RightsAwareExportTests(unittest.TestCase):
     def authorize_evidence(self, source_id, record):
         model = (CitationOnly if record["mode"] == "citation_only" else AuthorizedExcerpt).model_validate(record)
         digest = evidence_digest(source_id, model.source, sorted(model.passages, key=lambda part: part.id))
-        record["rights"]["citation"] = self.rights(rights_digest(self.policy, "citation", digest))
+        details = {}
+        if isinstance(model, CitationOnly) and model.public_attribution is not None:
+            details["public_attribution"] = model.public_attribution.model_dump(
+                mode="json", exclude_none=True)
+        record["rights"]["citation"] = self.rights(rights_digest(self.policy, "citation", digest, **details))
         if isinstance(model, CitationOnly):
             record["recheck"] = approval(recheck_digest(self.policy, digest))
         else:
@@ -188,6 +192,53 @@ class RightsAwareExportTests(unittest.TestCase):
         for forbidden in ("PRIVATE", "research/archives", "recheck", WITHHELD, "kew-gallery",
                           "ncstate-dell-enecks", "care.pothos.toxicity.001"):
             self.assertNotIn(forbidden.encode(), artifact + manifest)
+
+    def test_citation_attribution_for_replacement_identity_is_public_and_approval_bound(self):
+        citation = self.citation()
+        citation["source"].update(
+            url="https://example.invalid/wcvp/identity",
+            distribution="Synthetic checklist distributed via GBIF",
+        )
+        attribution = {
+            "credit": "Synthetic publisher and checklist citation",
+            "doi_url": "https://doi.org/10.1234/synthetic",
+            "license_url": "https://creativecommons.org/licenses/by/4.0/",
+            "modifications": "Bibliographic metadata formatted for this release.",
+        }
+        citation["public_attribution"] = attribution
+        self.selection["identity"] = self.authorize_evidence(IDENTITY_ID, citation)
+        self.approve_fixture()
+
+        artifact, manifest = build_release_v2(self.root, HEAD)
+        profile = json.loads(artifact)["profile"]
+        self.assertEqual(profile["authority"], "Kew POWO")
+        evidence = profile["evidence"]
+        self.assertEqual(evidence["distribution"], citation["source"]["distribution"])
+        self.assertEqual(evidence["url"], citation["source"]["url"])
+        self.assertEqual(evidence["public_attribution"], attribution)
+        self.assertEqual((artifact, manifest), build_release_v2(self.root, HEAD))
+        self.assertNotIn(b"PRIVATE", artifact + manifest)
+        for passage in evidence["passages"]:
+            self.assertNotIn("excerpt", passage)
+
+        changes = {
+            "credit": "Different publisher credit",
+            "doi_url": "https://doi.org/10.1234/changed",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "modifications": "Different statement of changes.",
+        }
+        for field, value in changes.items():
+            with self.subTest(field=field):
+                changed = copy.deepcopy(citation)
+                changed["public_attribution"][field] = value
+                self.selection["identity"] = changed
+                self.save()
+                with self.assertRaisesRegex(ValueError, "Stale rights decision for powo-87014-1/citation"):
+                    build_release_v2(self.root, HEAD)
+                self.authorize_evidence(IDENTITY_ID, changed)
+                self.save()
+                with self.assertRaisesRegex(ValueError, "Stale approval for plant-fa-pothos-001"):
+                    build_release_v2(self.root, HEAD)
 
     def test_repeated_source_accepts_a_consistently_reviewed_replacement(self):
         replacement = {
