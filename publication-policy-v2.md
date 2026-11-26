@@ -31,6 +31,10 @@ applicable approvals against the replacement and its locators. For example,
 record the correspondence from the historical POWO evidence ID to the actual
 WCVP distribution when reviewers approve that substitution.
 
+All citation-only references with the same source ID must carry identical
+public attribution or all omit it. Their passage locators may differ.
+Excerpt references retain their own attribution and redistribution decisions.
+
 A standing license can predate observation. For source-specific clearance,
 reviewers must record a review dated on or after observation of the material
 being cleared. The offline exporter enforces the release-date upper bound and
