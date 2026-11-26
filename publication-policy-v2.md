@@ -15,6 +15,10 @@ The v2 release input specifies `release_version`, `release_date`, `intended_use`
 - `authorized_excerpt` requires an `archive` with a repository-relative `path` under `research/archives/` and its `sha256`. Each passage also specifies inclusive 1-based `lines` through `first_line` and `last_line`. Rights include separate `citation`, `retention`, and `redistribution` decisions, along with public `attribution` and `public_reuse_basis`. Retention clearance must cover the full committed file and repository clone access. Redistribution clearance must cover each emitted passage and the intended distribution.
 - `citation_only` requires cleared citation rights for the exact URL, and a `recheck` approval. It accepts no archive or excerpt fields. The exporter validates the recorded recheck for the candidate release offline. Before approval, an authorized reviewer must reopen the lawful source, locate each exact passage, and confirm the recorded fingerprints still match. The recheck is required for each release, even when a reviewer can consult a lawfully retained restricted copy outside the checkout. If the evidence cannot be rechecked, withhold the claim. A citation-only build evaluates the attestation. It cannot independently reconstruct or hash publisher text that was not supplied.
 
+For a citation-only source with attribution conditions, supply `public_attribution` with `credit`, `license_url`, and `modifications`. Supply `doi_url` as a canonical HTTPS DOI link when the source has a DOI. The exporter copies these fields into the public citation and binds them to the citation rights decision and disclosure revision. Adding, editing, or removing attribution requires a new citation rights decision and renews the dependent identity or scientific, locale, and release approvals. The release passage recheck continues to bind the observed passages. Sources without public attribution fields keep their existing output and approval digests.
+
+The public identity's `authority` is the ontology's display treatment label. The identity evidence's `distribution` and `url` identify the actual approved dataset distribution and record, including when a GBIF-distributed WCVP record replaces the POWO page. Use `public_attribution` to credit that distribution.
+
 Approval records contain `reviewer`, `reviewed_at`, `decision` and `revision`. Rights decisions add a private `basis` and `permitted_use` matching the release's `intended_use`. The reviewer must belong to the maintainer-managed roster. Citation clearance applies to the stated public link as well as the intended use. For a different URL, record the reviewed source and locators that actually apply to that URL. Keep excerpts, confidential notes, and credentials out of public metadata fields.
 
 A source ID identifies one URL, distribution and optional publisher version
@@ -40,7 +44,7 @@ All revision inputs use the same canonical JSON as the output. The v2 module def
 | Domain | Bound fields |
 |---|---|
 | `passages-v2` | Source ID, exact distribution metadata and method, passage IDs, locators, relations, fingerprints, and archive ranges where applicable |
-| `rights-v2` | Evidence revision, rights scope, and intended use. Retention also binds the archive path and checksum. Redistribution additionally binds the public attribution and reuse basis. |
+| `rights-v2` | Evidence revision, rights scope, intended use, and any public citation attribution. Retention also binds the archive path and checksum. Redistribution additionally binds the public attribution and reuse basis. |
 | `release-recheck-v2` | Evidence revision, release version, fixed release date, and intended use |
 | `disclosure-v2` | Evidence revision and the complete disclosure inputs, including rights decisions, mode, and archive or recheck |
 | `identity-v2` and `evidence-v2` | Projected identity and evidence bindings, plus exact bilingual wording and scope for claim approval |
