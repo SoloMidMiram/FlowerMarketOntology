@@ -313,12 +313,17 @@ def build_release_v2(root: Path, source_revision: str) -> tuple[bytes, bytes]:
             "locales": selected.locale_approvals.model_dump(mode="json"),
         }
     source_identities = {}
+    citation_attributions = {}
     references = [identity_citation, *(ref for claim in claims for ref in claim["evidence"])]
     for reference in references:
         source_id = reference["source_id"]
         source_identity = (reference["url"], reference["distribution"], reference["version"])
         if source_identities.setdefault(source_id, source_identity) != source_identity:
             raise ValueError(f"Conflicting source identity for {source_id}")
+        if reference["mode"] == "citation_only":
+            attribution = reference.get("public_attribution")
+            if citation_attributions.setdefault(source_id, attribution) != attribution:
+                raise ValueError(f"Conflicting citation attribution for {source_id}")
 
     artifact = canonical({"schema_version": SCHEMA_VERSION, "profile": {**identity, "claims": claims}})
     manifest = {

@@ -274,6 +274,72 @@ class RightsAwareExportTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, "Conflicting source identity for rhs"):
                     build_release_v2(self.root, HEAD)
 
+    def credited_citations(self):
+        attribution = {
+            "credit": "Synthetic publisher",
+            "doi_url": "https://doi.org/10.1234/source",
+            "license_url": "https://creativecommons.org/licenses/by/4.0/",
+            "modifications": "Citation formatted for this release.",
+        }
+        for claim in (LIGHT, WATERING):
+            record = self.citation()
+            record["public_attribution"] = attribution.copy()
+            for passage in record["passages"]:
+                passage["locator"] = f"{claim}: {passage['locator']}"
+            self.selection["claims"][claim]["evidence"][SOURCE_ID] = self.authorize_evidence(
+                SOURCE_ID, record)
+        return attribution
+
+    def test_repeated_citation_attribution_allows_distinct_passages_and_stable_order(self):
+        attribution = self.credited_citations()
+        self.approve_fixture()
+        expected = build_release_v2(self.root, HEAD)
+        first, second = (row["evidence"][0] for row in json.loads(expected[0])["profile"]["claims"])
+        self.assertEqual(first["source_id"], second["source_id"])
+        self.assertEqual(first["public_attribution"], attribution)
+        self.assertEqual(second["public_attribution"], attribution)
+        self.assertNotEqual(first["passages"], second["passages"])
+
+        self.selection["claims"] = dict(reversed(list(self.selection["claims"].items())))
+        self.save()
+        self.assertEqual(build_release_v2(self.root, HEAD), expected)
+
+    def test_repeated_citation_attribution_rejects_conflicts_with_fresh_approvals(self):
+        original = self.credited_citations()
+        record = self.selected_evidence(WATERING)
+        for field, value in (
+            ("credit", "Different credit"),
+            ("doi_url", "https://doi.org/10.1234/different"),
+            ("license_url", "https://creativecommons.org/licenses/by-sa/4.0/"),
+            ("modifications", "Different statement of changes."),
+            (None, None),
+        ):
+            with self.subTest(field=field):
+                if field is None:
+                    del record["public_attribution"]
+                else:
+                    record["public_attribution"] = {**original, field: value}
+                for claim in (LIGHT, WATERING):
+                    self.authorize_evidence(SOURCE_ID, self.selected_evidence(claim))
+                self.approve_fixture()
+
+                with self.assertRaisesRegex(ValueError, "^Conflicting citation attribution for rhs$"):
+                    build_release_v2(self.root, HEAD)
+
+    def test_repeated_source_allows_citation_credit_alongside_excerpt_attribution(self):
+        original_excerpt = self.selected_evidence(LIGHT)
+        self.credited_citations()
+        self.selection["claims"][LIGHT]["evidence"][SOURCE_ID] = original_excerpt
+        self.approve_fixture()
+
+        artifact, _ = build_release_v2(self.root, HEAD)
+        excerpt, citation = (row["evidence"][0] for row in json.loads(artifact)["profile"]["claims"])
+        self.assertEqual(excerpt["mode"], "authorized_excerpt")
+        self.assertEqual(citation["mode"], "citation_only")
+        self.assertEqual(excerpt["source_id"], citation["source_id"])
+        self.assertEqual(excerpt["attribution"], "Synthetic publisher, CC BY 4.0")
+        self.assertEqual(citation["public_attribution"]["credit"], "Synthetic publisher")
+
     def test_rights_review_after_release_is_rejected(self):
         self.selected_evidence(WATERING)["rights"]["citation"]["reviewed_at"] = "2026-01-04"
         self.save()
