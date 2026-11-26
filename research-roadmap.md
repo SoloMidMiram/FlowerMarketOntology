@@ -32,7 +32,7 @@ The [fourth tranche](research/batches/batch-04.json) adds six bilingual pothos d
 
 Next research, in release order:
 
-1. Reproduce the pothos source passages and pin one exact image. Confirm species applicability for genus-level RHS guidance and record the media checksum, license evidence and credit.
+1. Review the [golden-pothos v2 evidence packet](research/sources/pothos-release-v2-review.md). Resolve identity, source rights, scientific verification and both locale approvals for the selected text-only claims. If a later release selects an image, pin the file and record its checksum, license evidence and credit.
 2. Collect expert-identified specimens for «برگ انجیری فر» and «بابا آدم گورخری». Check which morphological cues survive juvenile growth and which modifiers are vendor-specific. Collect permissioned images.
 3. Extend search expectations for qualified trade names, genus queries and historical treatments before running iOS/Safari and Android/Chrome user tasks. Keep any unsafe automatic species resolution visible as a failed case.
 4. Collect household symptom cases with conditions, intervention and follow-up so reviewers can compare competing causes.
